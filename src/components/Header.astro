@@ -1,0 +1,48 @@
+---
+import { DevToIcon, GithubIcon, TwitterIcon } from './Icons';
+---
+<header class="flex items-center px-8 py-4">
+  <a href="/" class="block text-black no-underline">
+    <div class="flex items-center justify-center w-8 h-8 mr-2 text-black font-black tracking-tighter border-2 border-current rounded-full">
+      DG
+    </div>
+  </a>
+
+  <a href="/projects" class="link">
+    Projects
+  </a>
+  <a href="/blog" class="link">
+    Blog
+  </a>
+  <a href="/about" class="link">
+    About
+  </a>
+
+  <a href="https://twitter.com/dustinsgoodman" target="_blank" class="link social-link">
+    <TwitterIcon className="social-link-icon" />
+  </a>
+  <a href="https://github.com/dustinsgoodman" target="_blank" class="link social-link">
+    <GithubIcon className="social-link-icon" />
+  </a>
+  <a href="https://dev.to/dustinsgoodman" target="_blank" class="link social-link">
+    <DevToIcon className="social-link-icon" />
+  </a>
+</header>
+
+<style>
+  .link {
+    @apply block text-gray-400 ml-4 no-underline text-base uppercase py-3 hover:text-blue-400 focus:text-blue-400;
+  }
+
+  .social-link {
+    @apply block ml-auto;
+  }
+
+  .social-link + .social-link {
+    @apply ml-4;
+  }
+
+  .social-link-icon {
+    @apply block w-5 h-5 fill-current transition;
+  }
+</style>
