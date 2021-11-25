@@ -1,7 +1,7 @@
 ---
 import MainHead from '../../components/MainHead.astro';
-import Nav from '../../components/Nav';
-import Footer from '../../components/Footer';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 
 interface MarkdownFrontmatter {
@@ -17,7 +17,7 @@ const posts = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
     <MainHead title="Blog | Dustin Goodman" description="Learn from Dustin Goodman's blog" />
   </head>
   <body>
-    <Nav />
+    <Header />
     <div className="wrapper">
       <h1>Dustin&apos;s Blog</h1>
       <div class="heroImg">

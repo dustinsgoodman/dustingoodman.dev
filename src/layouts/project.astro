@@ -1,8 +1,8 @@
 ---
 import MainHead from '../components/MainHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
 
 const { content } = Astro.props;
 ---
@@ -67,7 +67,7 @@ const { content } = Astro.props;
     </style>
   </head>
   <body>
-    <Nav />
+    <Header />
     <header style={`background-image:url(${content.img})`} class="hero">
       <h1 class="title">{content.title}</h1>
     </header>
