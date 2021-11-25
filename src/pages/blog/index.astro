@@ -1,0 +1,32 @@
+---
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
+import BlogPostPreview from '../../components/BlogPostPreview.astro';
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+}
+
+const posts = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
+  .filter(({ publishDate }) => !!publishDate)
+  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+---
+<html lang="en">
+  <head>
+    <MainHead title="Blog | Dustin Goodman" description="Learn from Dustin Goodman's blog" />
+  </head>
+  <body>
+    <Nav />
+    <div className="wrapper">
+      <h1>Dustin&apos;s Blog</h1>
+      <div class="heroImg">
+        <img width="1400" height="350" src="https://images.unsplash.com/photo-1581977012607-4091712d36f9?auto=format&fit=crop&w=1400&h=350&q=75" />
+      </div>
+      <section>
+        {posts.map((post) => (<BlogPostPreview post={post} />))}
+      </section>
+    </div>
+    <Footer />
+  </body>
+</html>
