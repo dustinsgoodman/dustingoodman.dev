@@ -3,7 +3,7 @@ import { DevToIcon, GithubIcon, TwitterIcon } from './Icons';
 ---
 <header class="flex items-center px-8 py-4">
   <a href="/" class="block text-black no-underline">
-    <div class="flex items-center justify-center w-8 h-8 mr-2 text-black font-black tracking-tighter border-2 border-current rounded-full">
+    <div class="flex items-center justify-center w-8 h-8 mr-2 text-black dark:text-gray-200 font-black tracking-tighter border-2 border-current rounded-full">
       DG
     </div>
   </a>
@@ -31,7 +31,7 @@ import { DevToIcon, GithubIcon, TwitterIcon } from './Icons';
 
 <style>
   .link {
-    @apply block text-gray-400 ml-4 no-underline text-base uppercase py-3 hover:text-blue-400 focus:text-blue-400;
+    @apply block text-gray-500 dark:text-gray-200 ml-4 no-underline text-base uppercase py-1 border-blue-500 dark:border-sky-400 hover:border-b hover:text-blue-500 focus:text-blue-500 hover:dark:text-sky-400 focus:dark:text-sky-400;
   }
 
   .social-link {
