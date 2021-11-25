@@ -16,18 +16,22 @@
   }
 
   h1 {
-    @apply text-8xl font-black;
+    @apply text-6xl font-bold my-8;
   }
 
   h2 {
-    @apply text-6xl font-extrabold;
+    @apply text-5xl font-bold;
   }
 
   h3 {
-    @apply text-5xl font-bold;
+    @apply text-4xl font-bold;
   }
 
   a {
     @apply text-blue-400;
+  }
+
+  p {
+    @apply mb-6;
   }
 }
