@@ -16,11 +16,15 @@
   }
 
   h1 {
-    @apply text-2xl;
+    @apply text-8xl font-black;
   }
 
   h2 {
-    @apply text-xl;
+    @apply text-6xl font-extrabold;
+  }
+
+  h3 {
+    @apply text-5xl font-bold;
   }
 
   a {

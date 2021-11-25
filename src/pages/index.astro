@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/base.astro';
 import HeroBanner from '../components/HeroBanner.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
 
 import Button from '../components/Button/index.jsx';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
@@ -8,6 +9,9 @@ import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent("./project/**/*.md");
 const featuredProject = projects[0];
+
+const posts = Astro.fetchContent("./blog/**/*.md");
+const featuredPost = posts[0];
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -19,28 +23,43 @@ const featuredProject = projects[0];
 >
   <HeroBanner />
   <div class="container mx-auto mt-2 mb-4">
-    <div class="grid">
-      <div class="section">
-        <h3 class="sectionTitle">Selected Work</h3>
-        <PortfolioPreview project={featuredProject} />
-        <div class="tac mt4">
-          <a href="/projects">
-            <Button>View All</Button>
-          </a>
-        </div>
+    <section>
+      <h3 class="mt-16 mb-8">
+        About me
+      </h3>
+      <p class="leading-loose mb-8">
+        I’m Dustin, and this is my website. It was made using{' '}
+        <a href="https://github.com/withastro/astro" target="_blank" rel="nofollow">
+          Astro
+        </a>, a new way to build static sites. This is just an example template for you to modify.
+      </p>
+      <p>
+        <a href="/about">Read more</a>
+      </p>
+    </section>
+
+    <section>
+      <h3 class="mt-16 mb-8">
+        Highlighted Projects
+      </h3>
+      <PortfolioPreview project={featuredProject} />
+      <div class="text-center mt-4">
+        <a href="/projects">
+          <Button>View All</Button>
+        </a>
       </div>
-      <div class="section">
-        <h3 class="sectionTitle">About me</h3>
-        <p class="bio">
-          <span>Hello!</span> I’m Dustin, and this is my website. It was made using{' '}
-          <a href="https://github.com/withastro/astro" target="_blank" rel="nofollow">
-            Astro
-          </a>, a new way to build static sites. This is just an example template for you to modify.
-        </p>
-        <p>
-          <a href="/about">Read more</a>
-        </p>
+    </section>
+
+    <section>
+      <h3 class="mt-16 mb-8">
+        Recent Posts
+      </h3>
+      <BlogPostPreview post={featuredPost} />
+      <div class="text-center mt-4">
+        <a href="/blog">
+          <Button>View All</Button>
+        </a>
       </div>
-    </div>
+    </section>
   </div>
 </BaseLayout>
