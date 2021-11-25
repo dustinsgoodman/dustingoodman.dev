@@ -1,0 +1,22 @@
+---
+import cn from 'classnames';
+import MainHead from '../components/MainHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer/index.jsx';
+
+const { title, description, enableWrapper = true } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main class={cn({
+      "container mx-auto": enableWrapper,
+    })}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
