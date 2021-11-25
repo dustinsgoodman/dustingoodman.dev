@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/base.astro';
+import PortfolioPreview from '../../components/PortfolioPreview/index.jsx';
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+}
+
+const projects = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
+  .filter(({ publishDate }) => !!publishDate)
+  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+---
+<BaseLayout
+  title="All Projects | Dustin Goodman"
+  description="Learn about Dustin Goodman's most recent projects"
+>
+  <h1 class="title mt4 mb4">All Projects</h1>
+  <section class="grid gap-8">
+    {projects.map((project) => (
+      <PortfolioPreview project={project} />
+    ))}
+  </section>
+</BaseLayout>
