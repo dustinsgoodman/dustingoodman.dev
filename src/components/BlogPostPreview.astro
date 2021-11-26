@@ -7,8 +7,26 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+const isOffsite = !!post.originalArticle;
+
+const getReadMoreText = (postSource: string | undefined) => {
+  if (postSource === 'Medium') {
+    return 'Read more on Medium.com';
+  }
+
+  if (postSource === 'ThisDot') {
+    return 'Read more on ThisDot.co';
+  }
+
+  return 'Read more';
+};
+
 ---
-<a href={post.url} class="group block p-4 rounded-xl hover:bg-gray-200">
+<a
+  href={isOffsite ? post.originalArticle : post.url}
+  target={isOffsite ? '_blank' : '_self'}
+  class="group block p-4 rounded-xl hover:bg-gray-200"
+>
   <article class="flex flex-col h-full">
     <header>
       <img src={post.heroImage} alt={post.alt} class="relative w-full h-72 mb-4" />
@@ -19,7 +37,7 @@ const { post } = Astro.props;
       <Markdown content={post.description} />
     </div>
     <span class="text-blue-800 group-hover:text-blue-400">
-      Read more
+      {getReadMoreText(post.originalSource)} &rarr;
     </span>
   </article>
 </a>
