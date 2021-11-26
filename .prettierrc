@@ -1,0 +1,8 @@
+{
+	"semi": true,
+	"arrowParens": "always",
+	"useTabs": false,
+  "tabWidth": 2,
+  "trailingComa": true,
+  "singleQuote": true
+}

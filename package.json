@@ -10,8 +10,14 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "astro": "^0.21.4",
     "classnames": "^2.3.1",
-    "tailwindcss": "^2.2.19"
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.0",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.5.2"
   }
 }
