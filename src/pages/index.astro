@@ -11,7 +11,7 @@ const projects = Astro.fetchContent("./projects/**/*.md");
 const featuredProject = projects[0];
 
 const posts = Astro.fetchContent("./blog/**/*.md");
-const featuredPost = posts[0];
+const recentPosts = posts.slice(-3).reverse();
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -54,7 +54,12 @@ const featuredPost = posts[0];
       <h3 class="mt-16 mb-8">
         Recent Posts
       </h3>
-      <BlogPostPreview post={featuredPost} />
+      <div class="grid grid-cols-3 gap-4">
+        {recentPosts.map(post => (
+          <BlogPostPreview post={post} />
+        ))}
+      </div>
+
       <div class="text-center mt-4">
         <a href="/blog">
           <Button>View All</Button>
