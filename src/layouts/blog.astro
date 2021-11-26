@@ -1,5 +1,5 @@
 ---
-import MainHead from '../components/MainHead.astro';
+import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import BlogPost from '../components/BlogPost.astro';
 
@@ -8,7 +8,7 @@ const {title, description, publishDate, author, heroImage, permalink, alt} = con
 ---
 <html lang={ content.lang || 'en' }>
   <head>
-    <MainHead title={title} description={description} permalink={permalink} />
+    <Head title={title} description={description} permalink={permalink} />
   </head>
 
   <body>
