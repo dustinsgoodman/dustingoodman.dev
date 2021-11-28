@@ -6,15 +6,18 @@ import Footer from '@/components/Footer.astro';
 
 const { title, description, enableWrapper = true } = Astro.props;
 ---
+
 <html lang="en">
   <head>
-    <Head title={title} description={description} />
+    <Head {title} {description} />
   </head>
   <body class="text-gray-900 dark:text-white bg-white dark:bg-gray-800">
     <Header />
-    <main class={cn({
-      "container mx-auto": enableWrapper,
-    })}>
+    <main
+      class={cn({
+        'container mx-auto': enableWrapper,
+      })}
+    >
       <slot />
     </main>
     <Footer />

@@ -5,9 +5,10 @@ import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
 import Button from '@/components/Button/index.jsx';
 
-const blogPosts = Astro.fetchContent("./blog/**/*.md");
+const blogPosts = Astro.fetchContent('./blog/**/*.md');
 const recentBlogPosts = blogPosts.slice(-3).reverse();
 ---
+
 <BaseLayout
   title="Welcome | Dustin Goodman"
   description="Dustin Goodman: Developer, Speaker, and Writer..."
@@ -16,14 +17,17 @@ const recentBlogPosts = blogPosts.slice(-3).reverse();
   <HeroBanner />
   <div class="container mx-auto mt-2 mb-4">
     <section>
-      <h3 class="mt-16 mb-8">
-        About me
-      </h3>
+      <h3 class="mt-16 mb-8">About me</h3>
       <p class="leading-loose mb-8">
         I’m Dustin, and this is my website. It was made using{' '}
-        <a href="https://github.com/withastro/astro" target="_blank" rel="nofollow">
+        <a
+          href="https://github.com/withastro/astro"
+          target="_blank"
+          rel="nofollow"
+        >
           Astro
-        </a>, a new way to build static sites. This is just an example template for you to modify.
+        </a>, a new way to build static sites. This is just an example template
+        for you to modify.
       </p>
       <p>
         <a href="/about">Read more</a>
@@ -31,13 +35,9 @@ const recentBlogPosts = blogPosts.slice(-3).reverse();
     </section>
 
     <section>
-      <h3 class="mt-16 mb-8">
-        Recent Posts
-      </h3>
+      <h3 class="mt-16 mb-8">Recent Posts</h3>
       <div class="grid grid-cols-3 gap-4">
-        {recentBlogPosts.map(post => (
-          <BlogPostPreview post={post} />
-        ))}
+        {recentBlogPosts.map((post) => <BlogPostPreview post={post} />)}
       </div>
 
       <div class="text-center mt-4">
