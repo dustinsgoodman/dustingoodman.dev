@@ -11,4 +11,8 @@ alt: This Dot Migrating from REST to GraphQL
 layout: '@/layouts/blog.astro'
 originalArticle: https://www.thisdot.co/blog/migrating-from-rest-to-graphql
 originalSource: ThisDot
+tags:
+  - GraphQL
+  - JavaScript
+  - REST
 ---

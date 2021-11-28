@@ -2,7 +2,7 @@
 import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
 ---
 
-<header class="flex items-center px-8 py-4">
+<header class="flex items-center px-8 py-4 bg-white dark:bg-gray-900">
   <a href="/" class="block text-black no-underline">
     <img
       src="/assets/avatar.png"
@@ -18,6 +18,8 @@ import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
     href="https://twitter.com/dustinsgoodman"
     target="_blank"
     class="link social-link"
+    aria-label="Dustin's Twitter"
+    rel="noopener noreferrer"
   >
     <TwitterIcon className="social-link-icon" />
   </a>
@@ -25,6 +27,8 @@ import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
     href="https://github.com/dustinsgoodman"
     target="_blank"
     class="link social-link"
+    aria-label="Dustin's Github"
+    rel="noopener noreferrer"
   >
     <GithubIcon className="social-link-icon" />
   </a>
@@ -32,6 +36,8 @@ import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
     href="https://dev.to/dustinsgoodman"
     target="_blank"
     class="link social-link"
+    aria-label="Dustin's DevTo"
+    rel="noopener noreferrer"
   >
     <DevToIcon className="social-link-icon" />
   </a>

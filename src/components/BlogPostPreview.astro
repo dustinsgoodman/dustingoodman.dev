@@ -25,34 +25,38 @@ const getReadMoreText = (postSource: string | undefined) => {
 <a
   href={isOffsite ? post.originalArticle : post.url}
   target={isOffsite ? '_blank' : '_self'}
-  class="group block p-4 rounded-xl hover:bg-gray-200"
+  class="group block rounded-xl bg-white dark:bg-gray-600 hover:bg-blue-100"
+  rel="noopener noreferrer"
 >
   <article class="flex flex-col h-full">
-    <header>
-      <img src={post.heroImage} alt={post.alt} class="relative w-full h-72 mb-4"
-      />
+    <img
+      src={post.heroImage}
+      alt={post.alt}
+      class="relative w-full max-h-40 sm:max-h-48 mb-4 rounded-t-xl"
+    />
+    <div class="px-4">
       <p
-        class="text-sm text-gray-500 dark:text-gray-200 group-hover:dark:text-gray-500 mb-1"
+        class="text-sm text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-500 mb-1"
       >
         {post.publishDate}
       </p>
-      <h1
-        class="text-2xl text-blue-800 group-hover:text-blue-400 dark:text-sky-400 group-hover:dark:text-sky-600 m-0"
+      <h2
+        class="text-2xl text-blue-800 group-hover:text-blue-600 dark:text-sky-300 dark:group-hover:text-sky-600 m-0"
       >
         {post.title}
-      </h1>
-    </header>
+      </h2>
+    </div>
     <div
-      class="text-gray-500 dark:text-gray-200 group-hover:dark:text-gray-500 flex-grow py-4"
+      class="text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-500 flex-grow p-4"
     >
       <Markdown content={post.description}>
 
       </Markdown>
     </div>
-    <span
-      class="text-blue-800 group-hover:text-blue-400 dark:text-sky-400 group-hover:dark:text-sky-600"
+    <div
+      class="text-blue-800 group-hover:text-blue-600 dark:text-sky-300   dark:group-hover:text-sky-600 px-4 pb-4"
     >
       {getReadMoreText(post.originalSource)} &rarr;
-    </span>
+    </div>
   </article>
 </a>

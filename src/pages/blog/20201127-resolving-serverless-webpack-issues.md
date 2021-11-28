@@ -11,4 +11,9 @@ alt: serverless node webpack
 layout: '@/layouts/blog.astro'
 originalArticle: https://dustinsgoodman.medium.com/resolving-serverless-webpack-issues-efae729e0619
 originalSource: Medium
+tags:
+  - Architecture
+  - Serverless
+  - Webpack
+  - AWS
 ---
