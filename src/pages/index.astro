@@ -17,7 +17,7 @@ const recentBlogPosts = blogPosts.slice(-3).reverse();
 >
   <HeroBanner />
   <div class="container mx-auto mt-2 mb-4">
-    <section>
+    <section id="about">
       <h3 class="mt-16 mb-8">About me</h3>
       <p class="leading-loose mb-8">
         I’m Dustin, and this is my website. It was made using{' '}
@@ -35,7 +35,7 @@ const recentBlogPosts = blogPosts.slice(-3).reverse();
       </p>
     </section>
 
-    <section>
+    <section id="blog">
       <h3 class="mt-16 mb-8">Recent Posts</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-0">
         {recentBlogPosts.map((post) => <BlogPostPreview post={post} />)}

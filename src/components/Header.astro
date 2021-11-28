@@ -1,62 +1,32 @@
 ---
-import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
 ---
 
-<header class="flex items-center px-8 py-4 bg-white dark:bg-gray-900">
-  <a href="/" class="block text-black no-underline">
+<header
+  class="sticky top-0 z-50 drop-shadow flex items-center px-8 py-4 bg-white dark:bg-gray-900"
+>
+  <a href="/" class="flex items-center text-black no-underline">
     <img
       src="/assets/avatar.png"
-      alt="Dustin Goodman"
+      alt="Dustin Goodman's Avatar"
       class="rounded-full w-10 h-10 mr-2"
     />
+    <span
+      class="text-2xl font-bold text-gray-700 dark:text-gray-100 hidden sm:inline"
+    >
+      Dustin Goodman
+    </span>
   </a>
 
-  <a href="/blog" class="link"> Blog </a>
-  <a href="/about" class="link"> About </a>
-
-  <a
-    href="https://twitter.com/dustinsgoodman"
-    target="_blank"
-    class="link social-link"
-    aria-label="Dustin's Twitter"
-    rel="noopener noreferrer"
-  >
-    <TwitterIcon className="social-link-icon" />
-  </a>
-  <a
-    href="https://github.com/dustinsgoodman"
-    target="_blank"
-    class="link social-link"
-    aria-label="Dustin's Github"
-    rel="noopener noreferrer"
-  >
-    <GithubIcon className="social-link-icon" />
-  </a>
-  <a
-    href="https://dev.to/dustinsgoodman"
-    target="_blank"
-    class="link social-link"
-    aria-label="Dustin's DevTo"
-    rel="noopener noreferrer"
-  >
-    <DevToIcon className="social-link-icon" />
-  </a>
+  <a href="#about" class="link">About</a>
+  <a href="#blog" class="link">Blog</a>
 </header>
 
 <style>
   .link {
-    @apply block text-gray-500 dark:text-gray-200 ml-4 no-underline text-base uppercase py-1 border-blue-500 dark:border-sky-400 hover:border-b hover:text-blue-500 focus:text-blue-500 hover:dark:text-sky-400 focus:dark:text-sky-400;
+    @apply block ml-auto text-gray-500 dark:text-gray-200 no-underline text-base uppercase py-1 border-blue-500 dark:border-sky-400 hover:border-b hover:text-blue-500 focus:text-blue-500 dark:hover:text-sky-400 dark:focus:text-sky-400;
   }
 
-  .social-link {
-    @apply block ml-auto;
-  }
-
-  .social-link + .social-link {
+  .link + .link {
     @apply ml-4;
-  }
-
-  .social-link-icon {
-    @apply block w-5 h-5 fill-current transition;
   }
 </style>
