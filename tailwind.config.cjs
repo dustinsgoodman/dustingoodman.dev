@@ -16,6 +16,7 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      purple: colors.purple,
     },
   },
   variants: {},
