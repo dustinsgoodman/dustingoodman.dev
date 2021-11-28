@@ -7,4 +7,5 @@ export interface BlogPost {
   layout: string;
   originalArticle?: string;
   originalSource?: 'Medium' | 'ThisDot';
+  tags?: string[];
 }
