@@ -1,12 +1,9 @@
 ---
 import BaseLayout from '../../layouts/base.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
+import { BlogPost } from '@/types';
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-}
-
-const posts = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
+const posts = Astro.fetchContent<BlogPost>('./**/*.md')
   .filter(({ publishDate }) => !!publishDate)
   .sort(
     (a, b) =>
@@ -18,8 +15,7 @@ const posts = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
   title="Blog | Dustin Goodman"
   description="Learn from Dustin Goodman's blog"
 >
-  <h1>Dustin&apos;s Blog</h1>
-  <section class="grid grid-cols-2 gap-8">
+  <section class="grid md:grid-cols-3 gap-4 px-4 md:px-0">
     {posts.map((post) => <BlogPostPreview post={post} />)}
   </section>
 </BaseLayout>
