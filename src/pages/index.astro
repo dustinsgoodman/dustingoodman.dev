@@ -4,17 +4,9 @@ import HeroBanner from '../components/HeroBanner.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 
 import Button from '../components/Button/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 
-// Data Fetching: List all Markdown posts in the repo.
-const projects = Astro.fetchContent("./projects/**/*.md");
-const featuredProject = projects[0];
-
-const posts = Astro.fetchContent("./blog/**/*.md");
-const recentPosts = posts.slice(-3).reverse();
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const blogPosts = Astro.fetchContent("./blog/**/*.md");
+const recentBlogPosts = blogPosts.slice(-3).reverse();
 ---
 <BaseLayout
   title="Welcome | Dustin Goodman"
@@ -40,22 +32,10 @@ const recentPosts = posts.slice(-3).reverse();
 
     <section>
       <h3 class="mt-16 mb-8">
-        Highlighted Projects
-      </h3>
-      <PortfolioPreview project={featuredProject} />
-      <div class="text-center mt-4">
-        <a href="/projects">
-          <Button>View All</Button>
-        </a>
-      </div>
-    </section>
-
-    <section>
-      <h3 class="mt-16 mb-8">
         Recent Posts
       </h3>
       <div class="grid grid-cols-3 gap-4">
-        {recentPosts.map(post => (
+        {recentBlogPosts.map(post => (
           <BlogPostPreview post={post} />
         ))}
       </div>
