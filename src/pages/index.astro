@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/base.astro';
-import HeroBanner from '../components/HeroBanner.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
+import BaseLayout from '@/layouts/base.astro';
+import HeroBanner from '@/components/HeroBanner.astro';
+import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
-import Button from '../components/Button/index.jsx';
+import Button from '@/components/Button/index.jsx';
 
 const blogPosts = Astro.fetchContent("./blog/**/*.md");
 const recentBlogPosts = blogPosts.slice(-3).reverse();

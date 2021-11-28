@@ -8,7 +8,7 @@ description: >
 publishDate: Feb 15, 2021
 heroImage: /blog-assets/20210215-migrating-rest-to-graphql.png
 alt: This Dot Migrating from REST to GraphQL
-layout: ../../layouts/blog.astro
+layout: "@/layouts/blog.astro"
 originalArticle: https://www.thisdot.co/blog/migrating-from-rest-to-graphql
 originalSource: ThisDot
 ---
