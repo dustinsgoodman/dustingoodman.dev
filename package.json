@@ -11,13 +11,9 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
     "astro": "^0.21.4",
     "autoprefixer": "^10.4.0",
     "classnames": "^2.3.1",
-    "eslint": "^8.3.0",
-    "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "postcss": "^8.4.4",
