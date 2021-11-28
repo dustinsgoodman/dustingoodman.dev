@@ -12,74 +12,83 @@ const { title, publishDate, heroImage, alt } = Astro.props;
 
 <div class="layout">
   <article class="content">
-  <div>
-    <header>
-      {heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
-      <p class="publish-date">{publishDate}</p>
-      <h1 class="title">{title}</h1>
-    </header>
-    <main>
-      <slot />
-    </main>
-  </div>
+    <div>
+      <header>
+        {heroImage && (
+          <img
+            width="720"
+            height="420"
+            class="hero-image"
+            loading="lazy"
+            src={heroImage}
+            alt={alt}
+          />
+        )}
+        <p class="publish-date">{publishDate}</p>
+        <h1 class="title">{title}</h1>
+      </header>
+      <main>
+        <slot />
+      </main>
+    </div>
   </article>
 </div>
 
 <style>
-.hero-image {
-  width: 100vw;
-  object-fit: cover;
-  object-position: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  max-width: 1280px;
-}
-
-@media (max-width: 50em) {
   .hero-image {
-    height: 260px;
-  margin-top: 0;
-  margin-bottom: 2rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1280px;
   }
-}
 
-.content {
-  margin-bottom: 8rem;
-}
+  @media (max-width: 50em) {
+    .hero-image {
+      height: 260px;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
 
-.content :global(main > * + *) {
-  margin-top: 1rem;
-}
+  .content {
+    margin-bottom: 8rem;
+  }
 
-.content :global(h2) {
-  margin-top: 4rem;
-}
+  .content :global(main > * + *) {
+    margin-top: 1rem;
+  }
 
-header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  .content :global(h2) {
+    margin-top: 4rem;
+  }
 
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 4px solid var(--theme-divider);
-}
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
-.title,
-.author,
-.publish-date {
-  margin: 0;
-}
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--theme-divider);
+  }
 
-.publish-date,
-.author {
-  color: var(--theme-text-lighter);
-}
+  .title,
+  .author,
+  .publish-date {
+    margin: 0;
+  }
 
-.title {
-  font-size: 2.25rem;
-  font-weight: 700;
-}
+  .publish-date,
+  .author {
+    color: var(--theme-text-lighter);
+  }
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
 </style>
