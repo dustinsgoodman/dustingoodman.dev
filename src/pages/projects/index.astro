@@ -6,6 +6,10 @@ interface MarkdownFrontmatter {
   publishDate: number;
 }
 
+/*
+ - react docs
+ -
+*/
 const projects = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
   .filter(({ publishDate }) => !!publishDate)
   .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());

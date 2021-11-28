@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/base.astro';
+import { ConferenceTalk } from '../../types';
+
+const talks = [
+  { title: 'GraphQL in the Enterprise', slug: 'graphql-in-the-enterprise' },
+];
+---
+<BaseLayout
+  title="Talks | Dustin Goodman"
+  description="Learn from Dustin Goodman's talks"
+>
+  <h1>Dustin&apos;s Talks</h1>
+  <section class="grid grid-cols-2 gap-8">
+    {talks.map((talk) => (
+      <a href={`/talks/${talk.slug}`}>{talk.title}</a>
+    ))}
+  </section>
+</BaseLayout>

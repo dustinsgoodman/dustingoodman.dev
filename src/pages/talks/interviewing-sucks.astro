@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/base.astro';
+
+const title = "Interviewing Sucks, But It Doesn't Have To";
+const description = "The developer interview process is different everywhere you go and produces lackluster results in most cases. Most companies approach interviews without a standard for the role they hire for and as a result. Let's fix this!";
+// we rise 2018 https://riseupwomen.tech/
+---
+<BaseLayout
+  title={`${title} | Dustin Goodman`}
+  description={description}
+>
+  <h1>{title}</h1>
+  <p>{description}</p>
+
+  <iframe
+    src="https://docs.google.com/presentation/d/e/2PACX-1vTMVFF5MM5O_J42V8ty9qy05hwTF-Y-x0HoWpiFIacJUSpMf1Ifg8XPIxEbjy5ZFq17YbIGj8sZkL0R/embed?start=false&loop=false&delayms=5000"
+    frameborder="0"
+    width="100%"
+    height="720"
+    allowfullscreen="true"
+    mozallowfullscreen="true"
+    webkitallowfullscreen="true"
+  >
+  </iframe>
+</BaseLayout>
