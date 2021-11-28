@@ -11,4 +11,6 @@ alt: This Dot Building a Multi Platform Community Engagement Tool
 layout: '@/layouts/blog.astro'
 originalArticle: https://www.thisdot.co/blog/building-a-multi-platform-community-engagement-tool
 originalSource: ThisDot
+tags:
+  - Architecture
 ---

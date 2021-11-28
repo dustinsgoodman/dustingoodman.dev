@@ -8,4 +8,8 @@ alt: Naming things is hard
 layout: '@/layouts/blog.astro'
 originalArticle: https://dustinsgoodman.medium.com/how-i-managed-to-encounter-and-recover-from-computer-sciences-two-hardest-problems-83f108b8dd1
 originalSource: Medium
+tags:
+  - Cache
+  - PHP
+  - Debugging
 ---
