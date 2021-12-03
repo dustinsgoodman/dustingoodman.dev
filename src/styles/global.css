@@ -11,6 +11,10 @@
     @apply box-content;
   }
 
+  section {
+    scroll-margin-top: 4em;
+  }
+
   img {
     @apply max-w-full h-auto;
   }
@@ -28,7 +32,7 @@
   }
 
   a {
-    @apply text-blue-400;
+    @apply text-blue-600 hover:text-blue-900 dark:text-sky-400 dark:hover:text-sky-600 hover:underline;
   }
 
   p {
