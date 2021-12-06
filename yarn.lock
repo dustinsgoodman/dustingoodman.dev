@@ -64,10 +64,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.3.0.tgz#cf18797ea884eec1857909186bd16fc26bfe6156"
   integrity sha512-5U+jcgfibLKW8PwnHQEdmgb+uZVeMVLz+paEr3vxKgikYfjXDjQu6qEDLOW3WTc/cIWrOF9rAtTKy8R/ArPscw==
 
-"@astrojs/renderer-preact@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/renderer-preact/-/renderer-preact-0.3.0.tgz#44e160a9a94e5ce77860d7ed51e96558f2ad218b"
-  integrity sha512-gw+LpSdJXeSXdMTc9aIvVHiOyBs9w37D1yGogE/cleStIN9nTM6TVeU06gtZkIHOViOGAsMXTCrM7enr6VBMKQ==
+"@astrojs/renderer-preact@^0.3.0", "@astrojs/renderer-preact@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/renderer-preact/-/renderer-preact-0.3.1.tgz#19d93a0b518a12d3d7b5353f2afb9869ae6e6364"
+  integrity sha512-NEcUEtir2H0g4bV4/GwBxqE6bJpOH4WV/FfFRAO6yxqVx3VCdRJ7163fLmMqqznczoqg9w64uEGejx+NdHAFIg==
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.16.0"
     preact "^10.5.15"
