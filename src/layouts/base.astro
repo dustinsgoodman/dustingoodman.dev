@@ -22,6 +22,19 @@ const {
 <html lang="en">
   <head>
     <Head {title} {description} />
+    <script>
+      const html = document.querySelector('html');
+      let darkMode = localStorage.getItem('darkMode');
+      if (!darkMode) {
+        darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      } else {
+        darkMode = darkMode === 'true';
+      }
+      if (darkMode) {
+        html.classList.add('dark');
+      }
+      localStorage.setItem('darkMode', darkMode);
+    </script>
   </head>
   <body class="text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-700">
     <Header />
