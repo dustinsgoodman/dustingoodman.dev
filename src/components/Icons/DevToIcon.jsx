@@ -4,8 +4,8 @@ function DevToIcon({ className }) {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 40"
-      width="1rem"
-      height="1rem"
+      width="1em"
+      height="1em"
       fill="currentColor"
     >
       <path d="M15.7 15.5c-.4-.3-.7-.4-1.1-.4h-1.7v10.1h1.7c.4 0 .8-.1 1.1-.4.4-.3.6-.7.6-1.3v-6.7c0-.6-.2-1-.6-1.3z" />

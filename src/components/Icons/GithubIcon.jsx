@@ -4,8 +4,8 @@ function GithubIcon({ className }) {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      width="1rem"
-      height="1rem"
+      width="1em"
+      height="1em"
       fill="currentColor"
     >
       <path fill="none" d="M0 0h24v24H0z"/>
