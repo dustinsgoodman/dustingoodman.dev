@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { SunIcon, MoonIcon } from '@/components/icons';
+import { SunIcon, MoonIcon } from '@/components/Icons';
 
 function DarkModeToggle({ className = '' }) {
   const [isDark, setIsDark] = useState(localStorage.getItem('darkMode') === 'true');
