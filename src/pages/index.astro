@@ -2,6 +2,7 @@
 import { GithubIcon, TwitterIcon } from '@/components/Icons';
 import BaseLayout from '@/layouts/base.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
+import AboutSection from '@/components/AboutSection.astro';
 import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
 import Button from '@/components/Button/index.jsx';
@@ -17,59 +18,9 @@ const recentBlogPosts = blogPosts.slice(-4).reverse();
   enableVerticalPadding={false}
 >
   <HeroBanner />
-  <section id="about">
-    <div class="container mx-auto py-8">
-      <h2 class="mb-4">About me</h2>
-      <div class="grid grid-cols-3 gap-8">
-        <img src="/assets/headshot.jpg" alt="Dustin Goodman Headshot" />
-        <div class="col-span-2 text-lg leading px-20">
-          <p>
-            <strong>Dustin Goodman</strong> works as an Engineering Manager at <a
-              href="https://thisdot.co"
-              target="_blank"
-              rel="noopener noreferrer">This Dot Labs</a
-            >, where he helps his team grow a community of current and future
-            technologists in order to learn about and further web technologies.
-            He enjoys writing to share what he's learned about technology as
-            well as lessons learned throughout his career in the hopes that
-            someone else will find them useful. He lives in New Orleans,
-            Louisiana with his dog, Sony.
-          </p>
-          <div class="p-8">
-            <h3 class="text-center text-xl font-bold mb-4">
-              Connect with Dustin
-            </h3>
-            <ul class="social-connect">
-              <li>
-                <a
-                  href="https://twitter.com/dustinsgoodman"
-                  target="_blank"
-                  class="block text-4xl bg-gray-200 hover:bg-gray-400 rounded-full p-2"
-                  aria-label="Dustin's Twitter"
-                  rel="noopener noreferrer"
-                >
-                  <TwitterIcon />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/dustinsgoodman"
-                  target="_blank"
-                  class="block text-4xl bg-gray-200 hover:bg-gray-400 rounded-full p-2"
-                  aria-label="Dustin's Github"
-                  rel="noopener noreferrer"
-                >
-                  <GithubIcon />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <AboutSection />
 
-  <section id="blog" class="bg-purple-300 dark:bg-purple-900">
+  <section id="blog" class="bg-blue-100 dark:bg-slate-900">
     <div class="container mx-auto py-8">
       <h2 class="mb-4">Recent Posts</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">

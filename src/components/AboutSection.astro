@@ -1,0 +1,65 @@
+---
+import { GithubIcon, TwitterIcon } from '@/components/Icons';
+---
+
+<section id="about" class="dark:bg-blue-900">
+  <div class="container max-w-[90%] mx-auto px-4 py-8">
+    <h2 class="text-center sm:text-left mb-4">About me</h2>
+    <div
+      class="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-8"
+    >
+      <img
+        class="block w-full sm:w-1/2 md:w-5/12 h-fit"
+        src="/assets/headshot.jpg"
+        alt="Dustin Goodman Headshot"
+      />
+
+      <div class="text-lg leading sm:w-1/2 md:w-7/12">
+        <p>
+          <strong>Dustin Goodman</strong> works as an Engineering Manager at
+          <a
+            href="https://thisdot.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="dark:text-blue-200 dark:hover:text-blue-400 underline"
+            >This Dot Labs</a
+          >, where he helps his team grow a community of current and future
+          technologists in order to learn about and further web technologies. He
+          enjoys writing to share what he's learned about technology as well as
+          lessons learned throughout his career in the hopes that someone else
+          will find them useful. He lives in New Orleans, Louisiana with his
+          dog, Sony.
+        </p>
+        <div>
+          <h3 class="text-center uppercase text-base font-bold mb-4">
+            Connect with Dustin
+          </h3>
+          <ul class="flex items-center justify-center space-x-4">
+            <li>
+              <a
+                href="https://twitter.com/dustinsgoodman"
+                target="_blank"
+                class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-500 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
+                aria-label="Dustin's Twitter"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/dustinsgoodman"
+                target="_blank"
+                class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-500 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
+                aria-label="Dustin's Github"
+                rel="noopener noreferrer"
+              >
+                <GithubIcon />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

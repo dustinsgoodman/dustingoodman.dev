@@ -1,71 +1,33 @@
 ---
+import { CodeIcon, MicIcon, PencilIcon } from '@/components/Icons';
+import RolePill from '@/components/RolePill';
 ---
 
-<div class="relative overflow-hidden md:h-[45vw] text-black">
-  <img
-    width="1600"
-    height="1131"
-    class="block w-full h-auto"
-    src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75"
-    srcset="
-      https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75  800w,
-      https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 1200w,
-      https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=75 1600w,
-      https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=2400&q=75 2400w
-    "
-    sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
-    alt="banner image"
-  />
-  <div class="gradient"></div>
-  <div class="gradient2"></div>
-  <div
-    class="absolute inset-0 w-full h-full z-10 flex flex-col items-start justify-center pl-8 md:pl-16"
-  >
-    <h1 class="font-black text-5xl md:text-7xl mb-2 mt-0">
-      <small class="block font-normal text-2xl md:text-4xl tracking-tighter"
-        >The personal site of </small
-      >Dustin Goodman
-    </h1>
-    <div>
-      <span class="role">👩‍💻 Developer</span>
-      <span class="role">🎤 Speaker</span>
-      <span class="role">✏️ Writer</span>
-    </div>
-    <p class="text-xl mt-6 mb-0">Lover of dogs, videogames, and technology.</p>
+<div
+  class="flex flex-col items-center justify-center relative overflow-hidden min-h-[80vw] sm:min-h-[45vw] text-neutral-900 dark:text-blue-100 bg-blue-500 dark:bg-blue-900 p-4 dark:border-b-2 dark:border-blue-100"
+>
+  <h1 class="font-black text-3xl sm:text-5xl md:text-7xl mb-3 md:mb-6 mt-0">
+    Dustin Goodman
+  </h1>
+  <div class="flex flex-wrap space-x-4">
+    <RolePill>
+      <CodeIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Developer</span>
+    </RolePill>
+    <RolePill>
+      <MicIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Speaker</span>
+    </RolePill>
+    <RolePill>
+      <PencilIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Writer</span>
+    </RolePill>
   </div>
+  <p
+    class="text-md sm:text-xl md:text-2xl font-semibold max-w-3xl mt-3 md:mt-6 mb-0 px-4 md:px-16"
+  >
+    Just a person with a passion for web and application development. Speaker
+    and writer on work experiences and software development. Dog dad and
+    musician fueled by coffee.
+  </p>
 </div>
-
-<style>
-  .gradient,
-  .gradient2 {
-    background-image: url('/assets/mesh-gradient.jpg');
-    background-size: cover;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-
-  .gradient2 {
-    mix-blend-mode: multiply;
-    background-size: cover;
-  }
-
-  .role {
-    @apply relative inline-block font-black text-white bg-black px-2 py-1 z-[2] md:text-xl;
-  }
-
-  .role + .role {
-    @apply ml-4;
-  }
-
-  .invert {
-    @apply absolute inset-0 text-black flex items-center justify-center w-full h-full pointer-events-none;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
-    transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
-  }
-</style>
