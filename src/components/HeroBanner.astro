@@ -1,30 +1,33 @@
 ---
+import { CodeIcon, MicIcon, PencilIcon } from '@/components/Icons';
+import RolePill from '@/components/RolePill';
 ---
 
 <div
-  class="flex flex-col items-center justify-center relative overflow-hidden md:h-[45vw] text-black dark:text-blue-100 bg-blue-500 dark:bg-blue-900"
+  class="flex flex-col items-center justify-center relative overflow-hidden min-h-[80vw] sm:min-h-[45vw] text-neutral-900 dark:text-blue-100 bg-blue-500 dark:bg-blue-900 p-4"
 >
-  <h1 class="font-black text-5xl md:text-7xl mb-2 mt-0">Dustin Goodman</h1>
-  <div>
-    <span class="role">👩‍💻 Developer</span>
-    <span class="role">🎤 Speaker</span>
-    <span class="role">✏️ Writer</span>
+  <h1 class="font-black text-3xl sm:text-5xl md:text-7xl mb-3 md:mb-6 mt-0">
+    Dustin Goodman
+  </h1>
+  <div class="flex flex-wrap space-x-4">
+    <RolePill>
+      <CodeIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Developer</span>
+    </RolePill>
+    <RolePill>
+      <MicIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Speaker</span>
+    </RolePill>
+    <RolePill>
+      <PencilIcon className="inline" />
+      <span class="hidden sm:inline">&nbsp; Writer</span>
+    </RolePill>
   </div>
-  <p class="text-xl mt-6 mb-0">Lover of dogs, videogames, and technology.</p>
+  <p
+    class="text-md sm:text-xl md:text-2xl font-semibold max-w-3xl mt-3 md:mt-6 mb-0 px-4 md:px-16"
+  >
+    Just a person with a passion for web and application development. Speaker
+    and writer on work experiences and software development. Dog dad and
+    musician fueled by coffee.
+  </p>
 </div>
-
-<style>
-  .role {
-    @apply relative inline-block font-black text-white bg-black px-2 py-1 z-[2] md:text-xl;
-  }
-
-  .role + .role {
-    @apply ml-4;
-  }
-
-  .invert {
-    @apply absolute inset-0 text-black flex items-center justify-center w-full h-full pointer-events-none;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 200%, 0% 200%);
-    transition: clip-path cubic-bezier(0.4, 0, 0.5, 1) 150ms;
-  }
-</style>
