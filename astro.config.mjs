@@ -10,6 +10,9 @@
 import { imagetools } from 'vite-imagetools';
 
 export default /** @type {import('astro').AstroUserConfig} */ ({
+  buildOptions: {
+    site: 'https://dustingoodman.dev/',
+  },
   // Enable the Preact renderer to support Preact JSX components.
   renderers: ['@astrojs/renderer-preact'],
   vite: {
