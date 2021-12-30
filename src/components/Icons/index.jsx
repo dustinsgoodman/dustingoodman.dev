@@ -5,4 +5,5 @@ export { default as MicIcon } from './MicIcon';
 export { default as MoonIcon } from './MoonIcon';
 export { default as PencilIcon } from './PencilIcon';
 export { default as SunIcon } from './SunIcon';
+export { default as TwitchIcon } from './TwitchIcon';
 export { default as TwitterIcon } from './TwitterIcon';
