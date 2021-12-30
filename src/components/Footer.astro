@@ -1,53 +1,67 @@
 ---
-import { DevToIcon, GithubIcon, TwitterIcon } from '@/components/Icons';
+import {
+  DevToIcon,
+  GithubIcon,
+  TwitchIcon,
+  TwitterIcon,
+} from '@/components/Icons';
 
 const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="flex items-center bg-white dark:bg-black text-center px-4 sm:px-8 py-4"
+  class="flex items-center justify-between bg-white dark:bg-black text-center px-4 sm:px-8 py-4"
 >
-  &copy; {currentYear} Dustin Goodman
+  <div>
+    &copy; {currentYear} Dustin Goodman
+  </div>
 
-  <a
-    href="https://twitter.com/dustinsgoodman"
-    target="_blank"
-    class="social-link"
-    aria-label="Dustin's Twitter"
-    rel="noopener noreferrer"
-  >
-    <TwitterIcon className="social-link-icon" />
-  </a>
-  <a
-    href="https://github.com/dustinsgoodman"
-    target="_blank"
-    class="social-link"
-    aria-label="Dustin's Github"
-    rel="noopener noreferrer"
-  >
-    <GithubIcon className="social-link-icon" />
-  </a>
-  <a
-    href="https://dev.to/dustinsgoodman"
-    target="_blank"
-    class="social-link"
-    aria-label="Dustin's DevTo"
-    rel="noopener noreferrer"
-  >
-    <DevToIcon className="social-link-icon" />
-  </a>
+  <div class="flex items-center space-x-2">
+    <a
+      href="https://twitter.com/dustinsgoodman"
+      target="_blank"
+      class="social-link"
+      aria-label="Dustin's Twitter"
+      rel="noopener noreferrer"
+    >
+      <TwitterIcon />
+    </a>
+    <a
+      href="https://github.com/dustinsgoodman"
+      target="_blank"
+      class="social-link"
+      aria-label="Dustin's Github"
+      rel="noopener noreferrer"
+    >
+      <GithubIcon />
+    </a>
+    <a
+      href="https://twitch.tv/sharocko"
+      target="_blank"
+      class="social-link"
+      aria-label="Dustin's Twitch"
+      rel="noopener noreferrer"
+    >
+      <TwitchIcon />
+    </a>
+    <a
+      href="https://dev.to/dustinsgoodman"
+      target="_blank"
+      class="social-link"
+      aria-label="Dustin's DevTo"
+      rel="noopener noreferrer"
+    >
+      <DevToIcon />
+    </a>
+  </div>
 </footer>
 
 <style>
   .social-link {
-    @apply block py-1 ml-auto;
-    @apply text-gray-500 dark:text-gray-200  hover:text-blue-500 focus:text-blue-500 dark:hover:text-sky-400 dark:focus:text-sky-400;
+    @apply block py-1;
+    @apply text-gray-500 dark:text-blue-100 hover:text-blue-500 focus:text-blue-500 dark:hover:text-sky-400 dark:focus:text-sky-400;
     @apply text-base uppercase no-underline;
     @apply border-b border-transparent hover:border-blue-500 dark:hover:border-sky-400;
-  }
-
-  .social-link + .social-link {
-    @apply ml-4;
   }
 
   .social-link-icon {
