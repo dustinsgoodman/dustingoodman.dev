@@ -1,4 +1,5 @@
 ---
+import FooterLink from '@/components/FooterLink';
 import {
   DevToIcon,
   GithubIcon,
@@ -17,54 +18,37 @@ const currentYear = new Date().getFullYear();
   </div>
 
   <div class="flex items-center space-x-2">
-    <a
+    <FooterLink
       href="https://twitter.com/dustinsgoodman"
       target="_blank"
-      class="social-link"
       aria-label="Dustin's Twitter"
       rel="noopener noreferrer"
     >
       <TwitterIcon />
-    </a>
-    <a
+    </FooterLink>
+    <FooterLink
       href="https://github.com/dustinsgoodman"
       target="_blank"
-      class="social-link"
       aria-label="Dustin's Github"
       rel="noopener noreferrer"
     >
       <GithubIcon />
-    </a>
-    <a
+    </FooterLink>
+    <FooterLink
       href="https://twitch.tv/sharocko"
       target="_blank"
-      class="social-link"
       aria-label="Dustin's Twitch"
       rel="noopener noreferrer"
     >
       <TwitchIcon />
-    </a>
-    <a
+    </FooterLink>
+    <FooterLink
       href="https://dev.to/dustinsgoodman"
       target="_blank"
-      class="social-link"
       aria-label="Dustin's DevTo"
       rel="noopener noreferrer"
     >
       <DevToIcon />
-    </a>
+    </FooterLink>
   </div>
 </footer>
-
-<style>
-  .social-link {
-    @apply block py-1;
-    @apply text-gray-500 dark:text-blue-100 hover:text-blue-500 focus:text-blue-500 dark:hover:text-sky-400 dark:focus:text-sky-400;
-    @apply text-base uppercase no-underline;
-    @apply border-b border-transparent hover:border-blue-500 dark:hover:border-sky-400;
-  }
-
-  .social-link-icon {
-    @apply w-5 h-5 fill-current transition;
-  }
-</style>
