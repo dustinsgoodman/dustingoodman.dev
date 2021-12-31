@@ -1,11 +1,8 @@
 ---
-import { GithubIcon, TwitterIcon } from '@/components/Icons';
 import BaseLayout from '@/layouts/base.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
 import AboutSection from '@/components/AboutSection.astro';
-import BlogPostPreview from '@/components/BlogPostPreview.astro';
-
-import Button from '@/components/Button/index.jsx';
+import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
 
 const blogPosts = Astro.fetchContent('./blog/**/*.md');
 const recentBlogPosts = blogPosts.slice(-4).reverse();
@@ -19,26 +16,5 @@ const recentBlogPosts = blogPosts.slice(-4).reverse();
 >
   <HeroBanner />
   <AboutSection />
-
-  <section id="blog" class="bg-blue-100 dark:bg-slate-900">
-    <div class="container mx-auto py-8">
-      <h2 class="mb-4">Recent Posts</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
-        {recentBlogPosts.map((post) => <BlogPostPreview post={post} />)}
-      </div>
-
-      <div class="text-center my-4">
-        <a href="/blog">
-          <Button>View All</Button>
-        </a>
-      </div>
-    </div>
-  </section>
+  <BlogPreviewSection blogPosts={recentBlogPosts} />
 </BaseLayout>
-
-<style>
-  .social-connect {
-    @apply grid gap-2 justify-center content-center;
-    grid-template-columns: repeat(2, 4rem);
-  }
-</style>
