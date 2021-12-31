@@ -1,12 +1,14 @@
 ---
+import cn from 'classnames';
 import { Markdown } from 'astro/components';
 import { BlogPost } from '@/types';
 
 export interface Props {
   post: BlogPost;
+  className: String;
 }
 
-const { post } = Astro.props;
+const { post, className } = Astro.props;
 const isOffsite = !!post.originalArticle;
 
 const getReadMoreText = (postSource: string | undefined) => {
@@ -25,36 +27,35 @@ const getReadMoreText = (postSource: string | undefined) => {
 <a
   href={isOffsite ? post.originalArticle : post.url}
   target={isOffsite ? '_blank' : '_self'}
-  class="group block rounded-xl bg-white dark:bg-gray-600 hover:bg-blue-100 hover:no-underline"
+  class={cn(
+    'group block rounded-xl bg-white dark:bg-gray-600 border-2 border-blue-100 hover:border-blue-600 dark:border-slate-400 dark:hover:border-blue-300 hover:no-underline overflow-clip hover:shadow-lg shadow-blue-900',
+    className
+  )}
   rel="noopener noreferrer"
 >
   <article class="flex flex-col h-full">
     <img
       src={post.heroImage}
       alt={post.alt}
-      class="relative w-full max-h-48 object-contain sm:max-h-64 mb-4 rounded-t-xl bg-blue-900"
+      class="relative w-full max-h-48 object-contain sm:max-h-64 mb-4 bg-blue-900"
     />
     <div class="px-4">
-      <p
-        class="text-sm text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-500 mb-1"
-      >
+      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">
         {post.publishDate}
       </p>
       <h2
-        class="text-2xl text-blue-800 group-hover:text-blue-600 dark:text-sky-300 dark:group-hover:text-sky-600 m-0"
+        class="text-2xl text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 m-0"
       >
         {post.title}
       </h2>
     </div>
-    <div
-      class="text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-500 grow p-4"
-    >
+    <div class="text-gray-500 dark:text-gray-200 grow p-4">
       <Markdown content={post.description}>
 
       </Markdown>
     </div>
     <div
-      class="text-blue-800 group-hover:text-blue-600 dark:text-sky-300   dark:group-hover:text-sky-600 px-4 pb-4"
+      class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 px-4 pb-4"
     >
       {getReadMoreText(post.originalSource)} &rarr;
     </div>
