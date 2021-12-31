@@ -1,0 +1,30 @@
+---
+import BlogPostPreview from '@/components/BlogPostPreview.astro';
+import Button from '@/components/Button';
+
+const { blogPosts } = Astro.props;
+---
+
+<section id="blog" class="bg-blue-100 dark:bg-slate-900">
+  <div class="container max-w-[90%] mx-auto px-4 py-8">
+    <h2 class="text-center sm:text-left mb-4">Recent Posts</h2>
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:px-0">
+      {blogPosts.map((post, idx) => (
+        <BlogPostPreview
+          post={post}
+          className={idx > 2 ? "xl:hidden" : ""}
+        />
+      ))}
+    </div>
+
+    <div class="text-center my-4">
+      <a href="/blog">
+        <Button
+          className="inline-block border-2 rounded-lg px-6 py-4 font-bold uppercase text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-blue-700 bg-blue-600 dark:bg-blue-100 hover:bg-blue-200 dark:hover:bg-blue-600 border-blue-600 dark:border-blue-100 hover:border-blue-700 dark:hover:border-blue-600"
+        >
+          View All
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
