@@ -802,10 +802,10 @@ astring@^1.7.5:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.1.tgz#a91c4afd4af3523e11f31242a3d5d9af62bb6cc6"
   integrity sha512-Aj3mbwVzj7Vve4I/v2JYOPFkCGM2YS7OqQTNSxmUR+LECRpokuPgAYghePgr6SALDo5bD5DlfbSaYjOzGJZOLQ==
 
-astro@^0.22.1:
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.1.tgz#3c54bce0860ab3d08e4d508b3b16ff0c7f730d68"
-  integrity sha512-h8IMB34YS365E9/Wdw+W2zaP/HHzLkmCc0v+5pIjsrX5nhCN897obq4rJHkOyQ1xgpFYVoFllgdnOGIAk6H0/w==
+astro@^0.22.3:
+  version "0.22.3"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.3.tgz#fa1d420e3971b036e535962432e1d75e9bd7654c"
+  integrity sha512-MoMgEe4aSE9B0uQEqK9uxVI+cGckPZxTBL843USEJ6fgPRo/J0NwtBsz6GRQc+9/cjmYd+FLfRyXbzjuUzubYg==
   dependencies:
     "@astrojs/compiler" "^0.6.0"
     "@astrojs/language-server" "^0.8.2"
