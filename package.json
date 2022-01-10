@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.4.0",
-    "astro": "^0.22.6",
+    "astro": "^0.22.9",
     "autoprefixer": "^10.4.1",
     "classnames": "^2.3.1",
     "postcss": "^8.4.5",
