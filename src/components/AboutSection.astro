@@ -1,5 +1,23 @@
 ---
 import { GithubIcon, TwitchIcon, TwitterIcon } from '@/components/Icons';
+
+const socialLinks = [
+  {
+    href: 'https://twitter.com/dustinsgoodman',
+    label: "Dustin's Twitter",
+    icon: TwitterIcon,
+  },
+  {
+    href: 'https://github.com/dustinsgoodman',
+    label: "Dustin's Github",
+    icon: GithubIcon,
+  },
+  {
+    href: 'https://twitch.tv/sharocko',
+    label: "Dustin's Twitch",
+    icon: TwitchIcon,
+  },
+];
 ---
 
 <section id="about" class="dark:bg-blue-900">
@@ -35,39 +53,19 @@ import { GithubIcon, TwitchIcon, TwitterIcon } from '@/components/Icons';
             Connect with Dustin
           </h3>
           <ul class="flex items-center justify-center space-x-4">
-            <li>
-              <a
-                href="https://twitter.com/dustinsgoodman"
-                target="_blank"
-                class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-600 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
-                aria-label="Dustin's Twitter"
-                rel="noopener noreferrer"
-              >
-                <TwitterIcon />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/dustinsgoodman"
-                target="_blank"
-                class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-600 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
-                aria-label="Dustin's Github"
-                rel="noopener noreferrer"
-              >
-                <GithubIcon />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitch.tv/sharocko"
-                target="_blank"
-                class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-600 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
-                aria-label="Dustin's Twitch"
-                rel="noopener noreferrer"
-              >
-                <TwitchIcon />
-              </a>
-            </li>
+            {socialLinks.map(({ href, label, icon: Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  class="block text-4xl text-white dark:text-blue-900 hover:text-slate-100 dark:hover:text-blue-700 bg-blue-600 dark:bg-white hover:bg-blue-900 dark:hover:bg-slate-300 rounded-full p-2"
+                >
+                  <Icon />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
