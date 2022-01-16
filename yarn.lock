@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@astrojs/compiler@^0.7.2":
+"@astrojs/compiler@^0.7.4":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.7.4.tgz#f32559254c715af36e3169c33c717fc2a084b71a"
   integrity sha512-CgKxhVYpfzr9Nox+79IGCd9IszEGIVhYCDl1am+LeAvpIVage9YE8YLVY0r+Ow8LaK26uqko/ae06+DmGDtU5w==
@@ -101,10 +101,10 @@
     "@vitejs/plugin-vue" "^1.9.4"
     vue "^3.2.22"
 
-"@astropub/webapi@^0.7.3":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@astropub/webapi/-/webapi-0.7.4.tgz#a24d4d5412b580d687b92cc043b3289cb1d1f34a"
-  integrity sha512-LpGMWrI0SWGCWol9Em4/wcAtiQHQFV3MoQUYzdpCRWg1UOpXi38d+2xDtWWEgOxb433IXLYQ6XubLLqIx5m3bQ==
+"@astropub/webapi@^0.10.1":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@astropub/webapi/-/webapi-0.10.2.tgz#b1416fb05875cfe06e7c6d1a5d25a73f9ad54b7e"
+  integrity sha512-h1ZdhIPlE90iCf+DTTk60nzG3Bjo43NRHNUOUAdPg/8LA3C60ebq62oq8rTaNozoNLyPXrlC/Ig2YSs7KMquiA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.0":
   version "7.16.0"
@@ -802,12 +802,12 @@ astring@^1.7.5:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.1.tgz#a91c4afd4af3523e11f31242a3d5d9af62bb6cc6"
   integrity sha512-Aj3mbwVzj7Vve4I/v2JYOPFkCGM2YS7OqQTNSxmUR+LECRpokuPgAYghePgr6SALDo5bD5DlfbSaYjOzGJZOLQ==
 
-astro@^0.22.6:
-  version "0.22.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.6.tgz#e3b6b47e7fd3999cd6695c42618805adba0a3d92"
-  integrity sha512-cP+5xEqK5EDauHVKoHH4aShhWDKwQTDWWnRyPfWT6ZH/06IwwD6rzkw1lMWKZzPdbwtve4HuW36sN7Zr0B7Jtw==
+astro@^0.22.9:
+  version "0.22.9"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-0.22.9.tgz#3baaa14a9fc79436bffb9bf67460641614129335"
+  integrity sha512-eJz9mUsLd8AdfCJw2GYFbEQQ8fS/3zS/gPQRVdQ/DWMwiKX9wXWn8PTeA+4Q2/bTVXDJIEBHb7c8TFYcQdS+HQ==
   dependencies:
-    "@astrojs/compiler" "^0.7.2"
+    "@astrojs/compiler" "^0.7.4"
     "@astrojs/language-server" "^0.8.6"
     "@astrojs/markdown-remark" "^0.6.0"
     "@astrojs/prism" "0.4.0"
@@ -815,7 +815,7 @@ astro@^0.22.6:
     "@astrojs/renderer-react" "0.4.0"
     "@astrojs/renderer-svelte" "0.3.1"
     "@astrojs/renderer-vue" "0.3.0"
-    "@astropub/webapi" "^0.7.3"
+    "@astropub/webapi" "^0.10.1"
     "@babel/core" "^7.15.8"
     "@babel/traverse" "^7.15.4"
     "@proload/core" "^0.2.1"
@@ -824,6 +824,7 @@ astro@^0.22.6:
     "@web/parse5-utils" "^1.3.0"
     astring "^1.7.5"
     ci-info "^3.2.0"
+    common-ancestor-path "^1.0.1"
     connect "^3.7.0"
     eol "^0.9.1"
     es-module-lexer "^0.9.3"
@@ -1115,6 +1116,11 @@ comma-separated-tokens@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.2.tgz#d4c25abb679b7751c880be623c1179780fe1dd98"
   integrity sha512-G5yTt3KQN4Yn7Yk4ed73hlZ1evrFKXeUW3086p3PRFNp7m2vIjI6Pg+Kgb+oyzhd9F2qdcoj67+y3SdxL5XWsg==
+
+common-ancestor-path@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/common-ancestor-path/-/common-ancestor-path-1.0.1.tgz#4f7d2d1394d91b7abdf51871c62f71eadb0182a7"
+  integrity sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==
 
 concat-map@0.0.1:
   version "0.0.1"
