@@ -12,7 +12,7 @@ const { title, publishDate, heroImage, alt, tags } = post;
 <article class="bg-white dark:bg-gray-600 mx-4 md:mx-48">
   {heroImage && (
     <img
-      class="object-cover w-full max-h-[420px]"
+      class="max-h-[420px] w-full object-cover"
       loading="lazy"
       src={heroImage}
       alt={alt}
@@ -24,7 +24,7 @@ const { title, publishDate, heroImage, alt, tags } = post;
   </p>
   <div class="flex justify-center content-evenly mb-4">
     {tags?.map((tag) => (
-      <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mx-1">
+      <span class="mx-1 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-gray-700">
         {tag}
       </span>
     ))}

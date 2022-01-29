@@ -12,8 +12,8 @@ const { blogPosts } = Astro.props;
       {blogPosts.map((post, idx) => (
         <BlogPostPreview
           post={post}
-          className={idx > 2 ? "xl:hidden" : ""}
-        />
+          className={idx > 2 ? 'xl:hidden' : ''}
+        ></BlogPostPreview>
       ))}
     </div>
 
