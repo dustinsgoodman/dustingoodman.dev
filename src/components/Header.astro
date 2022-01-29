@@ -4,26 +4,26 @@ import DarkModeToggle from '@/components/DarkModeToggle';
 ---
 
 <header
-  class="sticky top-0 z-50 drop-shadow flex items-center px-8 py-4 bg-white dark:bg-black"
+  class="sticky top-0 z-50 flex items-center bg-white px-8 py-4 drop-shadow dark:bg-black"
 >
   <a href="/" class="flex items-center text-black hover:no-underline">
     <img
       src="/assets/avatar.png"
       alt="Dustin Goodman's Avatar"
-      class="rounded-full w-10 h-10 mr-2"
+      class="mr-2 h-10 w-10 rounded-full"
     />
     <span
-      class="text-2xl font-bold text-gray-700 dark:text-blue-100 hidden sm:inline"
+      class="hidden text-2xl font-bold text-gray-700 dark:text-blue-100 sm:inline"
     >
       Dustin Goodman
     </span>
   </a>
 
-  <div class="flex items-end space-x-4 ml-auto">
+  <div class="ml-auto flex items-end space-x-4">
     <HeaderLink href="#about">About</HeaderLink>
     <HeaderLink href="#blog">Blog</HeaderLink>
     <span
-      class="block leading-6 text-gray-500 dark:text-blue-100 hover:no-underline text-base uppercase py-1 border-b border-transparent hover:border-blue-600 dark:hover:border-sky-400 hover:text-blue-600 focus:text-blue-600 dark:hover:text-sky-400 dark:focus:text-sky-400"
+      class="block border-b border-transparent py-1 text-base uppercase leading-6 text-gray-500 hover:border-blue-600 hover:text-blue-600 hover:no-underline focus:text-blue-600 dark:text-blue-100 dark:hover:border-sky-400 dark:hover:text-sky-400 dark:focus:text-sky-400"
     >
       <DarkModeToggle className="align-middle" client:only />
     </span>
