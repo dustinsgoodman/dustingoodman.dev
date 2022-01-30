@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 18px;
+  }
   body {
     @apply m-0 text-gray-900;
   }
@@ -20,15 +23,15 @@
   }
 
   h1 {
-    @apply my-8 text-6xl font-bold;
+    @apply my-8 text-4xl font-bold;
   }
 
   h2 {
-    @apply text-4xl font-bold;
+    @apply mb-4 text-3xl font-bold;
   }
 
   h3 {
-    @apply text-3xl font-bold;
+    @apply text-2xl font-bold;
   }
 
   a {
@@ -36,6 +39,35 @@
   }
 
   p {
-    @apply mb-6;
+    @apply mb-4 block leading-relaxed;
+  }
+
+  ol,
+  ul {
+    @apply ml-8 list-outside;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  li > p {
+    @apply mb-1;
+  }
+
+  code {
+    @apply rounded bg-slate-100 p-1 text-sm text-red-800;
+  }
+
+  p > img {
+    @apply mx-auto;
   }
 }
