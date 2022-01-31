@@ -5,17 +5,15 @@
 @layer base {
   html {
     font-size: 18px;
+    scroll-padding-top: 4.5rem;
   }
+
   body {
     @apply m-0 text-gray-900;
   }
 
   * {
     @apply box-content;
-  }
-
-  section {
-    scroll-margin-top: 4em;
   }
 
   img {
