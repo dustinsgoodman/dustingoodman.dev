@@ -68,11 +68,10 @@ provider:
   region: ${opt:region, "us-east-1"}
   runtime: nodejs14.x
   profile: ${self:custom.profile}-${self:custom.stage_env.${self:provider.stage}.PROFILE, 'dev'}
-  environment: ${self:custom.stage_env.${self:provider.stage}.SLS_STAGE}
 # ...
 ```
 
-Notice the really hard to grok fields `profile` and `environment` under `provider`. This was what we had to do to configure our service variables per development stage. For example, if I want the dev environment setup, I would set `--stage local` when I run my serverless commands and `profile` and `environment` would be set to `my-profile-dev` and `local`, respectively. This is pretty hard to keep track of and lead to many long configuration debugging sessions.
+Notice the really hard to grok field, `profile`, under `provider`. This was what we had to do to configure our service variables per development stage. For example, if I want the dev environment setup, I would set `--stage local` when I run my serverless commands and `profile` would be set to `my-profile-dev`. This is pretty hard to keep track of and lead to many long configuration debugging sessions.
 
 Now, you can use the new stage parameters by setting their values under the `params` key and then acessing them via the `${param:xxx}` syntax. So our above `serverless.yaml` can now be rewritten as:
 
@@ -92,7 +91,6 @@ provider:
   region: ${opt:region, "us-east-1"}
   runtime: nodejs14.x
   profile: ${params:PROFILE}
-  environment: ${params:SLS_STAGE}
 # ...
 ```
 
