@@ -26,7 +26,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
           // Add a Rehype plugin that you want to enable for your project.
           // If you need to provide options for the plugin, you can use an array and put the options as the second item.
           // 'rehype-slug',
-          ['rehype-autolink-headings', { behavior: 'prepend'}],
+          ['rehype-autolink-headings', { behavior: 'prepend' }],
           ['rehype-external-links', { target: '_blank', rel: ['nofollow'] }],
         ],
       },
