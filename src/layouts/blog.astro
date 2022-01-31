@@ -4,10 +4,16 @@ import BaseLayout from '@/layouts/base.astro';
 import BlogPost from '@/components/BlogPost.astro';
 
 const { content } = Astro.props;
-const { title, description } = content;
+const { title, description, heroImage } = content;
+const { canonicalURL } = Astro.request;
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout
+  {title}
+  {description}
+  socialImage={`https://dustingoodman.dev${heroImage}`}
+  {canonicalURL}
+>
   <BlogPost post={content}>
     <slot />
   </BlogPost>

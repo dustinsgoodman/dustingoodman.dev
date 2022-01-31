@@ -7,6 +7,8 @@ import Footer from '@/components/Footer.astro';
 export interface Props {
   title: string;
   description: string;
+  socialImage?: string;
+  canonicalUrl?: string;
   enableWrapper?: boolean;
   enableVerticalPadding?: boolean;
 }
@@ -14,6 +16,8 @@ export interface Props {
 const {
   title,
   description,
+  socialImage,
+  canonicalURL,
   enableWrapper = true,
   enableVerticalPadding = true,
 } = Astro.props;
@@ -21,7 +25,7 @@ const {
 
 <html lang="en">
   <head>
-    <Head {title} {description} />
+    <Head {title} {description} {socialImage} {canonicalURL} />
     <script>
       const html = document.querySelector('html');
       let darkMode = localStorage.getItem('darkMode');
