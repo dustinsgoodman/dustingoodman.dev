@@ -8,6 +8,7 @@
 
 // @ts-check
 import { imagetools } from 'vite-imagetools';
+import preact from '@astrojs/preact';
 
 export default /** @type {import('astro').AstroUserConfig} */ ({
   buildOptions: {
@@ -32,8 +33,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
       },
     ],
   },
-  // Enable the Preact renderer to support Preact JSX components.
-  renderers: ['@astrojs/renderer-preact'],
+  integrations: [preact()],
   vite: {
     plugins: [imagetools()],
   },

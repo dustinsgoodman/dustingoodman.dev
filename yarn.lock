@@ -71,19 +71,18 @@
     locate-character "^2.0.5"
     magic-string "^0.25.3"
 
+"@astrojs/preact@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-0.1.1.tgz#b1195d8fd15e59de5a8ea39197a9772619a983ff"
+  integrity sha512-suXq1MrlAf1pdieSZu0zOzlqCAtkiQrvyMWTpCPXdzjxSYhGCh4tGibBRx9MiImQLR91rpnXjOuxa9est22/Vw==
+  dependencies:
+    "@babel/plugin-transform-react-jsx" "^7.17.3"
+    preact-render-to-string "^5.1.21"
+
 "@astrojs/prism@0.4.1", "@astrojs/prism@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.4.1.tgz#c23224f03497e40f6a993fddde08f436e37ffd6c"
   integrity sha512-JxkrXFiFhfunOFBI2Xxwru9t4IzrLw+nfA7RkNnV8qP65BLidrwWS+NfZhOSVGTrbf+cQfF8QNe6O4gAX8wQHw==
-
-"@astrojs/renderer-preact@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/renderer-preact/-/renderer-preact-0.5.0.tgz#a4d0b2ee6bfadf5f155d41a206e9cea40c50a851"
-  integrity sha512-83De5FdGzCt7lqsHWx1Oc+pLgSM6G1xkdlZyV2pU0pyuV/NaTek9qaGNAmh96G28lufeyWKw1m1dVx8UGCSBnw==
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.16.7"
-    preact "^10.6.5"
-    preact-render-to-string "^5.1.19"
 
 "@astrojs/svelte-language-integration@^0.1.2":
   version "0.1.2"
@@ -280,7 +279,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.16.7"
 
-"@babel/plugin-transform-react-jsx@^7.16.7":
+"@babel/plugin-transform-react-jsx@^7.17.3":
   version "7.17.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.17.3.tgz#eac1565da176ccb1a715dae0b4609858808008c1"
   integrity sha512-9tjBm4O07f7mzKSIlEmPdiE6ub7kfIe6Cd+w+oQebpATfTQMAgW+YOuWxogbKVTulA+MEO7byMeIUtQ1z+z+ZQ==
@@ -3643,17 +3642,12 @@ postcss@^8.4.12, postcss@^8.4.5, postcss@^8.4.6:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-preact-render-to-string@^5.1.19:
-  version "5.1.19"
-  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.19.tgz#ffae7c3bd1680be5ecf5991d41fe3023b3051e0e"
-  integrity sha512-bj8sn/oytIKO6RtOGSS/1+5CrQyRSC99eLUnEVbqUa6MzJX5dYh7wu9bmT0d6lm/Vea21k9KhCQwvr2sYN3rrQ==
+preact-render-to-string@^5.1.21:
+  version "5.1.21"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.21.tgz#7329a59191d2ca7a40635828c7058f64ffe17639"
+  integrity sha512-wbMtNU4JpfvbE04iCe7BZ1yLYN8i6NRrq+NhR0fUINjPXGu3ZIc4GM5ScOiwdIP1sPXv9SVETuud/tmQGMvdNQ==
   dependencies:
     pretty-format "^3.8.0"
-
-preact@^10.6.5:
-  version "10.7.1"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.7.1.tgz#bdd2b2dce91a5842c3b9b34dfe050e5401068c9e"
-  integrity sha512-MufnRFz39aIhs9AMFisonjzTud1PK1bY+jcJLo6m2T9Uh8AqjD77w11eAAawmjUogoGOnipECq7e/1RClIKsxg==
 
 prebuild-install@^7.0.0:
   version "7.0.0"
