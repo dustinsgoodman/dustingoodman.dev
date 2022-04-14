@@ -3,11 +3,13 @@ import BaseLayout from '../../layouts/base.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import { BlogPost } from '@/types';
 
-const posts = Astro.fetchContent<BlogPost>('./**/*.md')
-  .filter(({ publishDate }) => !!publishDate)
+const allPosts = await Astro.glob<BlogPost>('./**/*.md');
+const posts = allPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
   );
 ---
 
@@ -21,7 +23,7 @@ const posts = Astro.fetchContent<BlogPost>('./**/*.md')
     <div
       class="container max-w-[90%] mx-auto px-4 py-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4"
     >
-      {posts.map((post) => <BlogPostPreview post={post} />)}
+      {posts.map((post) => <BlogPostPreview post={post.frontmatter} />)}
     </div>
   </section>
 </BaseLayout>
