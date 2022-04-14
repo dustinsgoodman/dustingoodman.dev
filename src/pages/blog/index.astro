@@ -10,7 +10,13 @@ const posts = allPosts
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -
       new Date(a.frontmatter.publishDate).valueOf()
-  );
+  )
+  .map(({ url, frontmatter }) => {
+    return {
+      ...frontmatter,
+      url,
+    };
+  });
 ---
 
 <BaseLayout

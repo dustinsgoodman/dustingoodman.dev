@@ -8,8 +8,7 @@ export interface Props {
 }
 
 const { post, className } = Astro.props;
-const postMetadata = post.frontmatter;
-const isOffsite = !!postMetadata.originalArticle;
+const isOffsite = !!post.originalArticle;
 
 const getReadMoreText = (postSource: string | undefined) => {
   if (postSource === 'Medium') {
@@ -25,7 +24,7 @@ const getReadMoreText = (postSource: string | undefined) => {
 ---
 
 <a
-  href={isOffsite ? postMetadata.originalArticle : post.url}
+  href={isOffsite ? post.originalArticle : post.url}
   target={isOffsite ? '_blank' : '_self'}
   class={cn(
     'group block rounded-xl bg-white dark:bg-gray-600 border-2 border-blue-100 hover:border-blue-600 dark:border-slate-400 dark:hover:border-blue-300 hover:no-underline overflow-clip hover:shadow-lg shadow-blue-900',
@@ -35,29 +34,29 @@ const getReadMoreText = (postSource: string | undefined) => {
 >
   <article class="flex flex-col h-full">
     <img
-      src={postMetadata.heroImage}
-      alt={postMetadata.alt}
+      src={post.heroImage}
+      alt={post.alt}
       class="relative w-full max-h-48 object-contain sm:max-h-64 mb-4 bg-blue-900"
     />
     <div class="px-4">
       <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">
-        {postMetadata.publishDate}
+        {post.publishDate}
       </p>
       <h2
         class="text-2xl text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 m-0"
       >
-        {postMetadata.title}
+        {post.title}
       </h2>
     </div>
     <div class="text-gray-500 dark:text-gray-200 grow p-4">
-      <Markdown content={postMetadata.description}>
+      <Markdown content={post.description}>
 
       </Markdown>
     </div>
     <div
       class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 px-4 pb-4"
     >
-      {getReadMoreText(postMetadata.originalSource)} &rarr;
+      {getReadMoreText(post.originalSource)} &rarr;
     </div>
   </article>
 </a>
