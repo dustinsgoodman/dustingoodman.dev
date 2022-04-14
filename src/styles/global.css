@@ -61,10 +61,6 @@
     @apply mb-1;
   }
 
-  code {
-    @apply rounded bg-slate-100 p-1 text-sm text-red-800;
-  }
-
   p > img {
     @apply mx-auto;
   }

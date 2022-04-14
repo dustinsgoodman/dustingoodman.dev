@@ -1,4 +1,4 @@
-function MoonIcon({ className }) {
+function MoonIcon({ className = '' }) {
   return (
     <svg
       className={className}

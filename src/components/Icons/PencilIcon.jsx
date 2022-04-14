@@ -1,4 +1,4 @@
-function PencilIcon({ className }) {
+function PencilIcon({ className = '' }) {
   return (
     <svg
       className={className}

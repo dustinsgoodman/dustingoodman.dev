@@ -1,4 +1,4 @@
-function TwitchIcon({ className }) {
+function TwitchIcon({ className = '' }) {
   return (
     <svg
       className={className}

@@ -4,8 +4,21 @@ import HeroBanner from '@/components/HeroBanner.astro';
 import AboutSection from '@/components/AboutSection.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
 
-const blogPosts = Astro.fetchContent('./blog/**/*.md');
-const recentBlogPosts = blogPosts.slice(-4).reverse();
+const blogPosts = await Astro.glob('./blog/**/*.md');
+const recentBlogPosts = blogPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  )
+  .map(({ url, frontmatter }) => {
+    return {
+      ...frontmatter,
+      url,
+    };
+  })
+  .slice(0, 4);
 ---
 
 <BaseLayout

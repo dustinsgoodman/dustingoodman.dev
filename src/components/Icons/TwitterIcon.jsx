@@ -1,4 +1,4 @@
-function TwitterIcon({ className }) {
+function TwitterIcon({ className = ''}) {
   return (
     <svg
       className={className}

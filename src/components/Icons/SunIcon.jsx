@@ -1,4 +1,4 @@
-function SunIcon({ className }) {
+function SunIcon({ className = '' }) {
   return (
     <svg
       className={className}

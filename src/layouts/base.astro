@@ -26,7 +26,7 @@ const {
 <html lang="en">
   <head>
     <Head {title} {description} {socialImage} {canonicalURL} />
-    <script>
+    <script is:inline>
       const html = document.querySelector('html');
       let darkMode = localStorage.getItem('darkMode');
       if (!darkMode) {

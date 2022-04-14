@@ -1,4 +1,4 @@
-function GithubIcon({ className }) {
+function GithubIcon({ className = '' }) {
   return (
     <svg
       className={className}

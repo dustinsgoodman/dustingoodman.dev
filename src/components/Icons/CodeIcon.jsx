@@ -1,4 +1,4 @@
-function CodeIcon({ className }) {
+function CodeIcon({ className = '' }) {
   return (
     <svg
       className={className}

@@ -1,4 +1,4 @@
-function MicIcon({ className }) {
+function MicIcon({ className = '' }) {
   return (
     <svg
       className={className}

@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 const {
   title = 'Dustin Goodman: Personal Site',
   description = 'The personal site of Dustin Goodman',
@@ -17,11 +18,6 @@ const {
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href={Astro.resolve('../styles/global.css')}
-/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
@@ -42,9 +38,11 @@ const {
 <meta property="og:image" content={socialImage} />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HEVHRVL93N"
-></script>
-<script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-HEVHRVL93N"
+  is:inline></script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);

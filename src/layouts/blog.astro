@@ -1,11 +1,10 @@
 ---
-import PrismTheme from 'prismjs/themes/prism-coy.css';
 import BaseLayout from '@/layouts/base.astro';
 import BlogPost from '@/components/BlogPost.astro';
 
 const { content } = Astro.props;
 const { title, description, heroImage } = content;
-const { canonicalURL } = Astro.request;
+const { canonicalURL } = Astro;
 ---
 
 <BaseLayout

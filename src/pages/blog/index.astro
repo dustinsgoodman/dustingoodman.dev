@@ -3,12 +3,20 @@ import BaseLayout from '../../layouts/base.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import { BlogPost } from '@/types';
 
-const posts = Astro.fetchContent<BlogPost>('./**/*.md')
-  .filter(({ publishDate }) => !!publishDate)
+const allPosts = await Astro.glob<BlogPost>('./**/*.md');
+const posts = allPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
-  );
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  )
+  .map(({ url, frontmatter }) => {
+    return {
+      ...frontmatter,
+      url,
+    };
+  });
 ---
 
 <BaseLayout
