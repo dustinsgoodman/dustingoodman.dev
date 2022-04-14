@@ -1,10 +1,11 @@
 ---
 import cn from 'classnames';
+import type { MarkdownInstance } from 'astro';
 import { Markdown } from 'astro/components';
 import { BlogPost } from '@/types';
 
 export interface Props {
-  post: BlogPost;
+  post: MarkdownInstance<BlogPost>;
   className?: String;
 }
 
