@@ -16,7 +16,10 @@ export default defineConfig(
     site: 'https://dustingoodman.dev/',
     markdown: {
       syntaxHighlight: 'shiki',
-
+      shikiConfig: {
+        theme: 'github-dark-dimmed',
+        langs: ['shell', 'yaml'],
+      },
       rehypePlugins: [
         // Add a Rehype plugin that you want to enable for your project.
         // If you need to provide options for the plugin, you can use an array and put the options as the second item.
