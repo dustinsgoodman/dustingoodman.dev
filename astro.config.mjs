@@ -7,26 +7,38 @@
 // @ts-check
 import { imagetools } from 'vite-imagetools';
 import preact from '@astrojs/preact';
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig(
-/** @type {import('astro').AstroUserConfig} */
-{
-  site: 'https://dustingoodman.dev/',
-  markdown: {
-    rehypePlugins: [// Add a Rehype plugin that you want to enable for your project.
-    // If you need to provide options for the plugin, you can use an array and put the options as the second item.
-    // 'rehype-slug',
-    ['rehype-autolink-headings', {
-      behavior: 'prepend'
-    }], ['rehype-external-links', {
-      target: '_blank',
-      rel: ['nofollow']
-    }]]
-  },
-  integrations: [preact()],
-  vite: {
-    plugins: [imagetools()]
+  /** @type {import('astro').AstroUserConfig} */
+  {
+    site: 'https://dustingoodman.dev/',
+    markdown: {
+      syntaxHighlight: 'shiki',
+
+      rehypePlugins: [
+        // Add a Rehype plugin that you want to enable for your project.
+        // If you need to provide options for the plugin, you can use an array and put the options as the second item.
+        // 'rehype-slug',
+        [
+          'rehype-autolink-headings',
+          {
+            behavior: 'prepend',
+          },
+        ],
+        [
+          'rehype-external-links',
+          {
+            target: '_blank',
+            rel: ['nofollow'],
+          },
+        ],
+      ],
+    },
+    integrations: [preact()],
+    vite: {
+      plugins: [imagetools()],
+    },
   }
-});
+);

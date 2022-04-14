@@ -1,4 +1,4 @@
-export interface BlogPost {
+export type BlogPost = {
   title: string;
   description: string;
   publishDate: string;
@@ -8,4 +8,4 @@ export interface BlogPost {
   originalArticle?: string;
   originalSource?: 'Medium' | 'ThisDot';
   tags?: string[];
-}
+};

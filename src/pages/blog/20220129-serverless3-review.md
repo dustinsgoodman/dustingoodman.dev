@@ -22,7 +22,7 @@ The Serverless Framework team did an amazing job of making the migration to v3 a
    - Some deprecations may be related to your plugins. The Serverless Framework team worked with many of the most popular plugins to make them backwards compatible. Go read your plugins' documentation and make the needed upgrades.
 3. Upgrade serverless to v3. Typically you can just do this on your system with the following:
 
-   ```bash
+   ```shell
    npm i -g serverless
    ```
 
