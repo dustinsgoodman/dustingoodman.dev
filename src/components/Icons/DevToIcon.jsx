@@ -1,4 +1,4 @@
-function DevToIcon({ className }) {
+function DevToIcon({ className = '' }) {
   return (
     <svg
       className={className}
