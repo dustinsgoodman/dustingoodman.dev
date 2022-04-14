@@ -16,7 +16,7 @@
     "classnames": "^2.3.1",
     "postcss": "^8.4.5",
     "preact": "^10.6.5",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "prettier-plugin-astro": "^0.0.12",
     "prettier-plugin-tailwindcss": "^0.1.8",
     "rehype-autolink-headings": "^6.1.1",
