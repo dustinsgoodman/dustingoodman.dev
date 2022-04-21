@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { Markdown } from 'astro/components';
 import { BlogPost } from '@/types';
 export interface Props {
-  post: BlogPost; // TODO: fix type
+  post: BlogPost;
   className?: String;
 }
 
@@ -37,6 +37,7 @@ const getReadMoreText = (postSource: string | undefined) => {
       src={post.heroImage}
       alt={post.alt}
       class="relative w-full max-h-48 object-contain sm:max-h-64 mb-4 bg-blue-900"
+      loading="lazy"
     />
     <div class="px-4">
       <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">
@@ -49,9 +50,7 @@ const getReadMoreText = (postSource: string | undefined) => {
       </h2>
     </div>
     <div class="text-gray-500 dark:text-gray-200 grow p-4">
-      <Markdown content={post.description}>
-
-      </Markdown>
+      <Markdown content={post.description} />
     </div>
     <div
       class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 px-4 pb-4"
