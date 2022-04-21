@@ -6,7 +6,7 @@ import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
 
 const blogPosts = await Astro.glob('./blog/**/*.md');
 const recentBlogPosts = blogPosts
-  .filter(({ frontmatter }) => !!frontmatter.publishDate)
+  .filter(({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -

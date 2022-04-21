@@ -8,4 +8,5 @@ export type BlogPost = {
   originalArticle?: string;
   originalSource?: 'Medium' | 'ThisDot';
   tags?: string[];
+  redirectUrl?: string;
 };

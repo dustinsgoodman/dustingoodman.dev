@@ -69,4 +69,8 @@
     @apply p-2;
     @apply mb-4;
   }
+
+  blockquote {
+    @apply px-4 italic border-l-4;
+  }
 }

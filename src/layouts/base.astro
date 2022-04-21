@@ -11,6 +11,7 @@ export interface Props {
   canonicalUrl?: string;
   enableWrapper?: boolean;
   enableVerticalPadding?: boolean;
+  redirectUrl?: string;
 }
 
 const {
@@ -20,12 +21,13 @@ const {
   canonicalURL,
   enableWrapper = true,
   enableVerticalPadding = true,
+  redirectUrl,
 } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <Head {title} {description} {socialImage} {canonicalURL} />
+    <Head {title} {description} {socialImage} {canonicalURL} {redirectUrl} />
     <script is:inline>
       const html = document.querySelector('html');
       let darkMode = localStorage.getItem('darkMode');
