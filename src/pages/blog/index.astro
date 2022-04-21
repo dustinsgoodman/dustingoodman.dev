@@ -5,7 +5,7 @@ import { BlogPost } from '@/types';
 
 const allPosts = await Astro.glob<BlogPost>('./**/*.md');
 const posts = allPosts
-  .filter(({ frontmatter }) => !!frontmatter.publishDate)
+  .filter(({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -

@@ -5,12 +5,15 @@ const {
   description = 'The personal site of Dustin Goodman',
   socialImage = 'https://dustingoodman.dev/assets/avatar.png',
   canonicalURL = 'https://dustingoodman.dev',
+  redirectUrl,
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
+{redirectUrl && <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />}
+
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
