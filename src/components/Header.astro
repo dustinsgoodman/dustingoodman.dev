@@ -1,6 +1,7 @@
 ---
 import HeaderLink from '@/components/HeaderLink';
 import DarkModeToggle from '@/components/DarkModeToggle';
+import avatarImageUrl from '@/images/assets/avatar.png?w=90&h=90&webp';
 ---
 
 <header
@@ -8,7 +9,7 @@ import DarkModeToggle from '@/components/DarkModeToggle';
 >
   <a href="/" class="flex items-center text-black hover:no-underline">
     <img
-      src="/assets/avatar.png"
+      src={avatarImageUrl}
       alt="Dustin Goodman's Avatar"
       class="mr-2 h-10 w-10 rounded-full"
     />

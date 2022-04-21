@@ -3,7 +3,7 @@ title: Why you should upgrade to Serverless 3
 description: >
   Serverless 3 just released and it has some pretty amazing quality of life improvements. Let's check out these new features and how we should leverage them today.
 publishDate: Jan 29, 2022
-heroImage: /blog-assets/20220130-serverless-v3-review.png
+heroImage: /blog-assets/20220130-serverless-v3-review.webp
 alt: Serverless 3 Review
 layout: '@/layouts/blog.astro'
 tags:
@@ -41,7 +41,7 @@ The Serverless Framework team did an amazing job of making the migration to v3 a
 ## 🎉 New Stage Parameters 🎉
 
 TL;DR:
-![stage parameters meme](/blog-assets/20220130-stage-params.png)
+![stage parameters meme](/blog-assets/20220130-stage-params.webp)
 
 This is by far my favorite feature included with this update as it removes an old hack that many serverless developers implemented to achieve the end goal of this feature. Specifically, this feature allows you to set service configuration settings based on the current stage, or environment. This is incredibily important for larger teams implementing serverless applications as typically, you'll have a production, staging, and/or development environment that may need custom configuration.
 
@@ -110,7 +110,7 @@ One of my least favorite things with the old CLI was starting a new project. Pre
 
 The new CLI project starter made a ton of improvements. Now, it creates the new folder for your project and initializes all your files in there. The CLI offers you a set of standard templates for common usages and guides you to their full list of amazing starter kits for new projects.
 
-![serverless init](/blog-assets/20220130-serverless-init.png)
+![serverless init](/blog-assets/20220130-serverless-init.webp)
 
 They kept with the old and help you quickly configure your project for the Serverless Dashboard and help you do your first deploy on project init but allow you to opt out as well.
 
