@@ -71,10 +71,10 @@
     locate-character "^2.0.5"
     magic-string "^0.25.3"
 
-"@astrojs/preact@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-0.1.1.tgz#b1195d8fd15e59de5a8ea39197a9772619a983ff"
-  integrity sha512-suXq1MrlAf1pdieSZu0zOzlqCAtkiQrvyMWTpCPXdzjxSYhGCh4tGibBRx9MiImQLR91rpnXjOuxa9est22/Vw==
+"@astrojs/preact@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/preact/-/preact-0.1.2.tgz#53fb6f7a6011decde6954d7ae6678fe7a182914f"
+  integrity sha512-u9LUq0/0mCvNkl0Z3Ezj8iqV6tz60dxkmUyOwGVh9RG/dqKswyZeOV7xWC5zxBkH8zufh7l58PHrFCIe+rM1pA==
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.17.3"
     preact-render-to-string "^5.1.21"
