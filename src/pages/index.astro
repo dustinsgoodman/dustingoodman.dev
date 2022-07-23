@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@/layouts/base.astro';
+import HomeLayout from '@/layouts/home.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
 import AboutSection from '@/components/AboutSection.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
@@ -23,13 +23,11 @@ const recentBlogPosts = blogPosts
   .slice(0, 4);
 ---
 
-<BaseLayout
+<HomeLayout
   title="Welcome | Dustin Goodman"
   description="Dustin Goodman: Developer, Speaker, and Writer..."
-  enableWrapper={false}
-  enableVerticalPadding={false}
 >
   <HeroBanner />
   <AboutSection />
   <BlogPreviewSection blogPosts={recentBlogPosts} />
-</BaseLayout>
+</HomeLayout>
