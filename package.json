@@ -10,20 +10,20 @@
     "format": "yarn prettier -w ."
   },
   "devDependencies": {
-    "@astrojs/preact": "^0.1.2",
-    "astro": "^0.26.1",
+    "@astrojs/preact": "^0.5.2",
+    "astro": "^0.0.0-rc-20220722032928",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
     "postcss": "^8.4.14",
-    "preact": "^10.7.2",
-    "prettier": "^2.6.2",
-    "prettier-plugin-astro": "^0.0.12",
-    "prettier-plugin-tailwindcss": "^0.1.11",
+    "preact": "^10.10.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.2",
+    "prettier-plugin-tailwindcss": "^0.1.12",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-external-links": "^1.0.1",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.7.2",
-    "vite-imagetools": "^4.0.3"
+    "tailwindcss": "^3.1.6",
+    "typescript": "^4.7.4",
+    "vite-imagetools": "^4.0.4"
   },
   "dependencies": {}
 }
