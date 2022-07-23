@@ -30,7 +30,7 @@ export default defineConfig(
           'rehype-external-links',
           {
             target: '_blank',
-            rel: ['nofollow'],
+            rel: ['nofollow', 'noopener', 'noreferrer'],
           },
         ],
       ],
