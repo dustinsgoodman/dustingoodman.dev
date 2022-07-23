@@ -71,6 +71,6 @@
   }
 
   blockquote {
-    @apply px-4 italic border-l-4;
+    @apply border-l-4 px-4 italic;
   }
 }

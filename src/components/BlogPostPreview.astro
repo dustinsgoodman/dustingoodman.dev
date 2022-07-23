@@ -1,6 +1,5 @@
 ---
 import cn from 'classnames';
-import { Markdown } from 'astro/components';
 import { BlogPost } from '@/types';
 export interface Props {
   post: BlogPost;
@@ -52,7 +51,7 @@ const getReadMoreText = (postSource: string | undefined) => {
       </h2>
     </div>
     <div class="text-gray-500 dark:text-gray-200 grow p-4">
-      <Markdown content={post.description} />
+      {post.description}
     </div>
     <div
       class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 px-4 pb-4"
