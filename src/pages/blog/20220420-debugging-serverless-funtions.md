@@ -47,10 +47,10 @@ AWS built Lambda to have [asynchronous invocations](https://docs.aws.amazon.com/
 export const handler = async () => {
   // do our background stuff like we may have before
   console.log('This function will definitely run');
-}
+};
 
 // main.js
-import { LambdaClient, InvokeCommand } from "@aws-sdk/client-lambda";
+import { LambdaClient, InvokeCommand } from '@aws-sdk/client-lambda';
 
 export const handler = async () => {
   // do some stuff ...
