@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Chapter 0: Introduction",
+    "path": "introduction",
+    "routes": [
+      {
+        "title": "Why this book?",
+        "path": "why-this-book"
+      },
+      {
+        "title": "About the Author",
+        "path": "about-the-author"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 1: Data Types",
+    "path": "data-types",
+    "routes": [
+      {
+        "title": "What are data types?",
+        "path": "what-are-data-types"
+      }
+    ]
+  }
+]
