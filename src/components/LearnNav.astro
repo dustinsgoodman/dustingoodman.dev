@@ -1,22 +1,26 @@
 ---
-import { getCurrentRoute, getSidebarNav } from '../navData/util';
+import { getSidebarNav, getRouteInfo } from '@/utils/nav';
 
 export interface Props {
   currentPage: string;
 }
 
 const { currentPage } = Astro.props as Props;
-const navPaths = getSidebarNav(currentPage);
-// const activeRoute = getCurrentRoute(navPaths, currentPage);
+const sidebarNav = getSidebarNav(currentPage);
+const navPaths = sidebarNav.routes;
+const routeInfo = getRouteInfo(sidebarNav, currentPage);
 ---
 
-<nav class="w-full h-full" aria-label="Learn Navigation">
-  <ul class="max-h-full overflow-x-visible overflow-y-auto">
+<nav
+  class="w-full h-full max-h-full overflow-x-visible overflow-y-auto "
+  aria-label="Learn Navigation"
+>
+  <ul class="py-4">
     {navPaths.map(({ path, title, routes }) => {
       return (
         <a href={path}>{title}</a>
         <ul>
-          {routes.map(({ title: subRouteTitle, path: subRoutePath }) => (
+          {routes?.map(({ title: subRouteTitle, path: subRoutePath }) => (
             <li>
               <a href={subRoutePath}>{subRouteTitle}</a>
             </li>
