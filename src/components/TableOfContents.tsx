@@ -1,7 +1,7 @@
 import type { FunctionalComponent } from 'preact';
 import { useState, useEffect, useRef } from 'preact/hooks';
 import cn from 'classnames';
-import { unescapeHtml } from '../utils';
+import { unescapeHtml } from '@/utils/unescapeHtml';
 
 interface Props {
   headers: { depth: number; slug: string; text: string }[];
