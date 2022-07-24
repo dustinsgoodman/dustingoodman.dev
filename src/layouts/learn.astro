@@ -1,26 +1,39 @@
 ---
+import { MarkdownContent } from 'astro';
 import BaseLayout from '@/layouts/base.astro';
+import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import LearnNav from '@/components/LearnNav.astro';
+import TableOfContents from '@/components/TableOfContents';
 
 export interface Props {
   title: string;
   description: string;
+  content: MarkdownContent;
 }
 
-const { title, description } = Astro.props;
+const { title, description, content } = Astro.props;
+
+const url = new URL(Astro.request.url);
+const currentPage = url.pathname;
+const headers = content.astro?.headers;
 ---
 
 <BaseLayout {title} {description}>
-  <div class="h-auto lg:h-screen flex flex-row">
-    <div
-      class="no-bg-scrollbar h-auto lg:h-full lg:overflow-y-scroll fixed flex flex-row lg:flex-col py-0 top-0 left-0 right-0 lg:max-w-xs w-full shadow lg:shadow-none z-50"
+  <Header />
+  <div>
+    <aside
+      class="hidden lg:flex fixed lg:w-80 top-20 bottom-0 left-0 p-0 z-10 bg-transparent"
     >
-      <!-- <Nav />
-    <Sidebar /> -->
-    </div>
-
-    <div class="flex flex-1 flex-col w-full h-full pl-0 lg:pl-80">
-      <main class="flex flex-1 flex-col items-end justify-around">
+      <LearnNav {currentPage} />
+    </aside>
+    <aside class="hidden lg:flex fixed top-20 bottom-0 right-0 p-0 z-10">
+      <nav aria-label="Table of Contents">
+        <TableOfContents {headers} />
+      </nav>
+    </aside>
+    <div class="flex flex-col h-full min-w-0 ml-0 lg:ml-80 mr-0 lg:mr-72">
+      <main class="container mx-auto py-4 md:py-8">
         <slot />
       </main>
       <Footer />
