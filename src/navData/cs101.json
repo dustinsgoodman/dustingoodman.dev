@@ -1,307 +1,310 @@
-[
-  {
-    "title": "Chapter 0: Introduction",
-    "path": "introduction",
-    "routes": [
-      {
-        "title": "Why this book?",
-        "path": "why-this-book"
-      },
-      {
-        "title": "How to use this book",
-        "path": "how-to-use-this-book"
-      },
-      {
-        "title": "Programming",
-        "path": "programming"
-      },
-      {
-        "title": "The Command Line",
-        "path": "the-command-line"
-      },
-      {
-        "title": "How programs work",
-        "path": "how-programs-work"
-      },
-      {
-        "title": "Compiled v Interpretted",
-        "path": "compiled-v-interpretted"
-      },
-      {
-        "title": "Syntax",
-        "path": "syntax"
-      },
-      {
-        "title": "Styles of Programming",
-        "path": "styles-of-programming"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 1: Data Types",
-    "path": "data-types",
-    "routes": [
-      {
-        "title": "What are data types?",
-        "path": "what-are-data-types"
-      },
-      {
-        "title": "Variables",
-        "path": "variables"
-      },
-      {
-        "title": "Variable Assignment",
-        "path": "variable-assignment"
-      },
-      {
-        "title": "Arithmetic Operators",
-        "path": "arithmetic-operators"
-      },
-      {
-        "title": "Logical Operators",
-        "path": "logical-operators"
-      },
-      {
-        "title": "Bitwise Operators",
-        "path": "bitwise-operators"
-      },
-      {
-        "title": "Arrays",
-        "path": "arrays"
-      },
-      {
-        "title": "Multi-dimensional Arrays",
-        "path": "multi-dimensional-arrays"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 2: Functions and Running Programs",
-    "path": "functions-and-running-programs",
-    "routes": [
-      {
-        "title": "Functions and Methods",
-        "path": "functions-and-methods"
-      },
-      {
-        "title": "Function Parameters",
-        "path": "function-parameters"
-      },
-      {
-        "title": "Value v Reference",
-        "path": "value-v-reference"
-      },
-      {
-        "title": "Functional Decomposition",
-        "path": "functional-decomposition"
-      },
-      {
-        "title": "Return Values",
-        "path": "return-values"
-      },
-      {
-        "title": "Displaying Output",
-        "path": "displaying-output"
-      },
-      {
-        "title": "Errors",
-        "path": "errors"
-      },
-      {
-        "title": "Debugging",
-        "path": "debugging"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 3: Conditional Statements",
-    "path": "conditional-statements",
-    "routes": [
-      {
-        "title": "What are conditional statements?",
-        "path": "what-are-conditional-statements"
-      },
-      {
-        "title": "The if Statement",
-        "path": "the-if-statement"
-      },
-      {
-        "title": "The else Statement",
-        "path": "the-else-statement"
-      },
-      {
-        "title": "The else if statement",
-        "path": "the-else-if-statement"
-      },
-      {
-        "title": "The Ternary Operator",
-        "path": "the-ternary-operator"
-      },
-      {
-        "title": "The switch statement",
-        "path": "the-switch-statement"
-      },
-      {
-        "title": "How to pick your conditional pattern",
-        "path": "picking-conditional-pattern"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 4: Loops",
-    "paths": "loops",
-    "routes": [
-      {
-        "title": "What are loops?",
-        "path": "what-are-loops"
-      },
-      {
-        "title": "The while Loop",
-        "path": "the-while-loop"
-      },
-      {
-        "title": "The do while Loop",
-        "path": "the-do-while-loop"
-      },
-      {
-        "title": "The for Loop",
-        "path": "the-for-loop"
-      },
-      {
-        "title": "Functional Looping",
-        "path": "functional-looping"
-      },
-      {
-        "title": "Special Loops",
-        "path": "special-loops"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 5: Recursion",
-    "path": "recursion",
-    "routes": [
-      {
-        "title": "What is recursion?",
-        "path": "what-is-recursion"
-      },
-      {
-        "title": "Why use recursion?",
-        "path": "why-use-recursion"
-      },
-      {
-        "title": "Our first recursive function",
-        "path": "our-first-recursive-function"
-      },
-      {
-        "title": "Tracing recursive functions",
-        "path": "tracing-recursive-functions"
-      },
-      {
-        "title": "Converting Recursion to Loops",
-        "path": "converting-recrusion-to-loops"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 6: Objects",
-    "path": "objects",
-    "routes": [
-      {
-        "title": "What is an object?",
-        "path": "what-is-an-object"
-      },
-      {
-        "title": "Maps, Dictionaries, Tables",
-        "path": "maps-dictionaries-tables"
-      },
-      {
-        "title": "Creating Objects",
-        "path": "creating-objects"
-      },
-      {
-        "title": "Class Inheritence",
-        "path": "class-inheritence"
-      },
-      {
-        "title": "Abstract Classes and Interfaces",
-        "path": "abstract-classes-and-interfaces"
-      },
-      {
-        "title": "Polymorphism",
-        "path": "polymorphism"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 7: Regular Expressions",
-    "path": "regular-expressions",
-    "routes": [
-      {
-        "title": "How to use regular expressions?",
-        "path": "how-to-use-regular-expressions"
-      },
-      {
-        "title": "Regular Expression Special Tokens",
-        "path": "regular-expression-special-tokens"
-      },
-      {
-        "title": "Pattern Matching and Grouping",
-        "path": "pattern-matching-and-grouping"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 8: File I/O",
-    "path": "file-io",
-    "routes": [
-      {
-        "title": "File Permissions",
-        "path": "file-permissions"
-      },
-      {
-        "title": "Command Line Interactions",
-        "path": "command-line-interactions"
-      },
-      {
-        "title": "Reading Files",
-        "path": "reading-files"
-      },
-      {
-        "title": "Writing Files",
-        "path": "writing-files"
-      },
-      {
-        "title": "File Streaming",
-        "path": "file-streaming"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 9: Exception Handling",
-    "path": "exception-handling",
-    "routes": [
-      {
-        "title": "Types of Exceptions",
-        "path": "types-of-exceptions"
-      },
-      {
-        "title": "try Blocks",
-        "path": "try-blocks"
-      },
-      {
-        "title": "catch Blocks",
-        "path": "catch-blocks"
-      },
-      {
-        "title": "finally Blocks",
-        "path": "finally-blocks"
-      }
-    ]
-  },
-  {
-    "title": "Chapter 10: What next?",
-    "path": "what-next",
-    "routes": []
-  }
-]
+{
+  "title": "CS101",
+  "path": "/learn/cs101",
+  "routes": [
+    {
+      "title": "Chapter 0: Introduction",
+      "path": "/learn/cs101/introduction",
+      "routes": [
+        {
+          "title": "Why this book?",
+          "path": "/learn/cs101/why-this-book"
+        },
+        {
+          "title": "How to use this book",
+          "path": "/learn/cs101/how-to-use-this-book"
+        },
+        {
+          "title": "Programming",
+          "path": "/learn/cs101/programming"
+        },
+        {
+          "title": "The Command Line",
+          "path": "/learn/cs101/the-command-line"
+        },
+        {
+          "title": "How programs work",
+          "path": "/learn/cs101/how-programs-work"
+        },
+        {
+          "title": "Compiled v Interpretted",
+          "path": "/learn/cs101/compiled-v-interpretted"
+        },
+        {
+          "title": "Syntax",
+          "path": "/learn/cs101/syntax"
+        },
+        {
+          "title": "Styles of Programming",
+          "path": "/learn/cs101/styles-of-programming"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 1: Data Types",
+      "path": "/learn/cs101/data-types",
+      "routes": [
+        {
+          "title": "What are data types?",
+          "path": "/learn/cs101/what-are-data-types"
+        },
+        {
+          "title": "Variables",
+          "path": "/learn/cs101/variables"
+        },
+        {
+          "title": "Variable Assignment",
+          "path": "/learn/cs101/variable-assignment"
+        },
+        {
+          "title": "Arithmetic Operators",
+          "path": "/learn/cs101/arithmetic-operators"
+        },
+        {
+          "title": "Logical Operators",
+          "path": "/learn/cs101/logical-operators"
+        },
+        {
+          "title": "Bitwise Operators",
+          "path": "/learn/cs101/bitwise-operators"
+        },
+        {
+          "title": "Arrays",
+          "path": "/learn/cs101/arrays"
+        },
+        {
+          "title": "Multi-dimensional Arrays",
+          "path": "/learn/cs101/multi-dimensional-arrays"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 2: Functions and Running Programs",
+      "path": "/learn/cs101/functions-and-running-programs",
+      "routes": [
+        {
+          "title": "Functions and Methods",
+          "path": "/learn/cs101/functions-and-methods"
+        },
+        {
+          "title": "Function Parameters",
+          "path": "/learn/cs101/function-parameters"
+        },
+        {
+          "title": "Value v Reference",
+          "path": "/learn/cs101/value-v-reference"
+        },
+        {
+          "title": "Functional Decomposition",
+          "path": "/learn/cs101/functional-decomposition"
+        },
+        {
+          "title": "Return Values",
+          "path": "/learn/cs101/return-values"
+        },
+        {
+          "title": "Displaying Output",
+          "path": "/learn/cs101/displaying-output"
+        },
+        {
+          "title": "Errors",
+          "path": "/learn/cs101/errors"
+        },
+        {
+          "title": "Debugging",
+          "path": "/learn/cs101/debugging"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 3: Conditional Statements",
+      "path": "/learn/cs101/conditional-statements",
+      "routes": [
+        {
+          "title": "What are conditional statements?",
+          "path": "/learn/cs101/what-are-conditional-statements"
+        },
+        {
+          "title": "The if Statement",
+          "path": "/learn/cs101/the-if-statement"
+        },
+        {
+          "title": "The else Statement",
+          "path": "/learn/cs101/the-else-statement"
+        },
+        {
+          "title": "The else if statement",
+          "path": "/learn/cs101/the-else-if-statement"
+        },
+        {
+          "title": "The Ternary Operator",
+          "path": "/learn/cs101/the-ternary-operator"
+        },
+        {
+          "title": "The switch statement",
+          "path": "/learn/cs101/the-switch-statement"
+        },
+        {
+          "title": "How to pick your conditional pattern",
+          "path": "/learn/cs101/picking-conditional-pattern"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 4: Loops",
+      "paths": "loops",
+      "routes": [
+        {
+          "title": "What are loops?",
+          "path": "/learn/cs101/what-are-loops"
+        },
+        {
+          "title": "The while Loop",
+          "path": "/learn/cs101/the-while-loop"
+        },
+        {
+          "title": "The do while Loop",
+          "path": "/learn/cs101/the-do-while-loop"
+        },
+        {
+          "title": "The for Loop",
+          "path": "/learn/cs101/the-for-loop"
+        },
+        {
+          "title": "Functional Looping",
+          "path": "/learn/cs101/functional-looping"
+        },
+        {
+          "title": "Special Loops",
+          "path": "/learn/cs101/special-loops"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 5: Recursion",
+      "path": "/learn/cs101/recursion",
+      "routes": [
+        {
+          "title": "What is recursion?",
+          "path": "/learn/cs101/what-is-recursion"
+        },
+        {
+          "title": "Why use recursion?",
+          "path": "/learn/cs101/why-use-recursion"
+        },
+        {
+          "title": "Our first recursive function",
+          "path": "/learn/cs101/our-first-recursive-function"
+        },
+        {
+          "title": "Tracing recursive functions",
+          "path": "/learn/cs101/tracing-recursive-functions"
+        },
+        {
+          "title": "Converting Recursion to Loops",
+          "path": "/learn/cs101/converting-recrusion-to-loops"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 6: Objects",
+      "path": "/learn/cs101/objects",
+      "routes": [
+        {
+          "title": "What is an object?",
+          "path": "/learn/cs101/what-is-an-object"
+        },
+        {
+          "title": "Maps, Dictionaries, Tables",
+          "path": "/learn/cs101/maps-dictionaries-tables"
+        },
+        {
+          "title": "Creating Objects",
+          "path": "/learn/cs101/creating-objects"
+        },
+        {
+          "title": "Class Inheritence",
+          "path": "/learn/cs101/class-inheritence"
+        },
+        {
+          "title": "Abstract Classes and Interfaces",
+          "path": "/learn/cs101/abstract-classes-and-interfaces"
+        },
+        {
+          "title": "Polymorphism",
+          "path": "/learn/cs101/polymorphism"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 7: Regular Expressions",
+      "path": "/learn/cs101/regular-expressions",
+      "routes": [
+        {
+          "title": "How to use regular expressions?",
+          "path": "/learn/cs101/how-to-use-regular-expressions"
+        },
+        {
+          "title": "Regular Expression Special Tokens",
+          "path": "/learn/cs101/regular-expression-special-tokens"
+        },
+        {
+          "title": "Pattern Matching and Grouping",
+          "path": "/learn/cs101/pattern-matching-and-grouping"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 8: File I/O",
+      "path": "/learn/cs101/file-io",
+      "routes": [
+        {
+          "title": "File Permissions",
+          "path": "/learn/cs101/file-permissions"
+        },
+        {
+          "title": "Command Line Interactions",
+          "path": "/learn/cs101/command-line-interactions"
+        },
+        {
+          "title": "Reading Files",
+          "path": "/learn/cs101/reading-files"
+        },
+        {
+          "title": "Writing Files",
+          "path": "/learn/cs101/writing-files"
+        },
+        {
+          "title": "File Streaming",
+          "path": "/learn/cs101/file-streaming"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 9: Exception Handling",
+      "path": "/learn/cs101/exception-handling",
+      "routes": [
+        {
+          "title": "Types of Exceptions",
+          "path": "/learn/cs101/types-of-exceptions"
+        },
+        {
+          "title": "try Blocks",
+          "path": "/learn/cs101/try-blocks"
+        },
+        {
+          "title": "catch Blocks",
+          "path": "/learn/cs101/catch-blocks"
+        },
+        {
+          "title": "finally Blocks",
+          "path": "/learn/cs101/finally-blocks"
+        }
+      ]
+    },
+    {
+      "title": "Chapter 10: What next?",
+      "path": "/learn/cs101/what-next"
+    }
+  ]
+}
