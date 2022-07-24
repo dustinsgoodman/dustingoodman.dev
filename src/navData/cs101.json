@@ -8,8 +8,32 @@
         "path": "why-this-book"
       },
       {
-        "title": "About the Author",
-        "path": "about-the-author"
+        "title": "How to use this book",
+        "path": "how-to-use-this-book"
+      },
+      {
+        "title": "Programming",
+        "path": "programming"
+      },
+      {
+        "title": "The Command Line",
+        "path": "the-command-line"
+      },
+      {
+        "title": "How programs work",
+        "path": "how-programs-work"
+      },
+      {
+        "title": "Compiled v Interpretted",
+        "path": "compiled-v-interpretted"
+      },
+      {
+        "title": "Syntax",
+        "path": "syntax"
+      },
+      {
+        "title": "Styles of Programming",
+        "path": "styles-of-programming"
       }
     ]
   },
@@ -20,7 +44,264 @@
       {
         "title": "What are data types?",
         "path": "what-are-data-types"
+      },
+      {
+        "title": "Variables",
+        "path": "variables"
+      },
+      {
+        "title": "Variable Assignment",
+        "path": "variable-assignment"
+      },
+      {
+        "title": "Arithmetic Operators",
+        "path": "arithmetic-operators"
+      },
+      {
+        "title": "Logical Operators",
+        "path": "logical-operators"
+      },
+      {
+        "title": "Bitwise Operators",
+        "path": "bitwise-operators"
+      },
+      {
+        "title": "Arrays",
+        "path": "arrays"
+      },
+      {
+        "title": "Multi-dimensional Arrays",
+        "path": "multi-dimensional-arrays"
       }
     ]
+  },
+  {
+    "title": "Chapter 2: Functions and Running Programs",
+    "path": "functions-and-running-programs",
+    "routes": [
+      {
+        "title": "Functions and Methods",
+        "path": "functions-and-methods"
+      },
+      {
+        "title": "Function Parameters",
+        "path": "function-parameters"
+      },
+      {
+        "title": "Value v Reference",
+        "path": "value-v-reference"
+      },
+      {
+        "title": "Functional Decomposition",
+        "path": "functional-decomposition"
+      },
+      {
+        "title": "Return Values",
+        "path": "return-values"
+      },
+      {
+        "title": "Displaying Output",
+        "path": "displaying-output"
+      },
+      {
+        "title": "Errors",
+        "path": "errors"
+      },
+      {
+        "title": "Debugging",
+        "path": "debugging"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 3: Conditional Statements",
+    "path": "conditional-statements",
+    "routes": [
+      {
+        "title": "What are conditional statements?",
+        "path": "what-are-conditional-statements"
+      },
+      {
+        "title": "The if Statement",
+        "path": "the-if-statement"
+      },
+      {
+        "title": "The else Statement",
+        "path": "the-else-statement"
+      },
+      {
+        "title": "The else if statement",
+        "path": "the-else-if-statement"
+      },
+      {
+        "title": "The Ternary Operator",
+        "path": "the-ternary-operator"
+      },
+      {
+        "title": "The switch statement",
+        "path": "the-switch-statement"
+      },
+      {
+        "title": "How to pick your conditional pattern",
+        "path": "picking-conditional-pattern"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 4: Loops",
+    "paths": "loops",
+    "routes": [
+      {
+        "title": "What are loops?",
+        "path": "what-are-loops"
+      },
+      {
+        "title": "The while Loop",
+        "path": "the-while-loop"
+      },
+      {
+        "title": "The do while Loop",
+        "path": "the-do-while-loop"
+      },
+      {
+        "title": "The for Loop",
+        "path": "the-for-loop"
+      },
+      {
+        "title": "Functional Looping",
+        "path": "functional-looping"
+      },
+      {
+        "title": "Special Loops",
+        "path": "special-loops"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 5: Recursion",
+    "path": "recursion",
+    "routes": [
+      {
+        "title": "What is recursion?",
+        "path": "what-is-recursion"
+      },
+      {
+        "title": "Why use recursion?",
+        "path": "why-use-recursion"
+      },
+      {
+        "title": "Our first recursive function",
+        "path": "our-first-recursive-function"
+      },
+      {
+        "title": "Tracing recursive functions",
+        "path": "tracing-recursive-functions"
+      },
+      {
+        "title": "Converting Recursion to Loops",
+        "path": "converting-recrusion-to-loops"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 6: Objects",
+    "path": "objects",
+    "routes": [
+      {
+        "title": "What is an object?",
+        "path": "what-is-an-object"
+      },
+      {
+        "title": "Maps, Dictionaries, Tables",
+        "path": "maps-dictionaries-tables"
+      },
+      {
+        "title": "Creating Objects",
+        "path": "creating-objects"
+      },
+      {
+        "title": "Class Inheritence",
+        "path": "class-inheritence"
+      },
+      {
+        "title": "Abstract Classes and Interfaces",
+        "path": "abstract-classes-and-interfaces"
+      },
+      {
+        "title": "Polymorphism",
+        "path": "polymorphism"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 7: Regular Expressions",
+    "path": "regular-expressions",
+    "routes": [
+      {
+        "title": "How to use regular expressions?",
+        "path": "how-to-use-regular-expressions"
+      },
+      {
+        "title": "Regular Expression Special Tokens",
+        "path": "regular-expression-special-tokens"
+      },
+      {
+        "title": "Pattern Matching and Grouping",
+        "path": "pattern-matching-and-grouping"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 8: File I/O",
+    "path": "file-io",
+    "routes": [
+      {
+        "title": "File Permissions",
+        "path": "file-permissions"
+      },
+      {
+        "title": "Command Line Interactions",
+        "path": "command-line-interactions"
+      },
+      {
+        "title": "Reading Files",
+        "path": "reading-files"
+      },
+      {
+        "title": "Writing Files",
+        "path": "writing-files"
+      },
+      {
+        "title": "File Streaming",
+        "path": "file-streaming"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 9: Exception Handling",
+    "path": "exception-handling",
+    "routes": [
+      {
+        "title": "Types of Exceptions",
+        "path": "types-of-exceptions"
+      },
+      {
+        "title": "try Blocks",
+        "path": "try-blocks"
+      },
+      {
+        "title": "catch Blocks",
+        "path": "catch-blocks"
+      },
+      {
+        "title": "finally Blocks",
+        "path": "finally-blocks"
+      }
+    ]
+  },
+  {
+    "title": "Chapter 10: What next?",
+    "path": "what-next",
+    "routes": []
   }
 ]
