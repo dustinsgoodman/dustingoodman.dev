@@ -1,10 +1,48 @@
 ---
-import LearnLayout from '../../layouts/learn.astro';
+import HomeLayout from '@/layouts/home.astro';
 ---
 
-<LearnLayout
+<HomeLayout
   title="Learn | Dustin Goodman"
-  description="Educational material created to help others learn important computer science or web development techniques."
+  description="Educational materials created by Dustin."
 >
-  What goes here?
-</LearnLayout>
+  <div class="container mx-auto px-4 py-4">
+    <h1>Learning Catalog</h1>
+    <p>
+      Talking to many modern day developers, many are opting to learn specific
+      tools and technologies that they can utilize to seek jobs. However, they
+      are not taking the time to learn the fundamentals of programming. In my
+      career, I've found these fundamentals to be a way to allow individuals to
+      extend their careers beyond a single domain as they teach concepts that
+      are applicable across different domains. This opens more opportunities to
+      an individual who may find their current path lacking.
+    </p>
+    <p>
+      These fundamentals are not a perfect solution to all problems. However,
+      they may help you understand why things work how they do and give you a
+      different insight into how to solve them.
+    </p>
+    <p>
+      Blogs are great for telling one off stories and demonstrating real world
+      experiences. However, some folks aren't quite ready to jump straight into
+      code. There are some pretty great learning resources out there, and I'm
+      not looking to replace them. However, I want to supplement them with
+      important information I think today's developers are not learning. As
+      such, I've created these education resources for public consumption. These
+      resources are intended to teach computer science and programming related
+      topics that are typically taught in universities.
+    </p>
+    <p>
+      I've always wanted to write a textbook or materials on specific subjects.
+      I'll write more about my personal motivations for this project a bit
+      later.
+    </p>
+  </div>
+  <section class="bg-blue-100 dark:bg-slate-900">
+    <div
+      class="container max-w-[90%] mx-auto px-4 py-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+    >
+      <a href="/learn/cs101/introduction">CS101</a>
+    </div>
+  </section>
+</HomeLayout>
