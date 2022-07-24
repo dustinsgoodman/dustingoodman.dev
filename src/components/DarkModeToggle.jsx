@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import { SunIcon, MoonIcon } from '@/components/Icons';
 
 function DarkModeToggle({ className = '' }) {
