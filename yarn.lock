@@ -95,6 +95,16 @@
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.6.1.tgz#f2289d46e532b01ce38afb6cf155f669c2601230"
   integrity sha512-/Hoppze9XPUfCIx44EUzKe3Tg7alr1MHl2++QJlDRQZfKfIvMBvf8mRMSPh7vzfayH6IlFaQUS/jMtGUWKt9wA==
 
+"@astrojs/tailwind@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-0.2.4.tgz#6d772acc90003fb5567408c29fe22c5894b4217f"
+  integrity sha512-rDpUHXOUmQkReIvaTBgxYsrsz8Hgt93Tbw9gu7Bkf7Uys6cBCnnQgFpPtdgrqyLNZ0qo9vAxWHSyBSi6jAs1yA==
+  dependencies:
+    "@proload/core" "^0.3.2"
+    autoprefixer "^10.4.7"
+    postcss "^8.4.14"
+    tailwindcss "^3.0.24"
+
 "@astrojs/telemetry@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@astrojs/telemetry/-/telemetry-0.4.1.tgz#5e44298641009c850afb3cba63281ed133e943e5"
@@ -3553,7 +3563,7 @@ preact-render-to-string@^5.2.0:
   dependencies:
     pretty-format "^3.8.0"
 
-preact@^10.10.0:
+preact@^10.6.5:
   version "10.10.0"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.10.0.tgz#7434750a24b59dae1957d95dc0aa47a4a8e9a180"
   integrity sha512-fszkg1iJJjq68I4lI8ZsmBiaoQiQHbxf1lNq+72EmC/mZOsFF5zn3k1yv9QGoFgIXzgsdSKtYymLJsrJPoamjQ==
@@ -3609,7 +3619,7 @@ prettier@^2.7.1:
 pretty-format@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-3.8.0.tgz#bfbed56d5e9a776645f4b1ff7aa1a3ac4fa3c385"
-  integrity sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=
+  integrity sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==
 
 prismjs@^1.28.0:
   version "1.28.0"
@@ -4270,7 +4280,7 @@ synckit@^0.7.0:
     "@pkgr/utils" "^2.3.0"
     tslib "^2.4.0"
 
-tailwindcss@^3.1.6:
+tailwindcss@^3.0.24, tailwindcss@^3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.6.tgz#bcb719357776c39e6376a8d84e9834b2b19a49f1"
   integrity sha512-7skAOY56erZAFQssT1xkpk+kWt2NrO45kORlxFPXUt3CiGsVPhH1smuH5XoDH6sGPXLyBv+zgCKA2HWBsgCytg==

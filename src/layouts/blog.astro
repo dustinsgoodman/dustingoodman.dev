@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@/layouts/base.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import BlogPost from '@/components/BlogPost.astro';
 
 const { content } = Astro.props;
@@ -14,7 +16,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   {canonicalURL}
   {redirectUrl}
 >
-  <BlogPost post={content}>
-    <slot />
-  </BlogPost>
+  <Header />
+  <main class="container mx-auto py-4 md:py-8">
+    <BlogPost post={content}>
+      <slot />
+    </BlogPost>
+  </main>
+  <Footer />
 </BaseLayout>

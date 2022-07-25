@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/base.astro';
-import BlogPostPreview from '../../components/BlogPostPreview.astro';
+import HomeLayout from '@/layouts/home.astro';
+import BlogPostPreview from '@/components/BlogPostPreview.astro';
 import { BlogPost } from '@/types';
 
 const allPosts = await Astro.glob<BlogPost>('./**/*.md');
@@ -21,12 +21,17 @@ const posts = allPosts
   });
 ---
 
-<BaseLayout
+<HomeLayout
   title="Blog | Dustin Goodman"
   description="Learn from Dustin Goodman's blog"
-  enableWrapper={false}
-  enableVerticalPadding={false}
 >
+  <div class="container mx-auto px-4 py-4">
+    <h1>Dustin's Blog</h1>
+    <p>
+      Writings on interesting problems, releases, or other topics I think are
+      interesting that I recommend you read too.
+    </p>
+  </div>
   <section class="bg-blue-100 dark:bg-slate-900">
     <div
       class="container max-w-[90%] mx-auto px-4 py-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4"
@@ -34,4 +39,4 @@ const posts = allPosts
       {posts.map((post) => <BlogPostPreview post={post} />)}
     </div>
   </section>
-</BaseLayout>
+</HomeLayout>
