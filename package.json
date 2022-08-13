@@ -14,16 +14,18 @@
     "astro": "^1.0.5",
     "autoprefixer": "^10.4.8",
     "classnames": "^2.3.1",
-    "postcss": "^8.4.14",
-    "preact": "^10.10.0",
+    "postcss": "^8.4.16",
+    "preact": "^10.10.2",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.3.0",
-    "prettier-plugin-tailwindcss": "^0.1.12",
+    "prettier-plugin-astro": "^0.5.0",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-external-links": "^2.0.0",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
     "vite-imagetools": "^4.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "D": "^1.0.0"
+  }
 }
