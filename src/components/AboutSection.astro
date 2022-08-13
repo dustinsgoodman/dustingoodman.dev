@@ -55,19 +55,21 @@ const socialLinks = [
             Connect with Dustin
           </h3>
           <ul class="flex items-center justify-center space-x-4 list-none ml-0">
-            {socialLinks.map(({ href, label, icon: Icon }) => (
-              <li>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  class="block rounded-full bg-blue-600 p-2 text-4xl text-white hover:bg-blue-900 hover:text-slate-100 dark:bg-white dark:text-blue-900 dark:hover:bg-slate-300 dark:hover:text-blue-700"
-                >
-                  <Icon />
-                </a>
-              </li>
-            ))}
+            {
+              socialLinks.map(({ href, label, icon: Icon }) => (
+                <li>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    class="block rounded-full bg-blue-600 p-2 text-4xl text-white hover:bg-blue-900 hover:text-slate-100 dark:bg-white dark:text-blue-900 dark:hover:bg-slate-300 dark:hover:text-blue-700"
+                  >
+                    <Icon />
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
