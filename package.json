@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/preact": "^0.5.2",
     "astro": "^0.0.0-rc-20220722032928",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.8",
     "classnames": "^2.3.1",
     "postcss": "^8.4.14",
     "preact": "^10.10.0",
