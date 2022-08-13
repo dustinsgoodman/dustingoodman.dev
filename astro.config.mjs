@@ -6,8 +6,9 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 // @ts-check
 import { imagetools } from 'vite-imagetools';
-import preact from '@astrojs/preact';
 import { defineConfig } from 'astro/config';
+import preact from '@astrojs/preact';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig(
@@ -35,7 +36,14 @@ export default defineConfig(
         ],
       ],
     },
-    integrations: [preact()],
+    integrations: [
+      tailwind({
+        config: {
+          applyBaseStyles: false,
+        },
+      }),
+      preact(),
+    ],
     vite: {
       plugins: [imagetools()],
     },
