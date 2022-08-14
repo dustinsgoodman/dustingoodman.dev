@@ -1,3 +1,4 @@
+export { default as CaretRightIcon } from './CaretRightIcon';
 export { default as CloseIcon } from './CloseIcon';
 export { default as CodeIcon } from './CodeIcon';
 export { default as DevToIcon } from './DevToIcon';
