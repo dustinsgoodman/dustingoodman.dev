@@ -1,6 +1,7 @@
 {
   "title": "Programming Fundamentals",
   "path": "/learn/programming-fundamentals",
+  "heading": true,
   "routes": [
     {
       "title": "Chapter 0: Introduction",
