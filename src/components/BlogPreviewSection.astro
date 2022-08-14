@@ -11,7 +11,11 @@ const { blogPosts } = Astro.props;
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:px-0">
       {
         blogPosts.map((post, idx) => (
-          <BlogPostPreview post={post} className={idx > 2 ? 'xl:hidden' : ''} />
+          <BlogPostPreview
+            post={post}
+            className={idx > 2 ? 'xl:hidden' : ''}
+            layout="card"
+          />
         ))
       }
     </div>
