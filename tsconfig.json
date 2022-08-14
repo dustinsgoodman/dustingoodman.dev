@@ -2,11 +2,15 @@
   "moduleResolution": "node",
   "compilerOptions": {
     "baseUrl": ".",
+    "moduleResolution": "node",
+    "module": "ES2020",
+    "target": "ES2020",
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/images/*": ["src/images/*"],
       "@/layouts/*": ["src/layouts/*"],
-      "@/types": ["src/types/index"]
+      "@/types": ["src/types/index"],
+      "@/utils/*": ["src/utils/*"]
     }
   }
 }
