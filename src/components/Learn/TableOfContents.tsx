@@ -12,7 +12,7 @@ const TableOfContents: FunctionalComponent<Props> = ({ headers = [] }) => {
     ({ depth }) => depth > 1 && depth < 4
   );
   const toc = useRef<HTMLUListElement>();
-  const [currentID, setCurrentID] = useState(targetedHeaders[0].slug);
+  const [currentID, setCurrentID] = useState(targetedHeaders?.[0]?.slug);
   const onThisPageID = 'on-this-page-heading';
 
   useEffect(() => {
