@@ -5,6 +5,8 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import LearnNav from '@/components/Learn/Nav.astro';
 import TableOfContents from '@/components/Learn/TableOfContents';
+import Breadcrumbs from '@/components/Learn/Breadcrumbs.astro';
+import { getNavContent, getRouteInfo } from '@/utils/nav';
 
 export interface Props {
   title: string;
@@ -16,6 +18,9 @@ const { title, description, content } = Astro.props as Props;
 const url = new URL(Astro.request.url);
 const currentPage = url.pathname;
 const headers = Astro.props.headings;
+
+const navContent = getNavContent(currentPage);
+const { breadcrumbs } = getRouteInfo(navContent, currentPage);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -24,7 +29,7 @@ const headers = Astro.props.headings;
     <aside
       class="hidden lg:flex fixed lg:w-80 top-20 bottom-0 left-0 p-0 z-10 bg-transparent"
     >
-      <LearnNav currentPage={currentPage} />
+      <LearnNav navContent={navContent} />
     </aside>
     <aside
       class="hidden lg:flex fixed lg:w-72 top-20 bottom-0 right-0 p-0 z-10"
@@ -35,6 +40,7 @@ const headers = Astro.props.headings;
     </aside>
     <div class="h-full min-w-0 mx-0 lg:ml-80 lg:mr-72">
       <main class="mx-auto px-16 py-4 md:py-8">
+        {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
         <h1>
           {content.title}
         </h1>
