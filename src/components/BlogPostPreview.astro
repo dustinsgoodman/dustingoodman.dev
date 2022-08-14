@@ -1,13 +1,17 @@
 ---
 import cn from 'classnames';
 import { BlogPost } from '@/types';
+
 export interface Props {
   post: BlogPost;
   className?: String;
+  layout?: 'card' | 'list';
 }
 
-const { post, className } = Astro.props;
+const { post, className, layout = 'card' } = Astro.props as Props;
 const isOffsite = !!post.originalArticle;
+const isCard = layout === 'card';
+const isList = layout === 'list';
 
 const getReadMoreText = (postSource: string | undefined) => {
   if (postSource === 'Medium') {
@@ -31,8 +35,15 @@ const getReadMoreText = (postSource: string | undefined) => {
   )}
   rel="noopener noreferrer"
 >
-  <article class="flex flex-col h-full">
-    <div class="h-48 sm:h-64 mb-4 bg-blue-900 flex">
+  <article
+    class={cn('flex', { 'flex-col h-full': isCard, 'flex-row w-full': isList })}
+  >
+    <div
+      class={cn('bg-blue-900 flex', {
+        'h-48 sm:h-64 order-first mb-4': isCard,
+        'w-48 sm:w-1/3 order-last': isList,
+      })}
+    >
       <img
         src={post.heroImage}
         alt={post.alt}
@@ -40,7 +51,7 @@ const getReadMoreText = (postSource: string | undefined) => {
         loading="lazy"
       />
     </div>
-    <div class="px-4">
+    <div class={cn('flex flex-col grow px-4', { 'w-2/3 p-4': isList })}>
       <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">
         {post.publishDate}
       </p>
@@ -49,14 +60,15 @@ const getReadMoreText = (postSource: string | undefined) => {
       >
         {post.title}
       </h2>
-    </div>
-    <div class="text-gray-500 dark:text-gray-200 grow p-4">
-      {post.description}
-    </div>
-    <div
-      class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 px-4 pb-4"
-    >
-      {getReadMoreText(post.originalSource)} &rarr;
+
+      <div class="text-gray-500 dark:text-gray-200 grow py-2">
+        {post.description}
+      </div>
+      <div
+        class="font-bold text-blue-600 group-hover:text-blue-800 dark:text-blue-100 dark:group-hover:text-blue-300 py-2"
+      >
+        {getReadMoreText(post.originalSource)} &rarr;
+      </div>
     </div>
   </article>
 </a>
