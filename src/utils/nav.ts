@@ -5,9 +5,11 @@ export interface RouteItem {
   path?: string;
   /** List of sub-routes */
   routes?: RouteItem[];
+  /** Whether the entry is a heading */
+  heading?: boolean;
 }
 
-interface RouteMeta {
+export interface RouteMeta {
   prevRoute?: RouteItem;
   currentRoute?: RouteItem;
   nextRoute?: RouteItem;
@@ -54,11 +56,11 @@ function getRouteMeta(
     ctx.nextRoute = routeTree;
   }
 
-  if (routeTree.path === currentPage) {
+  if (routeTree.path === currentPage && !routeTree.heading) {
     ctx.currentRoute = routeTree;
   }
 
-  if (!ctx.currentRoute) {
+  if (!ctx.currentRoute && !routeTree.heading) {
     ctx.prevRoute = routeTree;
   }
 
