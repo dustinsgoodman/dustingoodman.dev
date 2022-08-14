@@ -1,14 +1,12 @@
 ---
-import { getSidebarNav, getRouteInfo } from '@/utils/nav';
+import { RouteItem } from '@/utils/nav';
 
 export interface Props {
-  currentPage: string;
+  navContent: RouteItem;
 }
 
-const { currentPage } = Astro.props as Props;
-const sidebarNav = getSidebarNav(currentPage);
-const navPaths = sidebarNav.routes;
-const routeInfo = getRouteInfo(sidebarNav, currentPage);
+const { navContent } = Astro.props as Props;
+const navPaths = navContent.routes;
 ---
 
 <nav

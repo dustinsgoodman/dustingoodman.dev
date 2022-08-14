@@ -4,39 +4,39 @@
   "routes": [
     {
       "title": "Chapter 0: Introduction",
-      "path": "/learn/programming-fundamentals/introduction",
+      "path": "/learn/programming-fundamentals",
       "routes": [
         {
           "title": "Why this book?",
-          "path": "/learn/programming-fundamentals/why-this-book"
+          "path": "/learn/programming-fundamentals/introduction/why-this-book"
         },
         {
           "title": "How to use this book",
-          "path": "/learn/programming-fundamentals/how-to-use-this-book"
+          "path": "/learn/programming-fundamentals/introduction/how-to-use-this-book"
         },
         {
           "title": "Programming",
-          "path": "/learn/programming-fundamentals/programming"
+          "path": "/learn/programming-fundamentals/introduction/programming"
         },
         {
           "title": "The Command Line",
-          "path": "/learn/programming-fundamentals/the-command-line"
+          "path": "/learn/programming-fundamentals/introduction/the-command-line"
         },
         {
           "title": "How programs work",
-          "path": "/learn/programming-fundamentals/how-programs-work"
+          "path": "/learn/programming-fundamentals/introduction/how-programs-work"
         },
         {
           "title": "Compiled v Interpretted",
-          "path": "/learn/programming-fundamentals/compiled-v-interpretted"
+          "path": "/learn/programming-fundamentals/introduction/compiled-v-interpretted"
         },
         {
           "title": "Syntax",
-          "path": "/learn/programming-fundamentals/syntax"
+          "path": "/learn/programming-fundamentals/introduction/syntax"
         },
         {
           "title": "Styles of Programming",
-          "path": "/learn/programming-fundamentals/styles-of-programming"
+          "path": "/learn/programming-fundamentals/introduction/styles-of-programming"
         }
       ]
     },
@@ -46,35 +46,35 @@
       "routes": [
         {
           "title": "What are data types?",
-          "path": "/learn/programming-fundamentals/what-are-data-types"
+          "path": "/learn/programming-fundamentals/data-types/what-are-data-types"
         },
         {
           "title": "Variables",
-          "path": "/learn/programming-fundamentals/variables"
+          "path": "/learn/programming-fundamentals/data-types/variables"
         },
         {
           "title": "Variable Assignment",
-          "path": "/learn/programming-fundamentals/variable-assignment"
+          "path": "/learn/programming-fundamentals/data-types/variable-assignment"
         },
         {
           "title": "Arithmetic Operators",
-          "path": "/learn/programming-fundamentals/arithmetic-operators"
+          "path": "/learn/programming-fundamentals/data-types/arithmetic-operators"
         },
         {
           "title": "Logical Operators",
-          "path": "/learn/programming-fundamentals/logical-operators"
+          "path": "/learn/programming-fundamentals/data-types/logical-operators"
         },
         {
           "title": "Bitwise Operators",
-          "path": "/learn/programming-fundamentals/bitwise-operators"
+          "path": "/learn/programming-fundamentals/data-types/bitwise-operators"
         },
         {
           "title": "Arrays",
-          "path": "/learn/programming-fundamentals/arrays"
+          "path": "/learn/programming-fundamentals/data-types/arrays"
         },
         {
           "title": "Multi-dimensional Arrays",
-          "path": "/learn/programming-fundamentals/multi-dimensional-arrays"
+          "path": "/learn/programming-fundamentals/data-types/multi-dimensional-arrays"
         }
       ]
     },
@@ -84,35 +84,35 @@
       "routes": [
         {
           "title": "Functions and Methods",
-          "path": "/learn/programming-fundamentals/functions-and-methods"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/functions-and-methods"
         },
         {
           "title": "Function Parameters",
-          "path": "/learn/programming-fundamentals/function-parameters"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/function-parameters"
         },
         {
           "title": "Value v Reference",
-          "path": "/learn/programming-fundamentals/value-v-reference"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/value-v-reference"
         },
         {
           "title": "Functional Decomposition",
-          "path": "/learn/programming-fundamentals/functional-decomposition"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/functional-decomposition"
         },
         {
           "title": "Return Values",
-          "path": "/learn/programming-fundamentals/return-values"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/return-values"
         },
         {
           "title": "Displaying Output",
-          "path": "/learn/programming-fundamentals/displaying-output"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/displaying-output"
         },
         {
           "title": "Errors",
-          "path": "/learn/programming-fundamentals/errors"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/errors"
         },
         {
           "title": "Debugging",
-          "path": "/learn/programming-fundamentals/debugging"
+          "path": "/learn/programming-fundamentals/functions-and-running-programs/debugging"
         }
       ]
     },
@@ -122,31 +122,31 @@
       "routes": [
         {
           "title": "What are conditional statements?",
-          "path": "/learn/programming-fundamentals/what-are-conditional-statements"
+          "path": "/learn/programming-fundamentals/conditional-statements/what-are-conditional-statements"
         },
         {
           "title": "The if Statement",
-          "path": "/learn/programming-fundamentals/the-if-statement"
+          "path": "/learn/programming-fundamentals/conditional-statements/the-if-statement"
         },
         {
           "title": "The else Statement",
-          "path": "/learn/programming-fundamentals/the-else-statement"
+          "path": "/learn/programming-fundamentals/conditional-statements/the-else-statement"
         },
         {
           "title": "The else if statement",
-          "path": "/learn/programming-fundamentals/the-else-if-statement"
+          "path": "/learn/programming-fundamentals/conditional-statements/the-else-if-statement"
         },
         {
           "title": "The Ternary Operator",
-          "path": "/learn/programming-fundamentals/the-ternary-operator"
+          "path": "/learn/programming-fundamentals/conditional-statements/the-ternary-operator"
         },
         {
           "title": "The switch statement",
-          "path": "/learn/programming-fundamentals/the-switch-statement"
+          "path": "/learn/programming-fundamentals/conditional-statements/the-switch-statement"
         },
         {
           "title": "How to pick your conditional pattern",
-          "path": "/learn/programming-fundamentals/picking-conditional-pattern"
+          "path": "/learn/programming-fundamentals/conditional-statements/picking-conditional-pattern"
         }
       ]
     },
@@ -156,27 +156,27 @@
       "routes": [
         {
           "title": "What are loops?",
-          "path": "/learn/programming-fundamentals/what-are-loops"
+          "path": "/learn/programming-fundamentals/loops/what-are-loops"
         },
         {
           "title": "The while Loop",
-          "path": "/learn/programming-fundamentals/the-while-loop"
+          "path": "/learn/programming-fundamentals/loops/the-while-loop"
         },
         {
           "title": "The do while Loop",
-          "path": "/learn/programming-fundamentals/the-do-while-loop"
+          "path": "/learn/programming-fundamentals/loops/the-do-while-loop"
         },
         {
           "title": "The for Loop",
-          "path": "/learn/programming-fundamentals/the-for-loop"
+          "path": "/learn/programming-fundamentals/loops/the-for-loop"
         },
         {
           "title": "Functional Looping",
-          "path": "/learn/programming-fundamentals/functional-looping"
+          "path": "/learn/programming-fundamentals/loops/functional-looping"
         },
         {
           "title": "Special Loops",
-          "path": "/learn/programming-fundamentals/special-loops"
+          "path": "/learn/programming-fundamentals/loops/special-loops"
         }
       ]
     },
@@ -186,23 +186,23 @@
       "routes": [
         {
           "title": "What is recursion?",
-          "path": "/learn/programming-fundamentals/what-is-recursion"
+          "path": "/learn/programming-fundamentals/recursion/what-is-recursion"
         },
         {
           "title": "Why use recursion?",
-          "path": "/learn/programming-fundamentals/why-use-recursion"
+          "path": "/learn/programming-fundamentals/recursion/why-use-recursion"
         },
         {
           "title": "Our first recursive function",
-          "path": "/learn/programming-fundamentals/our-first-recursive-function"
+          "path": "/learn/programming-fundamentals/recursion/our-first-recursive-function"
         },
         {
           "title": "Tracing recursive functions",
-          "path": "/learn/programming-fundamentals/tracing-recursive-functions"
+          "path": "/learn/programming-fundamentals/recursion/tracing-recursive-functions"
         },
         {
           "title": "Converting Recursion to Loops",
-          "path": "/learn/programming-fundamentals/converting-recrusion-to-loops"
+          "path": "/learn/programming-fundamentals/recursion/converting-recrusion-to-loops"
         }
       ]
     },
@@ -212,27 +212,27 @@
       "routes": [
         {
           "title": "What is an object?",
-          "path": "/learn/programming-fundamentals/what-is-an-object"
+          "path": "/learn/programming-fundamentals/objects/what-is-an-object"
         },
         {
           "title": "Maps, Dictionaries, Tables",
-          "path": "/learn/programming-fundamentals/maps-dictionaries-tables"
+          "path": "/learn/programming-fundamentals/objects/maps-dictionaries-tables"
         },
         {
           "title": "Creating Objects",
-          "path": "/learn/programming-fundamentals/creating-objects"
+          "path": "/learn/programming-fundamentals/objects/creating-objects"
         },
         {
           "title": "Class Inheritence",
-          "path": "/learn/programming-fundamentals/class-inheritence"
+          "path": "/learn/programming-fundamentals/objects/class-inheritence"
         },
         {
           "title": "Abstract Classes and Interfaces",
-          "path": "/learn/programming-fundamentals/abstract-classes-and-interfaces"
+          "path": "/learn/programming-fundamentals/objects/abstract-classes-and-interfaces"
         },
         {
           "title": "Polymorphism",
-          "path": "/learn/programming-fundamentals/polymorphism"
+          "path": "/learn/programming-fundamentals/objects/polymorphism"
         }
       ]
     },
@@ -242,15 +242,15 @@
       "routes": [
         {
           "title": "How to use regular expressions?",
-          "path": "/learn/programming-fundamentals/how-to-use-regular-expressions"
+          "path": "/learn/programming-fundamentals/regular-expressions/how-to-use-regular-expressions"
         },
         {
           "title": "Regular Expression Special Tokens",
-          "path": "/learn/programming-fundamentals/regular-expression-special-tokens"
+          "path": "/learn/programming-fundamentals/regular-expressions/regular-expression-special-tokens"
         },
         {
           "title": "Pattern Matching and Grouping",
-          "path": "/learn/programming-fundamentals/pattern-matching-and-grouping"
+          "path": "/learn/programming-fundamentals/regular-expressions/pattern-matching-and-grouping"
         }
       ]
     },
@@ -260,23 +260,23 @@
       "routes": [
         {
           "title": "File Permissions",
-          "path": "/learn/programming-fundamentals/file-permissions"
+          "path": "/learn/programming-fundamentals/file-io/file-permissions"
         },
         {
           "title": "Command Line Interactions",
-          "path": "/learn/programming-fundamentals/command-line-interactions"
+          "path": "/learn/programming-fundamentals/file-io/command-line-interactions"
         },
         {
           "title": "Reading Files",
-          "path": "/learn/programming-fundamentals/reading-files"
+          "path": "/learn/programming-fundamentals/file-io/reading-files"
         },
         {
           "title": "Writing Files",
-          "path": "/learn/programming-fundamentals/writing-files"
+          "path": "/learn/programming-fundamentals/file-io/writing-files"
         },
         {
           "title": "File Streaming",
-          "path": "/learn/programming-fundamentals/file-streaming"
+          "path": "/learn/programming-fundamentals/file-io/file-streaming"
         }
       ]
     },
@@ -286,25 +286,25 @@
       "routes": [
         {
           "title": "Types of Exceptions",
-          "path": "/learn/programming-fundamentals/types-of-exceptions"
+          "path": "/learn/programming-fundamentals/exception-handling/types-of-exceptions"
         },
         {
           "title": "try Blocks",
-          "path": "/learn/programming-fundamentals/try-blocks"
+          "path": "/learn/programming-fundamentals/exception-handling/try-blocks"
         },
         {
           "title": "catch Blocks",
-          "path": "/learn/programming-fundamentals/catch-blocks"
+          "path": "/learn/programming-fundamentals/exception-handling/catch-blocks"
         },
         {
           "title": "finally Blocks",
-          "path": "/learn/programming-fundamentals/finally-blocks"
+          "path": "/learn/programming-fundamentals/exception-handling/finally-blocks"
         }
       ]
     },
     {
-      "title": "Chapter 10: What next?",
-      "path": "/learn/programming-fundamentals/what-next"
+      "title": "Chapter 10: What's next?",
+      "path": "/learn/programming-fundamentals/whats-next"
     }
   ]
 }

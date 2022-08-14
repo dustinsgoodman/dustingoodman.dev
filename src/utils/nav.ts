@@ -1,4 +1,4 @@
-interface RouteItem {
+export interface RouteItem {
   /** Page title (for the sidebar) */
   title: string;
   /** Path to page */
@@ -29,7 +29,7 @@ const navData = mapDefaultExports<RouteItem>(
   import.meta.glob('../navData/*.json', { eager: true })
 );
 
-export function getSidebarNav(currentPage: string): RouteItem {
+export function getNavContent(currentPage: string): RouteItem {
   const [_empty, _learn, courseName] = currentPage.split('/');
   return navData[courseName];
 }
@@ -78,7 +78,7 @@ function getBreadcrumbs(
   currentPage: string,
   breadcrumbs: RouteItem[] = []
 ): RouteItem[] {
-  if (currentPage.includes(routeTree.path)) {
+  if (currentPage === routeTree.path) {
     return breadcrumbs;
   }
 

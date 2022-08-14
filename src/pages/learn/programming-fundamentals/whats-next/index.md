@@ -1,5 +1,5 @@
 ---
-title: What next?
+title: What's next?
 layout: '@/layouts/learn.astro'
 ---
 
