@@ -7,7 +7,7 @@ export interface RouteItem {
   routes?: RouteItem[];
 }
 
-interface RouteMeta {
+export interface RouteMeta {
   prevRoute?: RouteItem;
   currentRoute?: RouteItem;
   nextRoute?: RouteItem;

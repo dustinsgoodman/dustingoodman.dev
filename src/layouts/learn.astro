@@ -3,9 +3,10 @@ import { MarkdownContent } from 'astro';
 import BaseLayout from '@/layouts/base.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import LearnNav from '@/components/Learn/Nav.astro';
-import TableOfContents from '@/components/Learn/TableOfContents';
-import Breadcrumbs from '@/components/Learn/Breadcrumbs.astro';
+import LearnNav from '@/components/learn/Nav.astro';
+import TableOfContents from '@/components/learn/TableOfContents';
+import Breadcrumbs from '@/components/learn/Breadcrumbs.astro';
+import Pagination from '@/components/learn/Pagination.astro';
 import { getNavContent, getRouteInfo } from '@/utils/nav';
 
 export interface Props {
@@ -20,7 +21,10 @@ const currentPage = url.pathname;
 const headers = Astro.props.headings;
 
 const navContent = getNavContent(currentPage);
-const { breadcrumbs } = getRouteInfo(navContent, currentPage);
+const { breadcrumbs, nextRoute, prevRoute } = getRouteInfo(
+  navContent,
+  currentPage
+);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -45,6 +49,7 @@ const { breadcrumbs } = getRouteInfo(navContent, currentPage);
           {content.title}
         </h1>
         <slot />
+        <Pagination nextRoute={nextRoute} {prevRoute} />
       </main>
       <Footer />
     </div>
