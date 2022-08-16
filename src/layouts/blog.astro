@@ -10,17 +10,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <BaseLayout
-  {title}
-  {description}
-  socialImage={`https://dustingoodman.dev${heroImage}`}
-  {canonicalURL}
-  {redirectUrl}
+	{title}
+	{description}
+	socialImage={`https://dustingoodman.dev${heroImage}`}
+	{canonicalURL}
+	{redirectUrl}
 >
-  <Header />
-  <main class="container mx-auto py-4 md:py-8">
-    <BlogPost post={content}>
-      <slot />
-    </BlogPost>
-  </main>
-  <Footer />
+	<Header />
+	<main class="container mx-auto py-4 md:py-8">
+		<BlogPost post={content}>
+			<slot />
+		</BlogPost>
+	</main>
+	<Footer />
 </BaseLayout>

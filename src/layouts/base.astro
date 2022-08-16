@@ -3,43 +3,43 @@ import '../styles/base.css';
 import Head from '@/components/Head.astro';
 
 export interface Props {
-  title: string;
-  description: string;
-  socialImage?: string;
-  canonicalUrl?: string;
-  redirectUrl?: string;
+	title: string;
+	description: string;
+	socialImage?: string;
+	canonicalUrl?: string;
+	redirectUrl?: string;
 }
 
 const { title, description, socialImage, canonicalURL, redirectUrl } =
-  Astro.props;
+	Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <Head {title} {description} {socialImage} {canonicalURL} {redirectUrl} />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Azeret Mono&display=swap"
-    />
-    <script is:inline>
-      const html = document.querySelector('html');
-      let darkMode = localStorage.getItem('darkMode');
-      if (!darkMode) {
-        darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      } else {
-        darkMode = darkMode === 'true';
-      }
-      if (darkMode) {
-        html.classList.add('dark');
-      }
-      localStorage.setItem('darkMode', darkMode);
-    </script>
-  </head>
-  <body class="text-gray-900 dark:text-white bg-white dark:bg-black">
-    <slot />
-  </body>
+	<head>
+		<Head {title} {description} {socialImage} {canonicalURL} {redirectUrl} />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Azeret Mono&display=swap"
+		/>
+		<script is:inline>
+			const html = document.querySelector('html');
+			let darkMode = localStorage.getItem('darkMode');
+			if (!darkMode) {
+				darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			} else {
+				darkMode = darkMode === 'true';
+			}
+			if (darkMode) {
+				html.classList.add('dark');
+			}
+			localStorage.setItem('darkMode', darkMode);
+		</script>
+	</head>
+	<body class="text-gray-900 dark:text-white bg-white dark:bg-black">
+		<slot />
+	</body>
 </html>

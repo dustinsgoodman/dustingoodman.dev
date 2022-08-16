@@ -1,56 +1,56 @@
 ---
 import FooterLink from '@/components/FooterLink';
 import {
-  DevToIcon,
-  GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
+	DevToIcon,
+	GithubIcon,
+	TwitchIcon,
+	TwitterIcon,
 } from '@/components/Icons';
 
 const currentYear = new Date().getFullYear();
 ---
 
 <div class="w-full">
-  <footer
-    class="flex items-center justify-between bg-white dark:bg-black text-center px-4 sm:px-8 py-4"
-  >
-    <div>
-      &copy; {currentYear} Dustin Goodman
-    </div>
+	<footer
+		class="flex items-center justify-between bg-white dark:bg-black text-center px-4 sm:px-8 py-4"
+	>
+		<div>
+			&copy; {currentYear} Dustin Goodman
+		</div>
 
-    <div class="flex items-center space-x-2">
-      <FooterLink
-        href="https://twitter.com/dustinsgoodman"
-        target="_blank"
-        aria-label="Dustin's Twitter"
-        rel="noopener noreferrer"
-      >
-        <TwitterIcon />
-      </FooterLink>
-      <FooterLink
-        href="https://github.com/dustinsgoodman"
-        target="_blank"
-        aria-label="Dustin's Github"
-        rel="noopener noreferrer"
-      >
-        <GithubIcon />
-      </FooterLink>
-      <FooterLink
-        href="https://twitch.tv/sharocko"
-        target="_blank"
-        aria-label="Dustin's Twitch"
-        rel="noopener noreferrer"
-      >
-        <TwitchIcon />
-      </FooterLink>
-      <FooterLink
-        href="https://dev.to/dustinsgoodman"
-        target="_blank"
-        aria-label="Dustin's DevTo"
-        rel="noopener noreferrer"
-      >
-        <DevToIcon />
-      </FooterLink>
-    </div>
-  </footer>
+		<div class="flex items-center space-x-2">
+			<FooterLink
+				href="https://twitter.com/dustinsgoodman"
+				target="_blank"
+				aria-label="Dustin's Twitter"
+				rel="noopener noreferrer"
+			>
+				<TwitterIcon />
+			</FooterLink>
+			<FooterLink
+				href="https://github.com/dustinsgoodman"
+				target="_blank"
+				aria-label="Dustin's Github"
+				rel="noopener noreferrer"
+			>
+				<GithubIcon />
+			</FooterLink>
+			<FooterLink
+				href="https://twitch.tv/sharocko"
+				target="_blank"
+				aria-label="Dustin's Twitch"
+				rel="noopener noreferrer"
+			>
+				<TwitchIcon />
+			</FooterLink>
+			<FooterLink
+				href="https://dev.to/dustinsgoodman"
+				target="_blank"
+				aria-label="Dustin's DevTo"
+				rel="noopener noreferrer"
+			>
+				<DevToIcon />
+			</FooterLink>
+		</div>
+	</footer>
 </div>

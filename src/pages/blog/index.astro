@@ -5,40 +5,40 @@ import { BlogPost } from '@/types';
 
 const allPosts = await Astro.glob<BlogPost>('./**/*.md');
 const posts = allPosts
-  .filter(
-    ({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
-  )
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
-  )
-  .map(({ url, frontmatter }) => {
-    return {
-      ...frontmatter,
-      url,
-    };
-  });
+	.filter(
+		({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
+	)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() -
+			new Date(a.frontmatter.publishDate).valueOf()
+	)
+	.map(({ url, frontmatter }) => {
+		return {
+			...frontmatter,
+			url,
+		};
+	});
 ---
 
 <HomeLayout
-  title="Blog | Dustin Goodman"
-  description="Learn from Dustin Goodman's blog"
+	title="Blog | Dustin Goodman"
+	description="Learn from Dustin Goodman's blog"
 >
-  <section class="container mx-auto px-4 py-4">
-    <h1>Dustin's Blog</h1>
-    <p>
-      I write about problems I think are interesting, releases of personal or
-      external projects that are important to me, and a variety of other topics
-      that I hope interest readers. My goal is to provide valuable insight into
-      web development, software engineering, or engineering management practices
-      that I've learned over the years. This links to all my blog posts across
-      the internet. I hope you find my posts valuable. 🤓
-    </p>
-  </section>
-  <section class="bg-blue-100 dark:bg-slate-900">
-    <div class="container max-w-[90%] mx-auto px-4 py-8 gap-y-2 flex flex-col">
-      {posts.map((post) => <BlogPostPreview post={post} layout="list" />)}
-    </div>
-  </section>
+	<section class="container mx-auto px-4 py-4">
+		<h1>Dustin's Blog</h1>
+		<p>
+			I write about problems I think are interesting, releases of personal or
+			external projects that are important to me, and a variety of other topics
+			that I hope interest readers. My goal is to provide valuable insight into
+			web development, software engineering, or engineering management practices
+			that I've learned over the years. This links to all my blog posts across
+			the internet. I hope you find my posts valuable. 🤓
+		</p>
+	</section>
+	<section class="bg-blue-100 dark:bg-slate-900">
+		<div class="container max-w-[90%] mx-auto px-4 py-8 gap-y-2 flex flex-col">
+			{posts.map((post) => <BlogPostPreview post={post} layout="list" />)}
+		</div>
+	</section>
 </HomeLayout>
