@@ -3,78 +3,78 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-display: swap;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    scroll-padding-top: 5rem;
-  }
+	html {
+		font-display: swap;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		scroll-padding-top: 5rem;
+	}
 
-  body {
-    @apply m-0 text-gray-900;
-  }
+	body {
+		@apply m-0 text-gray-900;
+	}
 
-  * {
-    @apply box-content;
-  }
+	* {
+		@apply box-content;
+	}
 
-  img {
-    @apply h-auto max-w-full;
-  }
+	img {
+		@apply h-auto max-w-full;
+	}
 
-  h1 {
-    @apply my-4 text-4xl font-bold;
-  }
+	h1 {
+		@apply my-4 text-4xl font-bold;
+	}
 
-  h2 {
-    @apply mb-4 text-3xl font-bold;
-  }
+	h2 {
+		@apply mb-4 text-3xl font-bold;
+	}
 
-  h3 {
-    @apply mb-2 text-2xl font-bold;
-  }
+	h3 {
+		@apply mb-2 text-2xl font-bold;
+	}
 
-  a {
-    @apply text-blue-600 hover:text-blue-900 hover:underline dark:text-sky-400 dark:hover:text-sky-600;
-  }
+	a {
+		@apply text-blue-600 hover:text-blue-900 hover:underline dark:text-sky-400 dark:hover:text-sky-600;
+	}
 
-  p {
-    @apply mb-4 block leading-relaxed;
-  }
+	p {
+		@apply mb-4 block leading-relaxed;
+	}
 
-  ol,
-  ul {
-    @apply ml-8 list-outside;
-  }
+	ol,
+	ul {
+		@apply ml-8 list-outside;
+	}
 
-  ol {
-    @apply list-decimal;
-  }
+	ol {
+		@apply list-decimal;
+	}
 
-  ul {
-    @apply list-disc;
-  }
+	ul {
+		@apply list-disc;
+	}
 
-  li {
-    @apply mb-2;
-  }
+	li {
+		@apply mb-2;
+	}
 
-  li > p {
-    @apply mb-1;
-  }
+	li > p {
+		@apply mb-1;
+	}
 
-  p > img {
-    @apply mx-auto;
-  }
+	p > img {
+		@apply mx-auto;
+	}
 
-  pre {
-    @apply p-2;
-    @apply mb-4;
-    font-display: swap;
-    font-family: Azeret Mono, monospace;
-  }
+	pre {
+		@apply p-2;
+		@apply mb-4;
+		font-display: swap;
+		font-family: Azeret Mono, monospace;
+	}
 
-  blockquote {
-    @apply border-l-4 px-4 italic;
-  }
+	blockquote {
+		@apply border-l-4 px-4 italic;
+	}
 }

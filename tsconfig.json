@@ -1,12 +1,12 @@
 {
-  "moduleResolution": "node",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/images/*": ["src/images/*"],
-      "@/layouts/*": ["src/layouts/*"],
-      "@/types": ["src/types/index"]
-    }
-  }
+	"moduleResolution": "node",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["src/components/*"],
+			"@/images/*": ["src/images/*"],
+			"@/layouts/*": ["src/layouts/*"],
+			"@/types": ["src/types/index"]
+		}
+	}
 }

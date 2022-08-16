@@ -1,10 +1,10 @@
 ---
 const {
-  title = 'Dustin Goodman: Personal Site',
-  description = 'The personal site of Dustin Goodman',
-  socialImage = 'https://dustingoodman.dev/assets/avatar.png',
-  canonicalURL = 'https://dustingoodman.dev',
-  redirectUrl,
+	title = 'Dustin Goodman: Personal Site',
+	description = 'The personal site of Dustin Goodman',
+	socialImage = 'https://dustingoodman.dev/assets/avatar.png',
+	canonicalURL = 'https://dustingoodman.dev',
+	redirectUrl,
 } = Astro.props;
 ---
 
@@ -22,9 +22,9 @@ const {
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
-  rel="preload"
-  as="style"
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+	rel="preload"
+	as="style"
 />
 
 <!-- social cards -->
@@ -42,16 +42,16 @@ const {
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-HEVHRVL93N"
-  is:inline
+	async
+	src="https://www.googletagmanager.com/gtag/js?id=G-HEVHRVL93N"
+	is:inline
 ></script>
 <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
 
-  gtag('config', 'G-HEVHRVL93N');
+	gtag('config', 'G-HEVHRVL93N');
 </script>
