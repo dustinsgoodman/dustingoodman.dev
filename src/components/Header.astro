@@ -5,18 +5,18 @@ import Logo from '@/components/Logo.astro';
 ---
 
 <header
-  class="sticky top-0 z-50 flex items-center bg-white px-8 py-4 drop-shadow dark:bg-black"
+	class="sticky top-0 z-50 flex items-center bg-white px-8 py-4 drop-shadow dark:bg-black"
 >
-  <Logo />
+	<Logo />
 
-  <div class="ml-auto flex items-end space-x-4">
-    <HeaderLink href="/#about">About</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/learn">Learn</HeaderLink>
-    <span
-      class="block border-b border-transparent py-1 text-base uppercase leading-6 text-gray-500 hover:border-blue-600 hover:text-blue-600 hover:no-underline focus:text-blue-600 dark:text-blue-100 dark:hover:border-sky-400 dark:hover:text-sky-400 dark:focus:text-sky-400"
-    >
-      <DarkModeToggle className="align-middle" client:load />
-    </span>
-  </div>
+	<div class="ml-auto flex items-end space-x-4">
+		<HeaderLink href="/#about">About</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/learn">Learn</HeaderLink>
+		<span
+			class="block border-b border-transparent py-1 text-base uppercase leading-6 text-gray-500 hover:border-blue-600 hover:text-blue-600 hover:no-underline focus:text-blue-600 dark:text-blue-100 dark:hover:border-sky-400 dark:hover:text-sky-400 dark:focus:text-sky-400"
+		>
+			<DarkModeToggle className="align-middle" client:load />
+		</span>
+	</div>
 </header>

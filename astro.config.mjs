@@ -12,40 +12,40 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig(
-  /** @type {import('astro').AstroUserConfig} */
-  {
-    site: 'https://dustingoodman.dev/',
-    markdown: {
-      syntaxHighlight: 'shiki',
-      shikiConfig: {
-        theme: 'github-dark-dimmed',
-      },
-      rehypePlugins: [
-        [
-          'rehype-autolink-headings',
-          {
-            behavior: 'prepend',
-          },
-        ],
-        [
-          'rehype-external-links',
-          {
-            target: '_blank',
-            rel: ['nofollow', 'noopener', 'noreferrer'],
-          },
-        ],
-      ],
-    },
-    integrations: [
-      tailwind({
-        config: {
-          applyBaseStyles: false,
-        },
-      }),
-      preact(),
-    ],
-    vite: {
-      plugins: [imagetools()],
-    },
-  }
+	/** @type {import('astro').AstroUserConfig} */
+	{
+		site: 'https://dustingoodman.dev/',
+		markdown: {
+			syntaxHighlight: 'shiki',
+			shikiConfig: {
+				theme: 'github-dark-dimmed',
+			},
+			rehypePlugins: [
+				[
+					'rehype-autolink-headings',
+					{
+						behavior: 'prepend',
+					},
+				],
+				[
+					'rehype-external-links',
+					{
+						target: '_blank',
+						rel: ['nofollow', 'noopener', 'noreferrer'],
+					},
+				],
+			],
+		},
+		integrations: [
+			tailwind({
+				config: {
+					applyBaseStyles: false,
+				},
+			}),
+			preact(),
+		],
+		vite: {
+			plugins: [imagetools()],
+		},
+	}
 );

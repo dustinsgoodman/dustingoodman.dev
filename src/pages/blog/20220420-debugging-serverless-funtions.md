@@ -21,16 +21,16 @@ When I first started writing serverless functions in Node.js, I had a misconcept
 
 ```javascript
 const randomBackgroundFunction = async () => {
-  console.log('This function may never run');
+	console.log('This function may never run');
 };
 
 export const handler = async () => {
-  // do some stuff ...
+	// do some stuff ...
 
-  randomBackgroundFunction(); // <-- this most likely won't run without an await
-  await randomBackgroundFunction(); // <-- this function will definitely run
+	randomBackgroundFunction(); // <-- this most likely won't run without an await
+	await randomBackgroundFunction(); // <-- this function will definitely run
 
-  return goodResponse;
+	return goodResponse;
 };
 ```
 
@@ -45,24 +45,24 @@ AWS built Lambda to have [asynchronous invocations](https://docs.aws.amazon.com/
 ```javascript
 // background.js
 export const handler = async () => {
-  // do our background stuff like we may have before
-  console.log('This function will definitely run');
+	// do our background stuff like we may have before
+	console.log('This function will definitely run');
 };
 
 // main.js
 import { LambdaClient, InvokeCommand } from '@aws-sdk/client-lambda';
 
 export const handler = async () => {
-  // do some stuff ...
-  const client = new LambdaClient(config);
-  const command = new InvokeCommand({
-    FunctionName: 'background',
-    InvocationType: 'Event', // default here is 'RequestResponse'
-  });
+	// do some stuff ...
+	const client = new LambdaClient(config);
+	const command = new InvokeCommand({
+		FunctionName: 'background',
+		InvocationType: 'Event', // default here is 'RequestResponse'
+	});
 
-  await client.send(command); // this acts as a fire and forget
+	await client.send(command); // this acts as a fire and forget
 
-  return resp;
+	return resp;
 };
 ```
 
