@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-display: swap;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    scroll-padding-top: 5rem;
-  }
+	html {
+		font-display: swap;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		scroll-padding-top: 5rem;
+	}
 
 	body {
 		@apply m-0 text-gray-900;

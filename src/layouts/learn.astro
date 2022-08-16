@@ -10,9 +10,9 @@ import Pagination from '@/components/Learn/Pagination.astro';
 import { getNavContent, getRouteInfo } from '@/utils/nav';
 
 export interface Props {
-  title: string;
-  description: string;
-  content: MarkdownContent;
+	title: string;
+	description: string;
+	content: MarkdownContent;
 }
 
 const { title, description, content } = Astro.props as Props;
@@ -22,36 +22,36 @@ const headers = Astro.props.headings;
 
 const navContent = getNavContent(currentPage);
 const { breadcrumbs, nextRoute, prevRoute } = getRouteInfo(
-  navContent,
-  currentPage
+	navContent,
+	currentPage
 );
 ---
 
 <BaseLayout title={title} description={description}>
-  <Header />
-  <div>
-    <aside
-      class="hidden lg:flex fixed lg:w-80 top-20 bottom-0 left-0 p-0 z-10 bg-transparent"
-    >
-      <LearnNav navContent={navContent} />
-    </aside>
-    <aside
-      class="hidden lg:flex fixed lg:w-72 top-20 bottom-0 right-0 p-0 z-10"
-    >
-      <nav class="w-full py-4" aria-label="Table of Contents">
-        <TableOfContents client:load headers={headers} />
-      </nav>
-    </aside>
-    <div class="h-full min-w-0 mx-0 lg:ml-80 lg:mr-72">
-      <main class="mx-auto px-16 py-4 md:py-8">
-        {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
-        <h1>
-          {content.title}
-        </h1>
-        <slot />
-        <Pagination nextRoute={nextRoute} {prevRoute} />
-      </main>
-      <Footer />
-    </div>
-  </div>
+	<Header />
+	<div>
+		<aside
+			class="hidden lg:flex fixed lg:w-80 top-20 bottom-0 left-0 p-0 z-10 bg-transparent"
+		>
+			<LearnNav navContent={navContent} />
+		</aside>
+		<aside
+			class="hidden lg:flex fixed lg:w-72 top-20 bottom-0 right-0 p-0 z-10"
+		>
+			<nav class="w-full py-4" aria-label="Table of Contents">
+				<TableOfContents client:load headers={headers} />
+			</nav>
+		</aside>
+		<div class="h-full min-w-0 mx-0 lg:ml-80 lg:mr-72">
+			<main class="mx-auto px-16 py-4 md:py-8">
+				{breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
+				<h1>
+					{content.title}
+				</h1>
+				<slot />
+				<Pagination nextRoute={nextRoute} {prevRoute} />
+			</main>
+			<Footer />
+		</div>
+	</div>
 </BaseLayout>

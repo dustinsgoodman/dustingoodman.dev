@@ -8,29 +8,29 @@ const { nextRoute, prevRoute } = Astro.props as Props;
 ---
 
 {
-  (prevRoute?.path || nextRoute?.path) && (
-    <>
-      <div class="mx-auto grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 md:py-12">
-        {prevRoute?.path ? (
-          <PaginationLink
-            type="Previous"
-            title={prevRoute.title}
-            href={prevRoute.path}
-          />
-        ) : (
-          <div />
-        )}
+	(prevRoute?.path || nextRoute?.path) && (
+		<>
+			<div class="mx-auto grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 md:py-12">
+				{prevRoute?.path ? (
+					<PaginationLink
+						type="Previous"
+						title={prevRoute.title}
+						href={prevRoute.path}
+					/>
+				) : (
+					<div />
+				)}
 
-        {nextRoute?.path ? (
-          <PaginationLink
-            type="Next"
-            title={nextRoute.title}
-            href={nextRoute.path}
-          />
-        ) : (
-          <div />
-        )}
-      </div>
-    </>
-  )
+				{nextRoute?.path ? (
+					<PaginationLink
+						type="Next"
+						title={nextRoute.title}
+						href={nextRoute.path}
+					/>
+				) : (
+					<div />
+				)}
+			</div>
+		</>
+	)
 }
