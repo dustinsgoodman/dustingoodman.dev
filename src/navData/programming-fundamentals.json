@@ -8,14 +8,6 @@
 			"path": "/learn/programming-fundamentals",
 			"routes": [
 				{
-					"title": "Why this book?",
-					"path": "/learn/programming-fundamentals/introduction/why-this-book"
-				},
-				{
-					"title": "How to use this book",
-					"path": "/learn/programming-fundamentals/introduction/how-to-use-this-book"
-				},
-				{
 					"title": "Programming",
 					"path": "/learn/programming-fundamentals/introduction/programming"
 				},

@@ -11,6 +11,11 @@ const TableOfContents: FunctionalComponent<Props> = ({ headers = [] }) => {
 	const targetedHeaders = [...headers].filter(
 		({ depth }) => depth > 1 && depth < 4
 	);
+	targetedHeaders.unshift({
+		depth: 1,
+		text: 'Overview',
+		slug: '',
+	});
 	const toc = useRef<HTMLUListElement>();
 	const [currentID, setCurrentID] = useState(targetedHeaders?.[0]?.slug);
 	const onThisPageID = 'on-this-page-heading';
@@ -80,7 +85,7 @@ const TableOfContents: FunctionalComponent<Props> = ({ headers = [] }) => {
 						<a
 							href={`#${slug}`}
 							onClick={onLinkClick}
-							class="text-link dark:text-link-dark hover:text-link dark:hover:text-link-dark block py-2 font-bold leading-normal"
+							class="text-link dark:text-link-dark hover:text-link dark:hover:text-link-dark block py-2 font-semibold leading-normal"
 						>
 							{unescapeHtml(text)}
 						</a>
