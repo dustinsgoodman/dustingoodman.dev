@@ -9,6 +9,9 @@ import { imagetools } from 'vite-imagetools';
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig(
@@ -22,13 +25,13 @@ export default defineConfig(
 			},
 			rehypePlugins: [
 				[
-					'rehype-autolink-headings',
+					rehypeAutolinkHeadings,
 					{
 						behavior: 'prepend',
 					},
 				],
 				[
-					'rehype-external-links',
+					rehypeExternalLinks,
 					{
 						target: '_blank',
 						rel: ['nofollow', 'noopener', 'noreferrer'],
@@ -43,6 +46,23 @@ export default defineConfig(
 				},
 			}),
 			preact(),
+			mdx({
+				rehypePlugins: [
+					[
+						rehypeAutolinkHeadings,
+						{
+							behavior: 'prepend',
+						},
+					],
+					[
+						rehypeExternalLinks,
+						{
+							target: '_blank',
+							rel: ['nofollow', 'noopener', 'noreferrer'],
+						},
+					],
+				],
+			}),
 		],
 		vite: {
 			plugins: [imagetools()],
