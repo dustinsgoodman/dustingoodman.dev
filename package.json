@@ -16,7 +16,7 @@
 		"autoprefixer": "^10.4.8",
 		"classnames": "^2.3.1",
 		"postcss": "^8.4.16",
-		"preact": "^10.10.2",
+		"preact": "^10.10.6",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.0",
 		"prettier-plugin-tailwindcss": "^0.1.13",
