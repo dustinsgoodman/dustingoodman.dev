@@ -1,12 +1,13 @@
 interface Props {
+	className: string;
 	title: string;
 	videoUrl: string;
 }
 
-function YoutTubeVideo({ title, videoUrl }: Props) {
+function YoutTubeVideo({ className, title, videoUrl }: Props) {
 	return (
 		<iframe
-			className="mx-auto"
+			className={className}
 			width="560"
 			height="315"
 			src={videoUrl}
