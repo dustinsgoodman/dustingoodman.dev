@@ -2182,12 +2182,12 @@ ignore@^5.1.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.9.tgz#9ec1a5cbe8e1446ec60d4420060d43aa6e7382fb"
   integrity sha512-2zeMQpbKz5dhZ9IwL0gbxSW5w0NK/MSAMtNuhgIHEPmaU3vPdKPL0UdvUCXs5SS4JAwsBxysK5sFMW8ocFiVjQ==
 
-imagetools-core@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/imagetools-core/-/imagetools-core-3.0.3.tgz#ed454c47abb21e85c272798a8a47b569ca344c72"
-  integrity sha512-JK7kb0ezkzD27zQgZs7mtRd7DekC+/RTePjIzPsuBAp3S/Z17wNt+6TSEdDJRQSV5xiGV+SOG00weSGVdX3Xig==
+imagetools-core@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/imagetools-core/-/imagetools-core-3.2.1.tgz#f4dc2b5a6c12afef17ff9455de13df51fac0708e"
+  integrity sha512-cTa1cQqGUhw1eqBpz6Jdby7aYP4d18v1hLG9j3mS/223+gx/fmRv+B/E/zDYlX7NoZ5gh4Tvft6mcxek7suE/A==
   dependencies:
-    sharp "^0.30.0"
+    sharp "^0.31.0"
 
 indent-string@^4.0.0:
   version "4.0.0"
@@ -3898,10 +3898,10 @@ semver@^7.3.5, semver@^7.3.7:
   dependencies:
     lru-cache "^6.0.0"
 
-sharp@^0.30.0:
-  version "0.30.7"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.30.7.tgz#7862bda98804fdd1f0d5659c85e3324b90d94c7c"
-  integrity sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==
+sharp@^0.31.0:
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.31.0.tgz#ce9b5202a5667486721cf07fd5b52360b1c2275a"
+  integrity sha512-ft96f8WzGxavg0rkLpMw90MTPMUZDyf0tHjPPh8Ob59xt6KzX8EqtotcqZGUm7kwqpX2pmYiyYX2LL0IZ/FDEw==
   dependencies:
     color "^4.2.3"
     detect-libc "^2.0.1"
@@ -4510,13 +4510,13 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-imagetools@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/vite-imagetools/-/vite-imagetools-4.0.4.tgz#4feba88c2dcaa8a6413c5f2e7afed3060862f6e0"
-  integrity sha512-ik1Sq4ueKYN2iBjxe3g8YxqM9aul2goQ2z8CuTKKxOG3M1nF63SRqialbXMuJVH8aKJ9A2oGhs1sktCAoo9EBg==
+vite-imagetools@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/vite-imagetools/-/vite-imagetools-4.0.9.tgz#434769dbc260134b4a8e68cbf5d87b926859c8fc"
+  integrity sha512-MQZWqYH/dbliA1IC7jiARgzpn+NCT3LEGgmln+IIj2WJiVX/Ry+KgmJoIK1OvA6tUsGXNpQSLhAqBQKRA9NuGQ==
   dependencies:
     "@rollup/pluginutils" "^4.1.2"
-    imagetools-core "^3.0.3"
+    imagetools-core "^3.2.1"
     magic-string "^0.26.0"
 
 vite@3.1.0:
