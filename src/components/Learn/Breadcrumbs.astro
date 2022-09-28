@@ -1,0 +1,35 @@
+---
+import { RouteItem } from '@/utils/nav';
+import { CaretRightIcon } from '@/components/Icons';
+
+export interface Props {
+	breadcrumbs: RouteItem[];
+}
+
+const { breadcrumbs } = Astro.props as Props;
+---
+
+<div class="flex">
+	{
+		breadcrumbs.map((crumb) => {
+			if (!crumb.path) {
+				return null;
+			}
+			return (
+				<div class="flex items-center">
+					<>
+						<a
+							href={crumb.path}
+							class="mr-1 text-sm uppercase tracking-wide hover:underline"
+						>
+							{crumb.title}
+						</a>
+						<span class="mr-1 inline-block text-lg">
+							<CaretRightIcon />
+						</span>
+					</>
+				</div>
+			);
+		})
+	}
+</div>

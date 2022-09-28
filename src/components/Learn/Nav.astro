@@ -1,0 +1,34 @@
+---
+import { RouteItem } from '@/utils/nav';
+
+export interface Props {
+	navContent: RouteItem;
+}
+
+const { navContent } = Astro.props as Props;
+const navPaths = navContent.routes;
+---
+
+<nav
+	class="w-full h-full max-h-full overflow-x-visible overflow-y-auto"
+	aria-label="Learn Navigation"
+>
+	<ul class="py-4">
+		{
+			navPaths.map(({ path, title, routes }) => {
+				return (
+					<>
+						<a href={path}>{title}</a>
+						<ul>
+							{routes?.map(({ title: subRouteTitle, path: subRoutePath }) => (
+								<li>
+									<a href={subRoutePath}>{subRouteTitle}</a>
+								</li>
+							))}
+						</ul>
+					</>
+				);
+			})
+		}
+	</ul>
+</nav>
