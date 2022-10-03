@@ -15,7 +15,7 @@
 		"astro": "^1.2.6",
 		"autoprefixer": "^10.4.12",
 		"classnames": "^2.3.2",
-		"postcss": "^8.4.16",
+		"postcss": "^8.4.17",
 		"preact": "^10.11.0",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.4",
