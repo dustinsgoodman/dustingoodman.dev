@@ -1,19 +1,57 @@
 ---
 const {
-  title = 'Dustin Goodman: Personal Site',
-  description = 'The personal site of Dustin Goodman'
+	title = 'Dustin Goodman: Personal Site',
+	description = 'The personal site of Dustin Goodman',
+	socialImage = 'https://dustingoodman.dev/assets/avatar.png',
+	canonicalURL = 'https://dustingoodman.dev',
+	redirectUrl,
 } = Astro.props;
 ---
-<meta charset="UTF-8">
-<meta name="description" property="og:description" content={description}>
-<meta name="viewport" content="width=device-width">
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+{redirectUrl && <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />}
+
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/global.css')}>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+	rel="preload"
+	as="style"
+/>
+
+<!-- social cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@dustinsgoodman" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImage} />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={socialImage} />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+	async
+	src="https://www.googletagmanager.com/gtag/js?id=G-HEVHRVL93N"
+	is:inline
+></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-HEVHRVL93N');
+</script>

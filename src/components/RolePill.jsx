@@ -1,0 +1,9 @@
+function RolePill({ children }) {
+	return (
+		<span className="relative z-[2] flex items-center rounded-sm bg-neutral-900 px-2 py-1 font-black text-blue-100 dark:bg-blue-100 dark:text-blue-900 md:text-xl">
+			{children}
+		</span>
+	);
+}
+
+export default RolePill;

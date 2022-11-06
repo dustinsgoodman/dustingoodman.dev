@@ -1,21 +1,44 @@
 ---
-import BaseLayout from '../../layouts/base.astro';
-import BlogPostPreview from '../../components/BlogPostPreview.astro';
+import HomeLayout from '@/layouts/home.astro';
+import BlogPostPreview from '@/components/BlogPostPreview.astro';
+import { BlogPost } from '@/types';
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-}
-
-const posts = Astro.fetchContent<MarkdownFrontmatter>('./**/*.md')
-  .filter(({ publishDate }) => !!publishDate)
-  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+const allPosts = await Astro.glob<BlogPost>('./**/*.md');
+const posts = allPosts
+	.filter(
+		({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
+	)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.publishDate).valueOf() -
+			new Date(a.frontmatter.publishDate).valueOf()
+	)
+	.map(({ url, frontmatter }) => {
+		return {
+			...frontmatter,
+			url,
+		};
+	});
 ---
-<BaseLayout
-  title="Blog | Dustin Goodman"
-  description="Learn from Dustin Goodman's blog"
+
+<HomeLayout
+	title="Blog | Dustin Goodman"
+	description="Learn from Dustin Goodman's blog"
 >
-  <h1>Dustin&apos;s Blog</h1>
-  <section class="grid grid-cols-2 gap-8">
-    {posts.map((post) => (<BlogPostPreview post={post} />))}
-  </section>
-</BaseLayout>
+	<section class="container mx-auto px-4 py-4">
+		<h1>Dustin's Blog</h1>
+		<p>
+			I write about problems I think are interesting, releases of personal or
+			external projects that are important to me, and a variety of other topics
+			that I hope interest readers. My goal is to provide valuable insight into
+			web development, software engineering, or engineering management practices
+			that I've learned over the years. This links to all my blog posts across
+			the internet. I hope you find my posts valuable. 🤓
+		</p>
+	</section>
+	<section class="bg-blue-100 dark:bg-slate-900">
+		<div class="container max-w-[90%] mx-auto px-4 py-8 gap-y-2 flex flex-col">
+			{posts.map((post) => <BlogPostPreview post={post} layout="list" />)}
+		</div>
+	</section>
+</HomeLayout>
