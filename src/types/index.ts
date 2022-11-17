@@ -24,5 +24,19 @@ export interface ConferenceTalk {
 	title: string;
 	description: string;
 	url: string;
-	recordings: Array<YouTubeVideo>;
+	slides: string;
+	cospeakers: Array<Cospeaker>;
+	appearances: Array<ConferenceTalkAppearance>;
+}
+
+export interface Cospeaker {
+	name: string;
+	twitter: string;
+	profilePic: string;
+}
+
+export interface ConferenceTalkAppearance {
+	name: string;
+	videoUrl?: string;
+	youtubeId?: string;
 }

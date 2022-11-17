@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/base.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ConferenceTalk from '@/components/ConferenceTalk.astro';
+
+const { content } = Astro.props;
+const { title, description } = content;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout {title} {description} {canonicalURL}>
+	<Header />
+	<main class="container mx-auto py-4 md:py-8">
+		<ConferenceTalk conferenceTalk={content}>
+			<slot />
+		</ConferenceTalk>
+	</main>
+	<Footer />
+</BaseLayout>
