@@ -1,19 +1,46 @@
 ---
-import BaseLayout from '../../layouts/base.astro';
-import { ConferenceTalk } from '../../types';
+import HomeLayout from '@/layouts/home.astro';
+import BlogPostPreview from '@/components/BlogPostPreview.astro';
+import { ConferenceTalk } from '@/types';
 
-const talks = [
-  { title: 'GraphQL in the Enterprise', slug: 'graphql-in-the-enterprise' },
-];
+const allTalks = await Astro.glob<ConferenceTalk>('./**/*.md');
+const talks = allTalks.map(async (talk) => {
+	const data = await talk.default();
+	return data;
+});
+console.log(talks);
+
+// const allPosts = await Astro.glob<ConferenceTalk>('./**/*.astro');
+// const posts = allPosts
+// 	.filter(
+// 		({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
+// 	)
+// 	.sort(
+// 		(a, b) =>
+// 			new Date(b.frontmatter.publishDate).valueOf() -
+// 			new Date(a.frontmatter.publishDate).valueOf()
+// 	)
+// 	.map(({ url, frontmatter }) => {
+// 		return {
+// 			...frontmatter,
+// 			url,
+// 		};
+// 	});
 ---
-<BaseLayout
-  title="Talks | Dustin Goodman"
-  description="Learn from Dustin Goodman's talks"
+
+<HomeLayout
+	title="Blog | Dustin Goodman"
+	description="Learn from Dustin Goodman's blog"
 >
-  <h1>Dustin&apos;s Talks</h1>
-  <section class="grid grid-cols-2 gap-8">
-    {talks.map((talk) => (
-      <a href={`/talks/${talk.slug}`}>{talk.title}</a>
-    ))}
-  </section>
-</BaseLayout>
+	<section class="container mx-auto px-4 py-4">
+		<h1>Dustin's Talks</h1>
+		<p>
+			I've spoken at conferences over the years. Check out some of my talks or
+			find slides and relevant code.
+		</p>
+	</section>
+	<section class="bg-blue-100 dark:bg-slate-900">
+		<div class="container max-w-[90%] mx-auto px-4 py-8 gap-y-2 flex flex-col">
+		</div>
+	</section>
+</HomeLayout>

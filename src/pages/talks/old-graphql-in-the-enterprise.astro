@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/base.astro';
+import YouTubeEmbed from '../../components/YouTubeEmbed.astro';
+
+const title = 'GraphQL in the Enterprise';
+const description =
+	'GraphQL is not just a buzzword, but is a useful tool for both front and backend teams to be able to work more effectively together. We’ll cover GraphQL’s client operations and how to utilize them, how to design your GraphQL API, and developing the server API. We’ll show you tools like GraphiQL, GraphQL Playground, and Apollo for testing and building your APIs. Additionally, you’ll learn best practices to avoid common mistakes when developing your GraphQL API.';
+---
+
+<BaseLayout title={`${title} | Dustin Goodman`} description={description}>
+	<h1>{title}</h1>
+	<p>
+		<strong>Co-speaker:</strong>
+		<a href="https://twitter.com/ladyleet" target="_blank">Tracy Lee</a>
+	</p>
+	<p>{description}</p>
+
+	<h3>Free Recordings</h3>
+	<section class="grid grid-cols-2 gap-4">
+		<div>
+			<h5>MagnoliaJS 2021</h5>
+			<YouTubeEmbed videoId="xAYDLpH4rwY" title="MagnoliaJS 2021" />
+		</div>
+		<div>
+			<h5>Incredible.dev</h5>
+			<YouTubeEmbed videoId="kZxOOLvoNbg" title="Incredible.dev" />
+		</div>
+		<div>
+			<h5>React World Tour: React Chicago</h5>
+			<YouTubeEmbed
+				videoId="P1oyn1eiEAc"
+				title="React World Tour: React Chicago"
+			/>
+		</div>
+		<div>
+			<h5>The Monthly Dev #11</h5>
+			<YouTubeEmbed
+				videoId="z9-4IhkifQU"
+				title="The Monthly Dev #11"
+				start={222}
+			/>
+		</div>
+		<div>
+			<h5>JSWorld 2021</h5>
+			<YouTubeEmbed videoId="xiMdIi9eNN4" title="JSWorld 2021" />
+		</div>
+	</section>
+
+	<h3>Paid Recordings</h3>
+	<ul>
+		<li>
+			<a
+				href="https://geekle.us/video_cluster/1623340026367x768778787322593300?video=1623382071116x580357415415286900"
+				target="_blank"
+			>
+				ANGULAR Global Summit'21
+			</a>
+		</li>
+	</ul>
+</BaseLayout>
