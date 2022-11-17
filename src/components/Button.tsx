@@ -1,7 +1,7 @@
-import { ComponentChildren } from 'preact';
+import { ReactNode } from 'react';
 
 type Props = {
-	children: ComponentChildren;
+	children: ReactNode;
 	className: string;
 	onClick?: () => void;
 	disabled?: boolean;
