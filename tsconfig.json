@@ -1,5 +1,4 @@
 {
-	"moduleResolution": "node",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
@@ -7,6 +6,8 @@
 			"@/images/*": ["src/images/*"],
 			"@/layouts/*": ["src/layouts/*"],
 			"@/types": ["src/types/index"]
-		}
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
 	}
 }
