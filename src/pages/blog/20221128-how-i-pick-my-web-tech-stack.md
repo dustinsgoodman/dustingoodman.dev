@@ -103,7 +103,7 @@ Find a solution that offers all the pros of a purely static solution but also pr
 
 ## Case 3: Product Applications
 
-Products cover a lot of different types of applications and there are a lot of questions we should be asking ourselves.
+Products cover a lot of different types of applications. You have data rich dashboards like NewRelic. There are CMS products like Contentful. You have marketing platforms like Hubspot or MailChimp. Each of these are unique in their offering and how to achieve the end goal. As such, there are a lot of questions we should be asking ourselves:
 
 - Do we care about SEO?
 - Are we building a single page application (SPA) or a multi page application (MPA)?
@@ -118,11 +118,11 @@ These are just some of the starting questions and as we learn more, our decision
 
 Depending on our answers, we’re going to need to pick the right toolset for our project which is a tough challenge as market conditions for developers are continually changing. At the time of this writing, Node.js with TypeScript and React are arguably the most popular technologies for building applications. I challenge whether that means they’re the right choice though.
 
-In my opinion, the Node ecosystem for building backends is not yet mature enough. This isn’t to say you can’t do it, but there’s not a singular proven set of tooling, and everyone is having to decide on their own stacks. This means teams are spending a lot of time doing technology research just to figure out which is the _right_ tool for the job and then doing a lot of work to ensure they’re still using something maintained and supported. This can sometimes lead to having to migrate to new tech that accomplishes the same end goals because of deprecations or dropped support.
+In my opinion, the Node ecosystem for building backends is not yet mature enough. I'll defer my full thoughts on this to another article, but this isn’t to say you can’t do it, but there’s not a singular proven set of tooling, and everyone is having to decide on their own stacks. This means teams are spending a lot of time doing technology research just to figure out which is the _right_ tool for the job and then doing a lot of work to ensure they’re still using something maintained and supported. This can sometimes lead to having to migrate to new tech that accomplishes the same end goals because of deprecations or dropped support.
 
 ### My Preference
 
-![Example of Active Record and the Rails Console in action](/blog-assets/20221128-rails-console.webp)
+![Rails architecture deployed to AWS Elastic Beanstalk with PostgresQL & Sidekiq Redis](/blog-assets/20221128-static-website-architecture.webp)
 
 When I’m building a server solution, I personally grab for Ruby on Rails. It’s not perfect for all situations, but I think Rails has a lot going for it:
 
@@ -137,6 +137,8 @@ When I’m building a server solution, I personally grab for Ruby on Rails. It�
 
 The above may not seem like a lot or that significant but considering the current state of the JavaScript ecosystem, replicating some of these features is a multi-day chore. These tools and features definitely come with their own downsides though and there are tradeoffs. That being said, you can opt to just use Rails as your API server, and frankly, that would be enough in my opinion. Rails’ frontend solutions are not ideal in my opinion and leave a lot on the table in terms of what you want especially with their asset management pipeline and their constant resistance to modern JavaScript frameworks.
 
+![Example of Active Record and the Rails Console in action](/blog-assets/20221128-rails-console.webp)
+
 If you’re a .NET or PHP developer, you may be saying, “we have these things, why not us instead? We even solve the frontend problem.” I totally agree and think these are great alternatives. I just personally don’t want to program in C# or PHP, regardless of how good the languages have gotten (and trust me, I’ve tried). But hey - we’ve got something good here.
 
 ### So what about the frontend then?
@@ -149,7 +151,7 @@ SolidJS, Svelte, and Qwik are the new kids on the block and are probably going t
 
 ### “What about serverless? It’s super fast and connects to all my infrastructure services already.”
 
-I’m a big fan of serverless and you can see my attempts on the internet to make serverless a first-class choice. Unfortunately, I’ve learned from experience and seen the downsides to serverless to know I wouldn’t actually recommend it at scale. I think it’s a great tool for true microservices and ETL APIs. These stacks can handle volume better than most and cost a fraction of the price, but scaling them to larger projects or teams is challenging and the developer experience is just not there yet. I think we’ll see this change in the coming months, but for now, I think [Dax Raad (@thdxr)](https://twitter.com/thdxr) hits a key point with [this tweet](https://twitter.com/thdxr/status/1592917691194802176):
+I’m a big fan of serverless and you can see my attempts on the internet to make serverless a first-class choice. Unfortunately, I’ve learned from experience and seen the downsides to serverless to know I wouldn’t actually recommend it at scale. I think it’s a great tool for singular-focused microservices and ETL APIs. These stacks can handle volume better than most and cost a fraction of the price, but scaling them to larger projects or teams is challenging and the developer experience is just not there yet. I think we’ll see this change in the coming months, but for now, I think [Dax Raad (@thdxr)](https://twitter.com/thdxr) hits a key point with [this tweet](https://twitter.com/thdxr/status/1592917691194802176):
 
 ![Tweet from Dax Raad talking about serverless tooling being trick shot demos and not maintainable applications](/blog-assets/20221128-dax-raad-tweet.webp)
 
