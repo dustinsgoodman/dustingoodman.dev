@@ -122,7 +122,7 @@ In my opinion, the Node ecosystem for building backends is not yet mature enough
 
 ### My Preference
 
-![Rails architecture deployed to AWS Elastic Beanstalk with PostgresQL & Sidekiq Redis](/blog-assets/20221128-static-website-architecture.webp)
+![Rails architecture deployed to AWS Elastic Beanstalk with PostgresQL & Sidekiq Redis](/blog-assets/20221128-rails-architecture.webp)
 
 When I’m building a server solution, I personally grab for Ruby on Rails. It’s not perfect for all situations, but I think Rails has a lot going for it:
 
