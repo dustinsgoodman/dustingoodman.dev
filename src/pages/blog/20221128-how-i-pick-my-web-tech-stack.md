@@ -168,3 +168,5 @@ Picking product technology is hard, but look for tools that are mature with a pr
 ## Conclusion
 
 Picking technology is a really hard problem. Just because a solution works 99% of the time on your proof of concepts and side projects does not mean it will work at scale. It doesn’t necessarily mean it won’t either though. I challenge you to discuss your technology choices and really understand the end goal of your product and try to better understand the future you’re building towards. Give yourself options and remember: one size does not fit all.
+
+Special thanks to [Jesse Tomchak](https://twitter.com/jtomchak) for feedback on this post!
