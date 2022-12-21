@@ -9,11 +9,6 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@astrojs/compiler@^0.23.4":
-  version "0.23.5"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.5.tgz#ea57a2b994b2930e3b3d2d524f10866698fef4f1"
-  integrity sha512-vBMPy9ok4iLapSyCCT1qsZ9dK7LkVFl9mObtLEmWiec9myGHS9h2kQY2xzPeFNJiWXUf9O6tSyQpQTy5As/p3g==
-
 "@astrojs/compiler@^0.29.3":
   version "0.29.19"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.29.19.tgz#dd8020a08c18639ce9de5b7203f4a4212d391279"
@@ -444,18 +439,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@pkgr/utils@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@pkgr/utils/-/utils-2.3.0.tgz#3b8491f112a80839450498816767eb03b7db6139"
-  integrity sha512-7dIJ9CRVzBnqyEl7diUHPUFJf/oty2SeoVzcMocc5PeOUDK9KGzvgIBjGRRzzlRDaOjh3ADwH0WeibQvi3ls2Q==
-  dependencies:
-    cross-spawn "^7.0.3"
-    is-glob "^4.0.3"
-    open "^8.4.0"
-    picocolors "^1.0.0"
-    tiny-glob "^0.2.9"
-    tslib "^2.4.0"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
@@ -3204,16 +3187,6 @@ preferred-pm@^3.0.3:
     path-exists "^4.0.0"
     which-pm "2.0.0"
 
-prettier-plugin-astro@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.5.4.tgz#0ccc510cdd260baf6346ccaf5956fb63d0b2bbd9"
-  integrity sha512-ILs/WgUYtKBOn3Zh217/PwjCFtUWEKQjcCFJDevri0hGEBwEnnda9aqSLL0/nhCOmQn/UE7M9zLQvThu970ZHw==
-  dependencies:
-    "@astrojs/compiler" "^0.23.4"
-    prettier "^2.7.1"
-    sass-formatter "^0.7.5"
-    synckit "^0.7.0"
-
 prettier-plugin-astro@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.7.0.tgz#e6dcd5fe1750bd87343123d86ea5f1dcd5038426"
@@ -3802,14 +3775,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-synckit@^0.7.0:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/synckit/-/synckit-0.7.3.tgz#99d4c1d09aaf03514801ff719b9c2bd80914a64d"
-  integrity sha512-jNroMv7Juy+mJ/CHW5H6TzsLWpa1qck6sCHbkv8YTur+irSq2PjbvmGnm2gy14BUQ6jF33vyR4DPssHqmqsDQw==
-  dependencies:
-    "@pkgr/utils" "^2.3.0"
-    tslib "^2.4.0"
 
 synckit@^0.8.4:
   version "0.8.4"
