@@ -19,7 +19,7 @@
 	}
 
 	img {
-		@apply h-auto max-w-full;
+		@apply h-auto max-w-full mx-auto;
 	}
 
 	h1 {
