@@ -4092,10 +4092,10 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-imagetools@^4.0.14:
-  version "4.0.14"
-  resolved "https://registry.yarnpkg.com/vite-imagetools/-/vite-imagetools-4.0.14.tgz#96ae82cec3519b7433831857bbfab78deeada120"
-  integrity sha512-L49npgCvhQHTwSHBesJBw1bSUirmeKLjW5/le4w7FryZLy0DW63iNWSDPN29Q8n2po0p8aycD3uiXOi17x9U7Q==
+vite-imagetools@^4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/vite-imagetools/-/vite-imagetools-4.0.15.tgz#2b0abf6589c144e1d3fc866ef2f0dc683e5e7a76"
+  integrity sha512-Y+JHb24m5LJ8phEeZ6725QaLMPzPDG821y0XV6dbyY6zA7EA3y3ropcGkQ/LPpqmJ/FmB8tJI3ZUGWOfjguDsA==
   dependencies:
     "@rollup/pluginutils" "^5.0.0"
     imagetools-core "^3.3.0"
