@@ -12,7 +12,7 @@ export interface Props {
 const { title, description, socialImage } = Astro.props;
 ---
 
-<BaseLayout {title} {description} {socialImage}>
+<BaseLayout title={title} description={description} socialImage={socialImage}>
 	<Header />
 	<main>
 		<slot />

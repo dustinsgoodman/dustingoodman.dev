@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import HomeLayout from '@/layouts/home.astro';
+import LandingLayout from '@/layouts/landing.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
 import AboutSection from '@/components/AboutSection.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
@@ -22,11 +22,11 @@ const recentBlogPosts = (
 	.slice(0, 4);
 ---
 
-<HomeLayout
+<LandingLayout
 	title="Welcome | Dustin Goodman"
 	description="Personal website for Dustin Goodman. Contains blog posts and other content related to web development."
 >
 	<HeroBanner />
 	<AboutSection />
 	<BlogPreviewSection blogPosts={recentBlogPosts} />
-</HomeLayout>
+</LandingLayout>

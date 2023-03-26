@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import HomeLayout from '@/layouts/home.astro';
+import LandingLayout from '@/layouts/landing.astro';
 import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
 const allPosts = await getCollection('blog', (post) => {
@@ -17,7 +17,7 @@ const posts = allPosts.sort(
 );
 ---
 
-<HomeLayout
+<LandingLayout
 	title="Blog | Dustin Goodman"
 	description="Learn from Dustin Goodman's blog"
 >
@@ -37,4 +37,4 @@ const posts = allPosts.sort(
 			{posts.map((post) => <BlogPostPreview post={post} layout="list" />)}
 		</div>
 	</section>
-</HomeLayout>
+</LandingLayout>

@@ -1,12 +1,20 @@
 ---
-import { BlogPost } from '@/types';
+import { CollectionEntry } from 'astro:content';
 
 export interface Props {
-	post: BlogPost;
+	post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const { title, publishDate, heroImage, alt, tags } = post;
+const { title, publishDate, heroImage, alt, tags } = post.data;
+
+const formatDate = (date: Date) => {
+	return date.toLocaleString('default', {
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric',
+	});
+};
 ---
 
 <article class="bg-white dark:bg-gray-600 mx-4 lg:mx-48">
@@ -22,7 +30,7 @@ const { title, publishDate, heroImage, alt, tags } = post;
 	}
 	<h1 class="text-4xl text-center mb-2">{title}</h1>
 	<p class="block text-lg text-gray-600 dark:text-gray-100 text-center mb-2">
-		{publishDate}
+		{formatDate(publishDate)}
 	</p>
 	<div class="flex flex-wrap content-evenly mb-4 gap-2 justify-center">
 		{
