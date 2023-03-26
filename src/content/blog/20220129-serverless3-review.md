@@ -2,7 +2,7 @@
 title: Why you should upgrade to Serverless 3
 description: >
   Serverless 3 just released and it has some pretty amazing quality of life improvements. Let's check out these new features and how we should leverage them today.
-publishDate: Jan 29, 2022
+publishDate: 2022-01-29
 heroImage: /blog-assets/20220130-serverless-v3-review.webp
 alt: Serverless 3 Review
 layout: '@/layouts/blog.astro'
