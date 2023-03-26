@@ -16,7 +16,13 @@ const { title, description, socialImage, canonicalURL, redirectUrl } =
 
 <html lang="en">
 	<head>
-		<Head {title} {description} {socialImage} {canonicalURL} {redirectUrl} />
+		<Head
+			title={title}
+			description={description}
+			socialImage={socialImage}
+			canonicalURL={canonicalURL}
+			redirectUrl={redirectUrl}
+		/>
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -39,7 +45,7 @@ const { title, description, socialImage, canonicalURL, redirectUrl } =
 			localStorage.setItem('darkMode', darkMode);
 		</script>
 	</head>
-	<body class="text-gray-900 dark:text-white bg-white dark:bg-black">
+	<body class="bg-white text-gray-900 dark:bg-black dark:text-white">
 		<slot />
 	</body>
 </html>

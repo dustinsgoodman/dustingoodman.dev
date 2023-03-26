@@ -1,33 +1,32 @@
 ---
-import HomeLayout from '@/layouts/home.astro';
+import { getCollection } from 'astro:content';
+import LandingLayout from '@/layouts/landing.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
 import AboutSection from '@/components/AboutSection.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
 
-const blogPosts = await Astro.glob('./blog/**/*.md');
-const recentBlogPosts = blogPosts
-	.filter(
-		({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
-	)
+const recentBlogPosts = (
+	await getCollection('blog', (post) => {
+		return (
+			import.meta.env.MODE !== 'production' ||
+			post.data.draft !== true ||
+			!!post.data.publishDate
+		);
+	})
+)
 	.sort(
 		(a, b) =>
-			new Date(b.frontmatter.publishDate).valueOf() -
-			new Date(a.frontmatter.publishDate).valueOf()
+			new Date(b.data.publishDate).valueOf() -
+			new Date(a.data.publishDate).valueOf()
 	)
-	.map(({ url, frontmatter }) => {
-		return {
-			...frontmatter,
-			url,
-		};
-	})
 	.slice(0, 4);
 ---
 
-<HomeLayout
+<LandingLayout
 	title="Welcome | Dustin Goodman"
 	description="Personal website for Dustin Goodman. Contains blog posts and other content related to web development."
 >
 	<HeroBanner />
 	<AboutSection />
 	<BlogPreviewSection blogPosts={recentBlogPosts} />
-</HomeLayout>
+</LandingLayout>

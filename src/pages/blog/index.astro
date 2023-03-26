@@ -1,27 +1,23 @@
 ---
-import HomeLayout from '@/layouts/home.astro';
+import { getCollection } from 'astro:content';
+import LandingLayout from '@/layouts/landing.astro';
 import BlogPostPreview from '@/components/BlogPostPreview.astro';
-import { BlogPost } from '@/types';
 
-const allPosts = await Astro.glob<BlogPost>('./**/*.md');
-const posts = allPosts
-	.filter(
-		({ frontmatter }) => !!frontmatter.publishDate && !frontmatter.redirectUrl
-	)
-	.sort(
-		(a, b) =>
-			new Date(b.frontmatter.publishDate).valueOf() -
-			new Date(a.frontmatter.publishDate).valueOf()
-	)
-	.map(({ url, frontmatter }) => {
-		return {
-			...frontmatter,
-			url,
-		};
-	});
+const allPosts = await getCollection('blog', (post) => {
+	return (
+		import.meta.env.MODE !== 'production' &&
+		post.data.draft !== true &&
+		!post.data.redirectUrl
+	);
+});
+const posts = allPosts.sort(
+	(a, b) =>
+		new Date(b.data.publishDate).valueOf() -
+		new Date(a.data.publishDate).valueOf()
+);
 ---
 
-<HomeLayout
+<LandingLayout
 	title="Blog | Dustin Goodman"
 	description="Learn from Dustin Goodman's blog"
 >
@@ -37,8 +33,8 @@ const posts = allPosts
 		</p>
 	</section>
 	<section class="bg-blue-100 dark:bg-slate-900">
-		<div class="container max-w-[90%] mx-auto px-4 py-8 gap-y-2 flex flex-col">
+		<div class="container mx-auto flex max-w-[90%] flex-col gap-y-2 px-4 py-8">
 			{posts.map((post) => <BlogPostPreview post={post} layout="list" />)}
 		</div>
 	</section>
-</HomeLayout>
+</LandingLayout>
