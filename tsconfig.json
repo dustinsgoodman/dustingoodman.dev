@@ -1,4 +1,5 @@
 {
+	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
@@ -7,7 +8,9 @@
 			"@/layouts/*": ["src/layouts/*"],
 			"@/types": ["src/types/index"]
 		},
+		"allowJs": true,
 		"jsx": "react-jsx",
-		"jsxImportSource": "react"
+		"jsxImportSource": "react",
+		"strictNullChecks": true
 	}
 }
