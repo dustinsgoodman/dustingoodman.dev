@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-04-14
 heroImage: /blog-assets/20220414-announcing-serverless-microservices-template.webp
 alt: Nx Serverless GraphQL Microservices Template
-layout: '@/layouts/blog.astro'
 tags:
   - Serverless Framework
   - GraphQL

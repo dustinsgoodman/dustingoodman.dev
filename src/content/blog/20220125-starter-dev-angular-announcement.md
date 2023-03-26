@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-01-25
 heroImage: /blog-assets/20220125-starter-dev-angular-announcement.webp
 alt: This Dot Announcing Angular GitHub Clone for starter.dev showcases
-layout: '@/layouts/blog.astro'
 originalArticle: https://www.thisdot.co/blog/announcing-angular-github-clone-for-starter-dev-showcases
 originalSource: ThisDot
 tags:

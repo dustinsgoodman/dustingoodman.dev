@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-11-28
 heroImage: /blog-assets/20221128-how-i-pick-my-tech-stack.webp
 alt: How I pick my web technology stack? Workflow diagram of content described in the article.
-layout: '@/layouts/blog.astro'
 tags:
   - Architecture
   - System Design

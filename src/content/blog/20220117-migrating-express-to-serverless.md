@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-01-17
 heroImage: /blog-assets/20220117-migrating-express-to-serverless.webp
 alt: This Dot Migrating a classic Express.js to Serverless Framework
-layout: '@/layouts/blog.astro'
 originalArticle: https://www.thisdot.co/blog/migrating-a-classic-express-js-to-serverless-framework
 originalSource: ThisDot
 tags:

@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-04-20
 heroImage: /blog-assets/20220420-debugging-serverless-functions.webp
 alt: Debugging Node Serverless Functions
-layout: '@/layouts/blog.astro'
 tags:
   - Serverless Framework
   - AWS Lambda

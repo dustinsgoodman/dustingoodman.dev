@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-09-26
 heroImage: /blog-assets/20220926-github-actions-serverless-framework-deploys.webp
 alt: This Dot GitHub Actions for Serverless Framework Deployments
-layout: '@/layouts/blog.astro'
 originalArticle: https://www.thisdot.co/blog/github-actions-for-serverless-framework-deployments
 originalSource: ThisDot
 tags:

@@ -5,7 +5,6 @@ description: >
 publishDate: 2022-01-29
 heroImage: /blog-assets/20220130-serverless-v3-review.webp
 alt: Serverless 3 Review
-layout: '@/layouts/blog.astro'
 tags:
   - Serverless Framework
 ---

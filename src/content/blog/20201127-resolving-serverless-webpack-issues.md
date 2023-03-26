@@ -5,7 +5,7 @@ description: >
 publishDate: 2020-11-27
 heroImage: /blog-assets/20201127-serverless-webpack.webp
 alt: serverless node webpack
-layout: '@/layouts/blog.astro'
+
 originalArticle: https://dustinsgoodman.medium.com/resolving-serverless-webpack-issues-efae729e0619
 originalSource: Medium
 tags:
