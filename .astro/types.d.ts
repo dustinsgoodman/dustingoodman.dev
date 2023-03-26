@@ -34,7 +34,10 @@ declare module 'astro:content' {
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
 		| import('astro/zod').ZodUnion<import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
+		| import('astro/zod').ZodDiscriminatedUnion<
+				string,
+				import('astro/zod').AnyZodObject[]
+		  >
 		| import('astro/zod').ZodIntersection<
 				import('astro/zod').AnyZodObject,
 				import('astro/zod').AnyZodObject
@@ -60,7 +63,9 @@ declare module 'astro:content' {
 
 	type EntryMapKeys = keyof typeof entryMap;
 	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
-	type ValidEntrySlug<C extends EntryMapKeys> = AllValuesOf<(typeof entryMap)[C]>['slug'];
+	type ValidEntrySlug<C extends EntryMapKeys> = AllValuesOf<
+		(typeof entryMap)[C]
+	>['slug'];
 
 	export function getEntryBySlug<
 		C extends keyof typeof entryMap,
@@ -72,7 +77,10 @@ declare module 'astro:content' {
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
-	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
+	export function getCollection<
+		C extends keyof typeof entryMap,
+		E extends CollectionEntry<C>
+	>(
 		collection: C,
 		filter?: (entry: CollectionEntry<C>) => entry is E
 	): Promise<E[]>;
@@ -81,106 +89,106 @@ declare module 'astro:content' {
 		filter?: (entry: CollectionEntry<C>) => unknown
 	): Promise<CollectionEntry<C>[]>;
 
-	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
-		Required<ContentConfig['collections'][C]>['schema']
-	>;
+	type InferEntrySchema<C extends keyof typeof entryMap> =
+		import('astro/zod').infer<
+			Required<ContentConfig['collections'][C]>['schema']
+		>;
 
 	const entryMap: {
-		"blog": {
-"20201122-compscis-hardest-problems.md": {
-  id: "20201122-compscis-hardest-problems.md",
-  slug: "20201122-compscis-hardest-problems",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20201127-resolving-serverless-webpack-issues.md": {
-  id: "20201127-resolving-serverless-webpack-issues.md",
-  slug: "20201127-resolving-serverless-webpack-issues",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20210215-migrating-rest-to-graphql.md": {
-  id: "20210215-migrating-rest-to-graphql.md",
-  slug: "20210215-migrating-rest-to-graphql",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20210408-multi-platform-engagement-tool.md": {
-  id: "20210408-multi-platform-engagement-tool.md",
-  slug: "20210408-multi-platform-engagement-tool",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220117-migrating-express-to-serverless.md": {
-  id: "20220117-migrating-express-to-serverless.md",
-  slug: "20220117-migrating-express-to-serverless",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220125-starter-dev-angular-announcement.md": {
-  id: "20220125-starter-dev-angular-announcement.md",
-  slug: "20220125-starter-dev-angular-announcement",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220129-serverless3-review.md": {
-  id: "20220129-serverless3-review.md",
-  slug: "20220129-serverless3-review",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220414-serverless-template-announcement.md": {
-  id: "20220414-serverless-template-announcement.md",
-  slug: "20220414-serverless-template-announcement",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220420-debugging-serverless-funtions.md": {
-  id: "20220420-debugging-serverless-funtions.md",
-  slug: "20220420-debugging-serverless-funtions",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220901-git-strategies-for-teams.md": {
-  id: "20220901-git-strategies-for-teams.md",
-  slug: "20220901-git-strategies-for-teams",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20220926-github-actions-serverless-framework-deploys.md": {
-  id: "20220926-github-actions-serverless-framework-deploys.md",
-  slug: "20220926-github-actions-serverless-framework-deploys",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"20221128-how-i-pick-my-web-tech-stack.md": {
-  id: "20221128-how-i-pick-my-web-tech-stack.md",
-  slug: "20221128-how-i-pick-my-web-tech-stack",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-"202220414-serverless-template-announcement.md": {
-  id: "202220414-serverless-template-announcement.md",
-  slug: "202220414-serverless-template-announcement",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
-},
-
+		blog: {
+			'20201122-compscis-hardest-problems.md': {
+				id: '20201122-compscis-hardest-problems.md';
+				slug: '20201122-compscis-hardest-problems';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20201127-resolving-serverless-webpack-issues.md': {
+				id: '20201127-resolving-serverless-webpack-issues.md';
+				slug: '20201127-resolving-serverless-webpack-issues';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20210215-migrating-rest-to-graphql.md': {
+				id: '20210215-migrating-rest-to-graphql.md';
+				slug: '20210215-migrating-rest-to-graphql';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20210408-multi-platform-engagement-tool.md': {
+				id: '20210408-multi-platform-engagement-tool.md';
+				slug: '20210408-multi-platform-engagement-tool';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220117-migrating-express-to-serverless.md': {
+				id: '20220117-migrating-express-to-serverless.md';
+				slug: '20220117-migrating-express-to-serverless';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220125-starter-dev-angular-announcement.md': {
+				id: '20220125-starter-dev-angular-announcement.md';
+				slug: '20220125-starter-dev-angular-announcement';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220129-serverless3-review.md': {
+				id: '20220129-serverless3-review.md';
+				slug: '20220129-serverless3-review';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220414-serverless-template-announcement.md': {
+				id: '20220414-serverless-template-announcement.md';
+				slug: '20220414-serverless-template-announcement';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220420-debugging-serverless-funtions.md': {
+				id: '20220420-debugging-serverless-funtions.md';
+				slug: '20220420-debugging-serverless-funtions';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220901-git-strategies-for-teams.md': {
+				id: '20220901-git-strategies-for-teams.md';
+				slug: '20220901-git-strategies-for-teams';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20220926-github-actions-serverless-framework-deploys.md': {
+				id: '20220926-github-actions-serverless-framework-deploys.md';
+				slug: '20220926-github-actions-serverless-framework-deploys';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'20221128-how-i-pick-my-web-tech-stack.md': {
+				id: '20221128-how-i-pick-my-web-tech-stack.md';
+				slug: '20221128-how-i-pick-my-web-tech-stack';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+			'202220414-serverless-template-announcement.md': {
+				id: '202220414-serverless-template-announcement.md';
+				slug: '202220414-serverless-template-announcement';
+				body: string;
+				collection: 'blog';
+				data: InferEntrySchema<'blog'>;
+			} & { render(): Render['.md'] };
+		};
 	};
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = typeof import('../src/content/config');
 }
