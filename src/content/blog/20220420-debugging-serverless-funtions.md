@@ -2,10 +2,9 @@
 title: Debugging Node Serverless Functions on AWS Lambda
 description: >
   Writing and testing functions for serverless locally can be a breeze especially with the Serverless Framework and serverless-offline plugin. However, once you get to real infrastructure, sometimes debugging your functions can be really challenging. Let's talk about some debugging tips and tricks.
-publishDate: Apr 20, 2022
+publishDate: 2022-04-20
 heroImage: /blog-assets/20220420-debugging-serverless-functions.webp
 alt: Debugging Node Serverless Functions
-layout: '@/layouts/blog.astro'
 tags:
   - Serverless Framework
   - AWS Lambda

@@ -2,10 +2,9 @@
 title: How I pick my web technology stack?
 description: >
   In this post, I explore how I make technology decisions based on use cases and what technologies I think are best suited towards solving the problem.
-publishDate: Nov 28, 2022
+publishDate: 2022-11-28
 heroImage: /blog-assets/20221128-how-i-pick-my-tech-stack.webp
 alt: How I pick my web technology stack? Workflow diagram of content described in the article.
-layout: '@/layouts/blog.astro'
 tags:
   - Architecture
   - System Design

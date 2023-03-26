@@ -1,5 +1,5 @@
 {
-	"moduleResolution": "node",
+	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
@@ -7,6 +7,10 @@
 			"@/images/*": ["src/images/*"],
 			"@/layouts/*": ["src/layouts/*"],
 			"@/types": ["src/types/index"]
-		}
+		},
+		"allowJs": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"strictNullChecks": true
 	}
 }

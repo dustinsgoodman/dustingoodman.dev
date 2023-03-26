@@ -1,0 +1,48 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/base.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import BlogPost from '@/components/BlogPost.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+
+	return posts.map((post) => {
+		return {
+			params: {
+				slug: post.slug,
+			},
+			props: {
+				post,
+			},
+		};
+	});
+}
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, heroImage, redirectUrl, originalArticle } =
+	post.data;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const { Content } = await post.render();
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	socialImage={`https://dustingoodman.dev${heroImage}`}
+	canonicalUrl={canonicalURL}
+	redirectUrl={redirectUrl || originalArticle}
+>
+	<Header />
+	<main class="container mx-auto py-4 md:py-8">
+		<BlogPost post={post}>
+			<Content />
+		</BlogPost>
+	</main>
+	<Footer />
+</BaseLayout>
