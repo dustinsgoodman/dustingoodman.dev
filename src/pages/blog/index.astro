@@ -4,11 +4,11 @@ import LandingLayout from '@/layouts/landing.astro';
 import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
 const allPosts = await getCollection('blog', (post) => {
-	return (
-		import.meta.env.MODE !== 'production' &&
-		post.data.draft !== true &&
-		!post.data.redirectUrl
-	);
+	if (import.meta.env.MODE === 'production') {
+		return post.data.draft !== true && !post.data.redirectUrl;
+	}
+
+	return !post.data.redirectUrl;
 });
 const posts = allPosts.sort(
 	(a, b) =>
