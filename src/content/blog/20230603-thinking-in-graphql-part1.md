@@ -54,4 +54,8 @@ For instance, a status field with a set of values that aren't human consumable n
 
 ## Standards and Best Practices
 
+Well, frankly, GraphQL has introduced new API concerns and challenges that didn't exist previously or had good solutions in the REST or RPC counterparts. Cyclic complexity, authorization, sub-query context, data filtering, and rate limiting are examples of these challenges. With REST solutions, there are great tools that exist that just solve these problems. With GraphQL, we're finding vendor lock-in challenges or solutions that solve our problems to a point but then we experience limitations with those solutions to these common problems. Several companies are actively trying to solve these challenges but we're just not getting their tools fast enough for our needs as a community.
+
+On top of all of this, we're still not standardized around how certain features of GraphQL should work. That's not to say everything has to work exactly the same way in every instance of a GraphQL API, but we need resources that we can point our less experienced team members towards that can answer their questions on best practices so the more senior members can solve the architecture problems allowing team to be more effective.
+
 ## Depth of Knowledge about the GraphQL Toolchain
