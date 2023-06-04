@@ -1,0 +1,24 @@
+---
+export interface Props {
+  videoId: string;
+  title: string;
+  start?: number;
+  end?: number;
+}
+
+const { videoId, start, title } = Astro.props;
+let src = `https://www.youtube.com/embed/${videoId}`;
+if (start) {
+  src += `?start=${start}`;
+}
+
+---
+<iframe
+  width="560"
+  height="315"
+  src={src}
+  title={title}
+  frameborder="0"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
