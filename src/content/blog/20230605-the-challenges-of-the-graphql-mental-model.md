@@ -1,14 +1,14 @@
 ---
-title: Thinking in GraphQL [Part 1]
+title: 'The Challenges of the GraphQL Mental Model'
 description: >
-  lorem ipsum
-publishDate: 2023-06-03
-heroImage: /blog-assets/20221128-how-i-pick-my-tech-stack.webp
-alt: How I pick my web technology stack? Workflow diagram of content described in the article.
+  GraphQL
+publishDate: 2023-06-05
+heroImage: /blog-assets/20230605-the-challenges-of-the-graphql-mental-model.webp
+alt: The Challenges of the GraphQL Mental Model
 tags:
   - GraphQL
   - API Design
-draft: true
+  - Architecture
 ---
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -48,14 +48,32 @@ This is not purely the fault of teams as the businesses around them are constant
 
 This has also led to the fullstack engineer who tries to bridge these gaps. Of course, they're caught in the same crossfire of everyone else and fall back to what they know - just dump the data and go.
 
-Going back to the GraphQL model again, the idea is the backend engineers can expose all the data even if it's not consumed by the frontend team and the frontend team can select what fields they want from the data available. This requires these teams to communicate more which can become another bottleneck for the business and therefore a problem. But, if these two teams started to discuss the actual behavior and needs of the data, better GraphQL fields and entities would arise.
+Going back to the GraphQL model again, the idea is the backend engineers can still expose all the data even if it's not consumed by the frontend team and the frontend team can select what fields they want from the data available to reduce client impacts. However, to truly realize the power of GraphQL requires these teams to communicate more which can become another bottleneck for the business and therefore a problem. But, if these two teams started to discuss the actual behavior and needs of the data, better GraphQL fields and entities would arise which could reduce the amount of JavaScript that ships to the client.
 
 For instance, a status field with a set of values that aren't human consumable need to get mapped somewhere. Should it happen on the frontend or backend? Historically, this problem just gets deferred to the frontend and requires more logic be shipped to clients. With GraphQL, however, we can now have special formatting resolvers in our API that give the client exactly the shape they want the data which alleviates the device needs. So why aren't developers ready to just do this with GraphQL?
 
 ## Standards and Best Practices
 
-Well, frankly, GraphQL has introduced new API concerns and challenges that didn't exist previously or had good solutions in the REST or RPC counterparts. Cyclic complexity, authorization, sub-query context, data filtering, and rate limiting are examples of these challenges. With REST solutions, there are great tools that exist that just solve these problems. With GraphQL, we're finding vendor lock-in challenges or solutions that solve our problems to a point but then we experience limitations with those solutions to these common problems. Several companies are actively trying to solve these challenges but we're just not getting their tools fast enough for our needs as a community.
+Well, frankly, GraphQL has introduced new API concerns and challenges that didn't exist previously or had good solutions in its REST or RPC counterparts. Cyclic complexity, authorization, sub-query context, data filtering, and rate limiting are examples of these challenges. With REST solutions, there are great tools that exist that just solve many of these problems. With GraphQL, we're finding vendor lock-in challenges or solutions that solve our problems to a point but then we experience limitations with those solutions to these common problems. Several companies are actively trying to solve these challenges but we're just not getting their tools fast enough for our needs as a community.
 
 On top of all of this, we're still not standardized around how certain features of GraphQL should work. That's not to say everything has to work exactly the same way in every instance of a GraphQL API, but we need resources that we can point our less experienced team members towards that can answer their questions on best practices so the more senior members can solve the architecture problems allowing team to be more effective.
 
+[The GraphQL Foundation website includes a document on some best practices](https://graphql.org/learn/best-practices/), but these focus more on API architectural best practices such as pagination, batching, caching, and communication. [How to GraphQL](https://www.howtographql.com/) is a great course that is also recommended for learning the basics of GraphQL, but it doesn't cover some of the techniques for thinking in GraphQL to allow for the building of better APIs. This really brings us the last issue.
+
 ## Depth of Knowledge about the GraphQL Toolchain
+
+The GraphQL ecosystem and toolchain is vast. With field level arguments, resolvers for _any_ field, fragments for query reuse, directives, etc., there are now features that aren't common outside of GraphQL that teams probably need to get the most out of their APIs. Education and experience are core to alleviating any challenges presented by this issue. Bringing GraphQL to a group of developers that have never used it prior will produce negative business productivity for the first several weeks as the teams ramp up on how to use the toolchain. However, it still probably takes the most efficient teams several months to fully acclimate and any new developer brought onto these teams will have to go through the same learning.
+
+We're not at a place yet where linters and other developer experience tooling can solve these problems fully. When a team decides on a standard or technique, they need to come to consensus and agree to adhere to the rules. But unlike formatting standards, there aren't solutions readily available to create these guardrails. As a result, teams are required to self-police their standards during development and code review. This comes with the challenge of knowing all the potential avenues where new decisions could arise. When I've worked on teams in the past, someone would try something new we hadn't discussed as a group and we'd have to work backwards to the alternatives to come up with a solution the team collectively would agree to moving forward.
+
+An example of this that comes up during later stages of GraphQL API development is the union type. Should you use it? If we use it, what implications does that have on consumers? Shared fields can't be lifted to the top-level query so is it actually worth utilizing this type over multiple queries in the same operation? Should union types be reserved only for aggregations or searches or can they be used more generically? These are the types of questions and discussions you might start finding your team having and without that experience, some decisions might get made without all the info leading to hard to reverse decisions later.
+
+## Conclusions
+
+If your team needs an API that can be consumed by multiple applications or serve the general public, GraphQL _may_ be the right solution for it. However, the business needs to understand the implications of adopting this style of development. There will be tradeoffs, like with any solution, but the ones exposed by GraphQL do force a shift to the mental model of many developers.
+
+This isn't to say that you should give up on GraphQL in favor of REST or RPC. In fact, REST and RPC both have their own pitfalls that could harm the user experience or limit your businesses ability to grow onto more platforms that you really need to consider as you have these discussions.
+
+I personally enjoy the GraphQL mental model and developing in it and have found that a lot of the solutions I've built with it have enormously benefitted from the decision to use it. The pay offs definitely came much later than many stakeholders would have wanted and setting up the ecosystem in the organization took longer than desired, but the flexibility and adaptability now that these systems exist are appreciated by the business, the developers, and the consumers of their products.
+
+If you want to continue this conversation, please reach out on [Twitter](https://twitter.com/dustinsgoodman) or [Bluesky](https://bsky.app/profile/dustingoodman.dev).
