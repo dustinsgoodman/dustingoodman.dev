@@ -16,7 +16,7 @@
 		"@types/react-dom": "^18.2.4",
 		"astro": "^2.1.7",
 		"autoprefixer": "^10.4.14",
-		"postcss": "^8.4.21",
+		"postcss": "^8.4.24",
 		"prettier": "^2.8.7",
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-tailwindcss": "^0.3.0",
