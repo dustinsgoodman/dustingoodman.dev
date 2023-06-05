@@ -77,4 +77,8 @@
 	blockquote {
 		@apply border-l-4 px-4 italic;
 	}
+
+	.twitter-tweet {
+		@apply mx-auto;
+	}
 }
