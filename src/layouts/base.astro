@@ -10,7 +10,7 @@ export interface Props {
 	redirectUrl?: string;
 }
 
-const { title, description, socialImage, canonicalURL, redirectUrl } =
+const { title, description, socialImage, canonicalUrl, redirectUrl } =
 	Astro.props;
 ---
 
@@ -20,7 +20,7 @@ const { title, description, socialImage, canonicalURL, redirectUrl } =
 			title={title}
 			description={description}
 			socialImage={socialImage}
-			canonicalURL={canonicalURL}
+			canonicalUrl={canonicalUrl}
 			redirectUrl={redirectUrl}
 		/>
 		<link

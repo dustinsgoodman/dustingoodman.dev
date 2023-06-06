@@ -1,9 +1,17 @@
 ---
+export interface Props {
+	title: string;
+	description: string;
+	socialImage?: string;
+	canonicalUrl?: string;
+	redirectUrl?: string;
+}
+
 const {
 	title = 'Dustin Goodman: Personal Site',
 	description = 'The personal site of Dustin Goodman',
 	socialImage = 'https://dustingoodman.dev/assets/avatar.png',
-	canonicalURL = 'https://dustingoodman.dev',
+	canonicalUrl = 'https://dustingoodman.dev',
 	redirectUrl,
 } = Astro.props;
 ---
@@ -37,7 +45,7 @@ const {
 <meta property="og:type" content="article" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={canonicalURL} />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:image" content={socialImage} />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

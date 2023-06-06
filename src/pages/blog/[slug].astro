@@ -27,7 +27,7 @@ interface Props {
 const { post } = Astro.props;
 const { title, description, heroImage, redirectUrl, originalArticle } =
 	post.data;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const { Content } = await post.render();
 ---
 
@@ -35,7 +35,7 @@ const { Content } = await post.render();
 	title={title}
 	description={description}
 	socialImage={`https://dustingoodman.dev${heroImage}`}
-	canonicalUrl={canonicalURL}
+	canonicalUrl={canonicalUrl}
 	redirectUrl={redirectUrl || originalArticle}
 >
 	<Header />
