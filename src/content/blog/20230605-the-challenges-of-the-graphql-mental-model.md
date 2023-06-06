@@ -1,7 +1,7 @@
 ---
 title: 'The Challenges of the GraphQL Mental Model'
 description: >
-  GraphQL
+  GraphQL can be an amazing tool for teams to implement the APIs powering their different applications that rely on the same source of data. However, the mental model required for it may not be as straightforward as traditional solutions. Let's explore some of these challenges.
 publishDate: 2023-06-05
 heroImage: /blog-assets/20230605-the-challenges-of-the-graphql-mental-model.webp
 alt: The Challenges of the GraphQL Mental Model
