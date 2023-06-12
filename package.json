@@ -18,7 +18,7 @@
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.24",
 		"prettier": "^2.8.8",
-		"prettier-plugin-astro": "^0.8.0",
+		"prettier-plugin-astro": "^0.10.0",
 		"prettier-plugin-tailwindcss": "^0.3.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-external-links": "^2.1.0",
