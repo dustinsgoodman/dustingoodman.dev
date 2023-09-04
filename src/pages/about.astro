@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import LandingLayout from '@/layouts/landing.astro';
+import Layout from '@/layouts/base.astro';
 import {
-	CodeIcon,
 	MicIcon,
 	PencilIcon,
 	TeamIcon,
@@ -38,11 +37,11 @@ const socialLinks = [
 ];
 ---
 
-<LandingLayout
-	title="Welcome | Dustin Goodman"
-	description="Personal website for Dustin Goodman. Contains blog posts and other content related to web development."
+<Layout
+	title="About | Dustin Goodman"
+	description="Learn more about Dustin Goodman"
 >
-	<section class="container relative mx-auto flex flex-col items-center py-4">
+	<section class="container relative mx-auto flex flex-col items-center">
 		<h2 class="my-2 text-center">I'm Dustin Goodman</h2>
 		<Image
 			class="my-2 block w-1/2 md:w-1/4"
@@ -96,7 +95,7 @@ const socialLinks = [
 			to any web-based technology stack and team.
 		</p>
 	</section>
-	<section class="container relative mx-auto flex flex-col items-center py-4">
+	<section class="container relative mx-auto flex flex-col items-center">
 		<h3 class="mb-4 text-center text-xl font-bold uppercase">
 			Connect with me
 		</h3>
@@ -118,4 +117,4 @@ const socialLinks = [
 			}
 		</ul>
 	</section>
-</LandingLayout>
+</Layout>
