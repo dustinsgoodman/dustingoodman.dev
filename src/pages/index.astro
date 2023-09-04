@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import LandingLayout from '@/layouts/landing.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
-import AboutSection from '@/components/AboutSection.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
 
 const recentBlogPosts = (
@@ -27,6 +26,5 @@ const recentBlogPosts = (
 	description="Personal website for Dustin Goodman. Contains blog posts and other content related to web development."
 >
 	<HeroBanner />
-	<AboutSection />
 	<BlogPreviewSection blogPosts={recentBlogPosts} />
 </LandingLayout>

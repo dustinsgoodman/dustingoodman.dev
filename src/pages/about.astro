@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import LandingLayout from '@/layouts/landing.astro';
+import {
+	CodeIcon,
+	MicIcon,
+	PencilIcon,
+	TeamIcon,
+	BlueskyIcon,
+	GithubIcon,
+	LinkedInIcon,
+	TwitterIcon,
+} from '@/components/Icons';
+import RolePill from '@/components/RolePill';
+import headshotImg from '@/images/assets/headshot.jpg';
+
+const socialLinks = [
+	{
+		href: 'https://twitter.com/dustinsgoodman',
+		label: "Dustin's Twitter",
+		icon: TwitterIcon,
+	},
+	{
+		href: 'https://bsky.app/profile/dustingoodman.dev',
+		label: "Dustin's Bluesky",
+		icon: BlueskyIcon,
+	},
+	{
+		href: 'https://github.com/dustinsgoodman',
+		label: "Dustin's Github",
+		icon: GithubIcon,
+	},
+	{
+		href: 'https://www.linkedin.com/in/dustinsgoodman/',
+		label: "Dustin's LinkedIn",
+		icon: LinkedInIcon,
+	},
+];
+---
+
+<LandingLayout
+	title="Welcome | Dustin Goodman"
+	description="Personal website for Dustin Goodman. Contains blog posts and other content related to web development."
+>
+	<section class="container relative mx-auto flex flex-col items-center py-4">
+		<h2 class="my-2 text-center">I'm Dustin Goodman</h2>
+		<Image
+			class="my-2 block w-1/2 md:w-1/4"
+			src={headshotImg}
+			alt="Dustin Goodman Headshot"
+			loading="lazy"
+			width="1136"
+			height="1136"
+		/>
+		<div class="my-4 flex flex-wrap space-x-4">
+			<RolePill>
+				<TeamIcon className="inline" />
+				<span class="hidden sm:inline">&nbsp; Engineering Leader</span>
+			</RolePill>
+			<RolePill>
+				<MicIcon className="inline" />
+				<span class="hidden sm:inline">&nbsp; Speaker</span>
+			</RolePill>
+			<RolePill>
+				<PencilIcon className="inline" />
+				<span class="hidden sm:inline">&nbsp; Writer</span>
+			</RolePill>
+		</div>
+	</section>
+	<section
+		class="container relative mx-auto flex max-w-prose flex-col items-center py-4"
+	>
+		<p class="px-2">
+			I am an engineering leader, writer, speaker, and dog dad. I work as an
+			Engineering Manager at
+			<a
+				href="https://thisdot.co"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline dark:text-blue-200 dark:hover:text-blue-400"
+				>This Dot Labs
+			</a>, where I help my team grow a community of current and future
+			technologists in order to learn about and further web technologies. I am
+			an expert product engineer with over a decade of industry experience
+			leading product and engineering teams to deliver solutions to their target
+			audiences with first-in-class user experiences.
+		</p>
+		<p class="px-2">
+			I'm a technologist who presents on stages around the USA. My blog contains
+			topics ranging from leadership learnings to technical deep dives. My goal
+			is to share my experiences with those willing to learn about them.
+		</p>
+		<p class="px-2">
+			My expertise is in React, GraphQL, and Serverless technologies. However,
+			I've worked in a variety of technologies and toolchains and am versatile
+			to any web-based technology stack and team.
+		</p>
+	</section>
+	<section class="container relative mx-auto flex flex-col items-center py-4">
+		<h3 class="mb-4 text-center text-xl font-bold uppercase">
+			Connect with me
+		</h3>
+		<ul class="ml-0 flex list-none items-center justify-center space-x-4">
+			{
+				socialLinks.map(({ href, label, icon: Icon }) => (
+					<li>
+						<a
+							href={href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={label}
+							class="block rounded-full bg-blue-600 p-2 text-4xl text-white hover:bg-blue-900 hover:text-slate-100 dark:bg-white dark:text-blue-900 dark:hover:bg-slate-300 dark:hover:text-blue-700"
+						>
+							<Icon />
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</LandingLayout>

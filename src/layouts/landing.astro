@@ -14,7 +14,7 @@ const { title, description, socialImage } = Astro.props;
 
 <BaseLayout title={title} description={description} socialImage={socialImage}>
 	<Header />
-	<main>
+	<main class="bg-blue-100 dark:bg-slate-900">
 		<slot />
 	</main>
 	<Footer />
