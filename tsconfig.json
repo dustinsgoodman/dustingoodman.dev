@@ -5,8 +5,7 @@
 		"paths": {
 			"@/components/*": ["src/components/*"],
 			"@/images/*": ["src/images/*"],
-			"@/layouts/*": ["src/layouts/*"],
-			"@/types": ["src/types/index"]
+			"@/layouts/*": ["src/layouts/*"]
 		},
 		"allowJs": true,
 		"jsx": "react-jsx",
