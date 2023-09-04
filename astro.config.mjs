@@ -5,7 +5,6 @@
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing "@ts-check" and `@type` comments below.
 // @ts-check
-import { imagetools } from 'vite-imagetools';
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
@@ -38,14 +37,9 @@ export default defineConfig(
 		},
 		integrations: [
 			tailwind({
-				config: {
-					applyBaseStyles: false,
-				},
+				applyBaseStyles: false,
 			}),
 			react(),
 		],
-		vite: {
-			plugins: [imagetools()],
-		},
 	}
 );
