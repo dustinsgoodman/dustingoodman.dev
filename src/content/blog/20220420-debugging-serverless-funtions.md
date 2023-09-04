@@ -79,7 +79,7 @@ Similar to invoking via another Lambda, we can utilize SQS to send a message to 
 
 Lambda's default timeout settings are the next major hurdle. If your Lambda needs to run for a while or process a lot of data, you might see your function just quit suddenly and not reach a later moment in your code. **By default, Lambda has a 6 second timeout.** If you're waiting on additional services, long running queries, or a Lambda to start cold, this could prove problematic. A quick way to check your Lambda's timeout is to load up the AWS Console and at the Lambda's general configuration at the bottom of page. In the screenshot below, you'll see the Lambda I'm inspecting has a 5 minute timeout.
 
-![Lambda Console Configuration Tab](/blog-assets/20220420-lambda-configuration.webp)
+![Lambda Console Configuration Tab](./blog-assets/20220420-lambda-configuration.webp)
 
 Lambda timeouts can be configured in second intervals up to 15 minutes. When I use the Serverless Framwork, I typically set my Lambdas attached to API Gateway triggers to 29 seconds and SQS triggers to 15 minutes via the configuration file. I choose 29 seconds because API Gateway's maximum timeout is 30 seconds and due to latency between the API Gateway and the Lambda, AWS warns when the timeout is equal to 30 seconds as it's not truly 30 seconds. Use your deployment configurations method of choice for setting timeouts but confirm they are what you set them to be.
 

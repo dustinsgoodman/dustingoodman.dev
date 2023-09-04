@@ -13,7 +13,7 @@ tags:
 
 One of my favorite conversations is trying to decide what technologies are best suited to accomplish the desired end result on a particular project. And well, as you may expect, the answer is “well it depends”.
 
-![Simpson's scene where the class pressures Bart to say it depends as if he were a senior engineer](/blog-assets/20221128-it-depends.webp)
+![Simpson's scene where the class pressures Bart to say it depends as if he were a senior engineer](./blog-assets/20221128-it-depends.webp)
 
 In this post, I hope to explore how I make these decisions. Feel free to challenge my thinking and let’s have a great conversation about how we can improve this decision tree.
 
@@ -31,7 +31,7 @@ For each of these archetypes, there is a solution that is arguably more appropri
 
 ## Case 1: Static Content Sites
 
-![Simple static website architecture diagram showing S3 to Cloudfront connected to a user device](/blog-assets/20221128-static-website-architecture.webp)
+![Simple static website architecture diagram showing S3 to Cloudfront connected to a user device](./blog-assets/20221128-static-website-architecture.webp)
 
 Are you building a docs site or a personal blog? Is your content relatively static with low-to-no interactive elements? If yes, I strongly recommend using [Astro](<[https://astro.build/](https://astro.build/)>) or an equivalent framework.
 
@@ -41,17 +41,17 @@ Astro is a HTML-first framework that utilizes island architectures to allow you 
 
 ### Other considerations for Astro
 
-![MDX logo](/blog-assets/20221128-mdx.webp)
+![MDX logo](./blog-assets/20221128-mdx.webp)
 
 Astro also is a winner in my book because they have first-class markdown and MDX experiences which is great for content writers, who aren’t necessarily technical. Thus, making Astro an excellent option for this classification of projects.
 
 ### When to maybe not use Astro?
 
-![Excerpt from Astro docs talking about how they aren't the best use case for applications](/blog-assets/20221128-astro-use-case.webp)
+![Excerpt from Astro docs talking about how they aren't the best use case for applications](./blog-assets/20221128-astro-use-case.webp)
 
 [Astro admits this themself](<[https://docs.astro.build/en/concepts/why-astro/#content-focused](https://docs.astro.build/en/concepts/why-astro/#content-focused)>) that there are use cases that maybe they aren’t the best at and that’s okay! This is part of why I recommend them and prioritize them for this type of project. My website is built on Astro and I’ll say the development experience has been superb. That being said, if you’re starting to add features like CTAs to capture consumer information that sends out emails or other needs to interact with other services, this type of tech maybe isn’t for you. Of course, you can use web APIs to send requests to a server or serverless functions but there are better options for this use case that require less tech.
 
-![Architecture diagram demonstrating how to achieve dynamic sites with Astro by introducing a separate API stack](/blog-assets/20221128-separate-architectures-design.webp)
+![Architecture diagram demonstrating how to achieve dynamic sites with Astro by introducing a separate API stack](./blog-assets/20221128-separate-architectures-design.webp)
 
 ### Alternatives to Astro
 
@@ -71,7 +71,7 @@ Are you building your company’s marketing website or an Ecommerce site? You’
 
 ### Why these frameworks?
 
-![Dynamic website architecture diagram showing most of the ecosystem lives inside of the Next or Remix domain area](/blog-assets/20221128-dynamic-website-architecture.webp)
+![Dynamic website architecture diagram showing most of the ecosystem lives inside of the Next or Remix domain area](./blog-assets/20221128-dynamic-website-architecture.webp)
 
 First off, Next.js & Nuxt.js provide a way to build **static** pages, and you can build good content creation experiences for your marketing team using a headless CMS with all three options. However, Next.js & Nuxt.js also provide a means for creating **dynamic** pages allowing you to integrate with your marketing team’s tooling, which Remix does by default. Finally, they all provide **API routes**. This gives you the ability to create those CTA features I mentioned above that Astro didn’t solve so well. With all these pieces combined, it allows you to:
 
@@ -121,7 +121,7 @@ In my opinion, the Node ecosystem for building backends is not yet mature enough
 
 ### My Preference
 
-![Rails architecture deployed to AWS Elastic Beanstalk with PostgresQL & Sidekiq Redis](/blog-assets/20221128-rails-architecture.webp)
+![Rails architecture deployed to AWS Elastic Beanstalk with PostgresQL & Sidekiq Redis](./blog-assets/20221128-rails-architecture.webp)
 
 When I’m building a server solution, I personally grab for Ruby on Rails. It’s not perfect for all situations, but I think Rails has a lot going for it:
 
@@ -136,13 +136,13 @@ When I’m building a server solution, I personally grab for Ruby on Rails. It�
 
 The above may not seem like a lot or that significant but considering the current state of the JavaScript ecosystem, replicating some of these features is a multi-day chore. These tools and features definitely come with their own downsides though and there are tradeoffs. That being said, you can opt to just use Rails as your API server, and frankly, that would be enough in my opinion. Rails’ frontend solutions are not ideal in my opinion and leave a lot on the table in terms of what you want especially with their asset management pipeline and their constant resistance to modern JavaScript frameworks.
 
-![Example of Active Record and the Rails Console in action](/blog-assets/20221128-rails-console.webp)
+![Example of Active Record and the Rails Console in action](./blog-assets/20221128-rails-console.webp)
 
 If you’re a .NET or PHP developer, you may be saying, “we have these things, why not us instead? We even solve the frontend problem.” I totally agree and think these are great alternatives. I just personally don’t want to program in C# or PHP, regardless of how good the languages have gotten (and trust me, I’ve tried). But hey - we’ve got something good here.
 
 ### So what about the frontend then?
 
-![angular react and vue logos](/blog-assets/20221128-frontend-frameworks.webp)
+![angular react and vue logos](./blog-assets/20221128-frontend-frameworks.webp)
 
 Use what makes the most sense for your product’s use case and what your team is most comfortable with. I think you need to weigh your priorities again, but I think Angular, React, or Vue are all excellent choices especially when paired with meta frameworks that enhance them for the better. I also recommend these as they are the currently battle-tested solutions.
 
@@ -152,7 +152,7 @@ SolidJS, Svelte, and Qwik are the new kids on the block and are probably going t
 
 I’m a big fan of serverless and you can see my attempts on the internet to make serverless a first-class choice. Unfortunately, I’ve learned from experience and seen the downsides to serverless to know I wouldn’t actually recommend it at scale. I think it’s a great tool for singular-focused microservices and ETL APIs. These stacks can handle volume better than most and cost a fraction of the price, but scaling them to larger projects or teams is challenging and the developer experience is just not there yet. I think we’ll see this change in the coming months, but for now, I think [Dax Raad (@thdxr)](https://twitter.com/thdxr) hits a key point with [this tweet](https://twitter.com/thdxr/status/1592917691194802176):
 
-![Tweet from Dax Raad talking about serverless tooling being trick shot demos and not maintainable applications](/blog-assets/20221128-dax-raad-tweet.webp)
+![Tweet from Dax Raad talking about serverless tooling being trick shot demos and not maintainable applications](./blog-assets/20221128-dax-raad-tweet.webp)
 
 Serverless is amazing and when used correctly, is truly amazing, but right now, we’re seeing the wrong trends in the space around the tech. I hope this changes.
 
