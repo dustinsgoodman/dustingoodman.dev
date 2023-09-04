@@ -1,33 +1,26 @@
 ---
+import { Image } from 'astro:assets';
 import { CodeIcon, MicIcon, PencilIcon } from '@/components/Icons';
 import RolePill from '@/components/RolePill';
+import avatarImg from '@/images/assets/avatar.png';
 ---
 
-<div
-	class="relative flex min-h-[80vw] flex-col items-center justify-center overflow-hidden bg-blue-600 p-4 text-white dark:border-b-2 dark:border-blue-100 dark:bg-blue-900 dark:text-blue-100 sm:min-h-[45vw]"
->
-	<h1 class="mb-3 mt-0 text-3xl font-black sm:text-5xl md:mb-6 md:text-7xl">
-		Dustin Goodman
-	</h1>
-	<div class="flex flex-wrap space-x-4">
-		<RolePill>
-			<CodeIcon className="inline" />
-			<span class="hidden sm:inline">&nbsp; Developer</span>
-		</RolePill>
-		<RolePill>
-			<MicIcon className="inline" />
-			<span class="hidden sm:inline">&nbsp; Speaker</span>
-		</RolePill>
-		<RolePill>
-			<PencilIcon className="inline" />
-			<span class="hidden sm:inline">&nbsp; Writer</span>
-		</RolePill>
-	</div>
-	<p
-		class="text-md mb-0 mt-3 max-w-3xl px-4 font-semibold sm:text-xl md:mt-6 md:px-16 md:text-2xl"
-	>
-		Just a person with a passion for web and application development. Speaker
-		and writer on work experiences and software development. Dog dad and
-		musician fueled by coffee.
+<div class="relative flex flex-col items-center justify-center p-4">
+	<Image
+		class="my-2 block w-48 rounded"
+		src={avatarImg}
+		alt="Dustin Goodman Headshot"
+		loading="lazy"
+		width="1136"
+		height="1136"
+	/>
+	<p class="mb-0 max-w-prose text-2xl">
+		Hello, I'm <span
+			class="underline decoration-blue-900 decoration-wavy decoration-1 underline-offset-2 dark:decoration-sky-200"
+			>Dustin Goodman</span
+		>!
+	</p>
+	<p class="max-w-prose text-2xl">
+		Engineering Leader & Technologist & Speaker
 	</p>
 </div>

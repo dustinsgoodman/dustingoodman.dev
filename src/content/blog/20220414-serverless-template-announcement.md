@@ -80,7 +80,7 @@ One of the most important aspects of serverless development is keeping an eye on
 
 With this project, you can run `yarn analyze <service name> --function=<function name>` to get an analysis of your bundle size. For example, if you run `yarn analyze public-api --function=graphql`, you'll see the following analysis:
 
-![public-api graphql function analysis](/blog-assets/20220414-bundle-analysis.webp)
+![public-api graphql function analysis](./blog-assets/20220414-bundle-analysis.webp)
 
 ## Default Services
 
@@ -96,7 +96,7 @@ Other projects will have more complexity and this doesn't begin to demonstrate a
 
 I started my career building Ruby on Rails applications. One of my favorite features was the `rails console` which allows developers to interact with their application code directly which greatly helps with testing and debugging. As such, I wanted to recreate this for this template. You can run `yarn console <library name>` to get an interactive REPL that you can interface with that library's code. I only included this as part of libraries and not services due to the nature of the code structure and the lack of entry points in which you should interact with the Lambda functions in your services. Below you can see how the console can work:
 
-![example utils console](/blog-assets/20220414-console-example.webp)
+![example utils console](./blog-assets/20220414-console-example.webp)
 
 ## What's Next?
 

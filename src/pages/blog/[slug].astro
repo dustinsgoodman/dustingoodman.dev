@@ -1,8 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseLayout from '@/layouts/base.astro';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
+import Layout from '@/layouts/base.astro';
 import BlogPost from '@/components/BlogPost.astro';
 
 export async function getStaticPaths() {
@@ -31,18 +29,14 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const { Content } = await post.render();
 ---
 
-<BaseLayout
+<Layout
 	title={title}
 	description={description}
 	socialImage={`https://dustingoodman.dev${heroImage}`}
 	canonicalUrl={canonicalUrl}
 	redirectUrl={redirectUrl || originalArticle}
 >
-	<Header />
-	<main class="container mx-auto py-4 md:py-8">
-		<BlogPost post={post}>
-			<Content />
-		</BlogPost>
-	</main>
-	<Footer />
-</BaseLayout>
+	<BlogPost post={post}>
+		<Content />
+	</BlogPost>
+</Layout>
