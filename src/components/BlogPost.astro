@@ -18,14 +18,9 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<article class="mx-4 bg-white dark:bg-gray-600 lg:mx-48">
-	<Image
-		class="max-h-[420px] w-full object-cover"
-		loading="lazy"
-		src={heroImage}
-		alt={alt}
-	/>
-	<h1 class="mb-2 text-center text-4xl">{title}</h1>
+<article class="mx-auto max-w-prose">
+	<Image class="object-contain" src={heroImage} alt={alt} />
+	<h1 class="mb-2 px-4 text-center text-4xl">{title}</h1>
 	<p class="mb-2 block text-center text-lg text-gray-600 dark:text-gray-100">
 		{formatDate(publishDate)}
 	</p>

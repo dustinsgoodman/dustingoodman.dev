@@ -9,15 +9,11 @@ type BlogType = CollectionEntry<'blog'>;
 
 <section id="blog" class="bg-blue-100 dark:bg-slate-900">
 	<div class="container mx-auto max-w-[90%] px-4 py-8">
-		<h2 class="mb-4 text-center sm:text-left">Recent Posts</h2>
+		<h2 class="mb-4 text-center">Recent Posts</h2>
 		<div class="grid gap-4 md:grid-cols-2 md:px-0 xl:grid-cols-3">
 			{
 				blogPosts.map((post: BlogType, idx: number) => (
-					<BlogPostPreview
-						post={post}
-						className={idx > 2 ? 'xl:hidden' : ''}
-						layout="card"
-					/>
+					<BlogPostPreview post={post} className={idx > 2 ? 'xl:hidden' : ''} />
 				))
 			}
 		</div>
