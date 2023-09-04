@@ -1,6 +1,12 @@
 ---
-import headshotImageUrl from '@/images/assets/headshot.jpg?w=1420&h=1420&webp&imagetools';
-import { GithubIcon, TwitchIcon, TwitterIcon } from '@/components/Icons';
+import { Image } from 'astro:assets';
+import headshotImg from '@/images/assets/headshot.jpg';
+import {
+	BlueskyIcon,
+	GithubIcon,
+	LinkedInIcon,
+	TwitterIcon,
+} from '@/components/Icons';
 
 const socialLinks = [
 	{
@@ -9,14 +15,19 @@ const socialLinks = [
 		icon: TwitterIcon,
 	},
 	{
+		href: 'https://bsky.app/profile/dustingoodman.dev',
+		label: "Dustin's Bluesky",
+		icon: BlueskyIcon,
+	},
+	{
 		href: 'https://github.com/dustinsgoodman',
 		label: "Dustin's Github",
 		icon: GithubIcon,
 	},
 	{
-		href: 'https://twitch.tv/sharocko',
-		label: "Dustin's Twitch",
-		icon: TwitchIcon,
+		href: 'https://www.linkedin.com/in/dustinsgoodman/',
+		label: "Dustin's LinkedIn",
+		icon: LinkedInIcon,
 	},
 ];
 ---
@@ -27,11 +38,13 @@ const socialLinks = [
 		<div
 			class="flex flex-wrap space-y-4 md:flex-nowrap md:space-x-8 md:space-y-0"
 		>
-			<img
+			<Image
 				class="block w-full sm:w-1/2 md:w-5/12"
-				src={headshotImageUrl}
+				src={headshotImg}
 				alt="Dustin Goodman Headshot"
 				loading="lazy"
+				width="1420"
+				height="1420"
 			/>
 
 			<div class="leading text-lg sm:w-1/2 md:w-7/12">

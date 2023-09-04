@@ -1,9 +1,9 @@
 ---
 import FooterLink from '@/components/FooterLink';
 import {
-	DevToIcon,
+	BlueskyIcon,
 	GithubIcon,
-	TwitchIcon,
+	LinkedInIcon,
 	TwitterIcon,
 } from '@/components/Icons';
 
@@ -28,6 +28,14 @@ const currentYear = new Date().getFullYear();
 				<TwitterIcon />
 			</FooterLink>
 			<FooterLink
+				href="https://bsky.app/profile/dustingoodman.dev"
+				target="_blank"
+				aria-label="Dustin's Bluesky"
+				rel="noopener noreferrer"
+			>
+				<BlueskyIcon />
+			</FooterLink>
+			<FooterLink
 				href="https://github.com/dustinsgoodman"
 				target="_blank"
 				aria-label="Dustin's Github"
@@ -36,20 +44,12 @@ const currentYear = new Date().getFullYear();
 				<GithubIcon />
 			</FooterLink>
 			<FooterLink
-				href="https://twitch.tv/sharocko"
+				href="https://www.linkedin.com/in/dustinsgoodman/"
 				target="_blank"
-				aria-label="Dustin's Twitch"
+				aria-label="Dustin's LinkedIn"
 				rel="noopener noreferrer"
 			>
-				<TwitchIcon />
-			</FooterLink>
-			<FooterLink
-				href="https://dev.to/dustinsgoodman"
-				target="_blank"
-				aria-label="Dustin's DevTo"
-				rel="noopener noreferrer"
-			>
-				<DevToIcon />
+				<LinkedInIcon />
 			</FooterLink>
 		</div>
 	</footer>
