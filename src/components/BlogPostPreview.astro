@@ -1,5 +1,6 @@
 ---
-import { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { type CollectionEntry } from 'astro:content';
 
 export interface Props {
 	post: CollectionEntry<'blog'>;
@@ -57,7 +58,7 @@ const getReadMoreText = (postSource: string | undefined) => {
 				},
 			]}
 		>
-			<img
+			<Image
 				src={post.data.heroImage}
 				alt={post.data.alt}
 				class="relative max-h-48 w-full object-contain sm:max-h-64"
