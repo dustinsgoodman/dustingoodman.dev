@@ -1,6 +1,6 @@
 ---
 import '../styles/base.css';
-import '@fontsource/montserrat';
+import '@fontsource-variable/montserrat';
 import '@fontsource/azeret-mono';
 import Head from '@/components/Head.astro';
 import Header from '@/components/Header.astro';
@@ -26,14 +26,6 @@ const { title, description, socialImage, canonicalUrl, redirectUrl } =
 			socialImage={socialImage}
 			canonicalUrl={canonicalUrl}
 			redirectUrl={redirectUrl}
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css?family=Azeret Mono&display=swap"
 		/>
 		<script is:inline>
 			const html = document.querySelector('html');
