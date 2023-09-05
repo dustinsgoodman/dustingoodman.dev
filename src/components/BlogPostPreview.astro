@@ -41,11 +41,11 @@ const getReadMoreText = (postSource: string | undefined) => {
 	rel="noopener noreferrer"
 >
 	<article class="flex h-full flex-col">
-		<div class="order-first mb-4 flex h-44 bg-slate-900">
+		<div class="mb-4 flex h-44 flex-col justify-center bg-slate-900">
 			<Image
 				src={post.data.heroImage}
 				alt={post.data.alt}
-				class="relative w-full object-contain sm:max-h-64"
+				class="relative w-full object-contain"
 				loading="lazy"
 			/>
 		</div>
