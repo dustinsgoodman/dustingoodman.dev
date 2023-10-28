@@ -70,6 +70,7 @@
 		@apply p-2;
 		@apply mb-4;
 		font-display: swap;
+		font-size: 14px;
 	}
 
 	blockquote {
