@@ -589,10 +589,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.16.tgz#bb1138c8fee894c6b02795e03bb84ed8ac9a20a1"
   integrity sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==
 
-"@fontsource/azeret-mono@^5.0.15":
-  version "5.0.15"
-  resolved "https://registry.yarnpkg.com/@fontsource/azeret-mono/-/azeret-mono-5.0.15.tgz#d8fd1d0bd4bc507fa1a48813d46c745a990037f5"
-  integrity sha512-4NTaeOBg/xyENqozVXCewgX6i1Bd3xaegualnZ17PL+iN2Btw5N3YXp7RHkyK/H2kAAxOIX3EAJc+vILIt+wAQ==
+"@fontsource/azeret-mono@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/azeret-mono/-/azeret-mono-5.0.17.tgz#d22ff310d46ef427a4c0bcd8227e201bd9d7c436"
+  integrity sha512-DPHHxhOc9JszTPeegHIcS5Zm5Gk7f5v/LfZm5neQ9PyMGI9Lz7b1sFk04N5mXKP5FuSX3uNd0blJw+zmR/kb9g==
 
 "@jridgewell/gen-mapping@^0.3.0":
   version "0.3.3"
