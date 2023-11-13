@@ -28,7 +28,7 @@
 	"dependencies": {
 		"@astrojs/check": "^0.2.1",
 		"@fontsource-variable/montserrat": "^5.0.16",
-		"@fontsource/azeret-mono": "^5.0.15",
+		"@fontsource/azeret-mono": "^5.0.17",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0"
 	}
