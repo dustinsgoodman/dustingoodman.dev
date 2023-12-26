@@ -1,5 +1,6 @@
 ---
 import '../styles/base.css';
+import { ViewTransitions } from 'astro:transitions';
 import '@fontsource-variable/montserrat';
 import '@fontsource/azeret-mono';
 import Head from '@/components/Head.astro';
@@ -27,6 +28,7 @@ const { title, description, socialImage, canonicalUrl, redirectUrl } =
 			canonicalUrl={canonicalUrl}
 			redirectUrl={redirectUrl}
 		/>
+		<ViewTransitions />
 		<script is:inline>
 			const html = document.querySelector('html');
 			let darkMode = localStorage.getItem('darkMode');
