@@ -10,10 +10,7 @@
 		"format": "yarn prettier -w ."
 	},
 	"devDependencies": {
-		"@astrojs/react": "^3.0.8",
 		"@astrojs/tailwind": "^5.0.4",
-		"@types/react": "^18.2.45",
-		"@types/react-dom": "^18.2.18",
 		"astro": "^4.0.7",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.32",
@@ -28,8 +25,6 @@
 	"dependencies": {
 		"@astrojs/check": "^0.3.4",
 		"@fontsource-variable/montserrat": "^5.0.17",
-		"@fontsource/azeret-mono": "^5.0.18",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"@fontsource/azeret-mono": "^5.0.18"
 	}
 }
