@@ -1,0 +1,102 @@
+---
+import { type Page } from 'astro';
+
+export type Props = {
+  page: Page<any>;
+  path: string;
+}
+
+function getPageNumbers(page: Page, windowSize = 5) {
+  let first = 1;
+  let last = page.lastPage;
+  const halfWindowSize = Math.floor(windowSize / 2);
+  const rightMargin = page.lastPage - page.currentPage;
+
+  if (page.currentPage <= halfWindowSize) {
+    if (page.lastPage > windowSize) {
+      last = windowSize;
+    }
+  } else if (rightMargin <= halfWindowSize) {
+    first = Math.max(page.lastPage - windowSize + 1, first);
+  } else {
+    first = Math.max(page.currentPage - halfWindowSize, first);
+    last = Math.min(page.currentPage + halfWindowSize, last);
+  }
+
+  return Array(last - first + 1).fill(0).map((_, idx) => first + idx);
+}
+
+function getUrl(path: string, pageNumber: number) {
+  if (pageNumber === 1) {
+    return path;
+  }
+  return `${path}/${pageNumber}`
+}
+
+const { page, path } = Astro.props;
+const pageNumbers = getPageNumbers(page);
+const firstPageInRange = pageNumbers[0];
+const lastPageInRange = pageNumbers[pageNumbers.length - 1];
+
+---
+<nav role="navigation" aria-label="Pagination">
+  <ul class="flex align-center justify-center space-x-2 list-none">
+    {page.url.prev && (
+      <li>
+        <a href={page.url.prev} aria-label="Go to previous page">
+          &laquo;Prev
+        </a>
+      </li>
+    )}
+    {firstPageInRange !== 1 && (
+      <li>
+        <a href={getUrl(path, 1)} aria-label="Go to page 1">
+          1
+        </a>
+      </li>
+    )}
+    {
+      firstPageInRange && firstPageInRange > 2 && (
+        <li>
+          &hellip;
+        </li>
+      )
+    }
+    {
+      pageNumbers.map((pageNumber) => {
+        return (
+          <li>
+            {pageNumber === page.currentPage ? (
+              <span> {pageNumber}</span>
+            ) : (
+              <a href={getUrl(path, pageNumber)} aria-label={`Go to page ${pageNumber}`}>
+                {pageNumber}
+              </a>
+            )}
+          </li>
+        );
+      })
+    }
+    {
+      lastPageInRange < page.lastPage - 1 && (
+        <li>
+          &hellip;
+        </li>
+      )
+    }
+    {lastPageInRange !== page.lastPage && (
+      <li>
+        <a href={getUrl(path, page.lastPage)} aria-label={`Go to page ${page.lastPage}`}>
+          {page.lastPage}
+        </a>
+      </li>
+    )}
+    {page.url.next && (
+      <li>
+        <a href={page.url.next} aria-label="Go to next page">
+          Next&raquo;
+        </a>
+      </li>
+    )}
+  </ul>
+</nav>
