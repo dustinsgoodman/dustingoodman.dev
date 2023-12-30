@@ -6,10 +6,9 @@ publishDate: 2022-04-14
 heroImage: ./blog-assets/20220414-announcing-serverless-microservices-template.png
 alt: Nx Serverless GraphQL Microservices Template
 tags:
-  - Serverless Framework
+  - Serverless
   - GraphQL
   - Microservices
-  - Nx
 ---
 
 For those that know me, they know I love talking about two things more than anything: Serverless Framework and GraphQL. Today, I'm excited to announce a project starter template that I've been developing that allows developers to build serverless microservices with GraphQL. It is built using Nx monorepos and provides a lot of quality of life developer tooling out-of-the-box. I'll discuss what's in the repo and how you can leverage it today for your own projects. If you want to jump into the code, you can [find it on GitHub](https://github.com/dustinsgoodman/serverless-microservices-graphql-template).

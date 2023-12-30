@@ -6,9 +6,8 @@ publishDate: 2022-04-20
 heroImage: ./blog-assets/20220420-debugging-serverless-functions.png
 alt: Debugging Node Serverless Functions
 tags:
-  - Serverless Framework
-  - AWS Lambda
-  - Debugging
+  - Serverless
+  - AWS
   - Node.js
 ---
 

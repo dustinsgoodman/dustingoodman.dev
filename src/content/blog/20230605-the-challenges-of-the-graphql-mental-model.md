@@ -7,7 +7,6 @@ heroImage: ./blog-assets/20230605-the-challenges-of-the-graphql-mental-model.png
 alt: The Challenges of the GraphQL Mental Model
 tags:
   - GraphQL
-  - API Design
   - Architecture
 ---
 

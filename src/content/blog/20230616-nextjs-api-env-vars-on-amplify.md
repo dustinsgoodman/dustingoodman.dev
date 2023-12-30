@@ -8,6 +8,7 @@ alt: Utilizing API Environment Variables on Next.js Apps Deployed to AWS Amplify
 originalArticle: https://www.thisdot.co/blog/utilizing-api-environment-variables-on-next-js-apps-deployed-to-aws-amplify
 originalSource: ThisDot
 tags:
-  - NextJS
-  - AWS Amplify
+  - Node.js
+  - ReactJS
+  - AWS
 ---

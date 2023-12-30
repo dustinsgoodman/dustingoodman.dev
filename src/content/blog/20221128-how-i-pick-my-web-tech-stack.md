@@ -7,8 +7,7 @@ heroImage: ./blog-assets/20221128-how-i-pick-my-tech-stack.png
 alt: How I pick my web technology stack? Workflow diagram of content described in the article.
 tags:
   - Architecture
-  - System Design
-  - Teams
+  - Engineering Leadership
 ---
 
 ![My decision tree for picking technology stacks](./blog-assets/20221128-how-i-pick-my-tech-stack.webp)

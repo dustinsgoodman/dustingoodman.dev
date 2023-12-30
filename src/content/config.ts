@@ -11,7 +11,25 @@ const blogCollection = defineCollection({
 			alt: z.string(),
 			originalArticle: z.string().url().optional(),
 			originalSource: z.enum(['Medium', 'ThisDot']).optional(),
-			tags: z.array(z.string()),
+			tags: z.array(
+				z.enum([
+					'Angular',
+					'Architecture',
+					'AWS',
+					'DevOps',
+					'Engineering Leadership',
+					'GraphQL',
+					'JavaScript',
+					'Microservices',
+					'Node.js',
+					'Open Source',
+					'Project Management',
+					'ReactJS',
+					'REST',
+					'Serverless',
+					'TypeScript',
+				])
+			),
 			redirectUrl: z.string().optional(),
 		}),
 });

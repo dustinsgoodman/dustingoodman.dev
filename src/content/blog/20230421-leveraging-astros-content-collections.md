@@ -9,5 +9,5 @@ originalArticle: https://www.thisdot.co/blog/leveraging-astros-content-collectio
 originalSource: ThisDot
 tags:
   - JavaScript
-  - Astro
+  - TypeScript
 ---

@@ -7,7 +7,6 @@ heroImage: ./blog-assets/20231027-extending-graphql-schema-with-custom-scalars.p
 alt: Extending GraphQL Schemas with Custom Scalars
 tags:
   - GraphQL
-  - API Design
   - Architecture
 ---
 

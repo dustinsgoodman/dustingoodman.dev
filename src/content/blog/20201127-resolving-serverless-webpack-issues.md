@@ -11,6 +11,5 @@ originalSource: Medium
 tags:
   - Architecture
   - Serverless
-  - Webpack
   - AWS
 ---

@@ -8,8 +8,7 @@ alt: This Dot GitHub Actions for Serverless Framework Deployments
 originalArticle: https://www.thisdot.co/blog/github-actions-for-serverless-framework-deployments
 originalSource: ThisDot
 tags:
+  - Serverless
   - DevOps
-  - Serverless Framework
-  - Nx
-  - GitHub Actions
+  - Microservices
 ---

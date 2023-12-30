@@ -6,7 +6,7 @@ publishDate: 2022-01-29
 heroImage: ./blog-assets/20220130-serverless-v3-review.webp
 alt: Serverless 3 Review
 tags:
-  - Serverless Framework
+  - Serverless
 ---
 
 If you haven't read about the release and what's included in this update, I highly recommend you read both the [beta release announcement](https://www.serverless.com/blog/serverless-framework-v3-beta) and the [full release announcement](https://www.serverless.com/blog/serverless-framework-v3-is-live) first as they give a good overview of all the changes. In this post, I'll highlight a few of those core changes and their significance.

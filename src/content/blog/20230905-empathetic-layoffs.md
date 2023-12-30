@@ -7,7 +7,6 @@ heroImage: ./blog-assets/20230905-empathetic-layoffs.png
 alt: Performing a Layoff with Empathy
 tags:
   - Engineering Leadership
-  - Engineering Management
 ---
 
 The layoffs in the tech industry have been rampant since the end of last year. Unfortunately, my team had to undergo layoffs recently as well. The decision to perform this layoff was difficult to make and the follow up decisions on how to execute it were equally challenging. At the end of the day, I think my team handled the situation as best as it could be done. Out of respect for the company and those involved, I will not be speaking to the specifics around why these layoffs had to be done or details around who was impacted. This post is to share what I thought were positives from the process and provide insights for those having to make similar challenging decisions. I want to share how we approached these layoffs from a **place of empathy**.

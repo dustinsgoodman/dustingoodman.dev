@@ -8,8 +8,8 @@ alt: This Dot Migrating a classic Express.js to Serverless Framework
 originalArticle: https://www.thisdot.co/blog/migrating-a-classic-express-js-to-serverless-framework
 originalSource: ThisDot
 tags:
-  - Serverless Framework
-  - Express.js
+  - Serverless
+  - Node.js
   - AWS
   - DevOps
 ---

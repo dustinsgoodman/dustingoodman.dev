@@ -8,7 +8,5 @@ alt: 'Starter.dev: Bootstrap your project with zero configuration!'
 originalArticle: https://www.thisdot.co/blog/starter-dev-bootstrap-your-project-with-zero-configuration
 originalSource: ThisDot
 tags:
-  - JavaScript
-  - TypeScript
-  - starter.dev
+  - Open Source
 ---

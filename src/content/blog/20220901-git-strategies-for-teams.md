@@ -8,7 +8,6 @@ alt: This Dot Git Strategies for Working on Teams
 originalArticle: https://www.thisdot.co/blog/git-strategies-for-working-on-teams
 originalSource: ThisDot
 tags:
-  - Git
   - Project Management
-  - Team Leadership
+  - Engineering Leadership
 ---

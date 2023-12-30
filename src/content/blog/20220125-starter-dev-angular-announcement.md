@@ -9,9 +9,7 @@ originalArticle: https://www.thisdot.co/blog/announcing-angular-github-clone-for
 originalSource: ThisDot
 tags:
   - Angular
-  - Apollo
   - GraphQL
-  - TailwindCSS
   - JavaScript
   - TypeScript
 ---
