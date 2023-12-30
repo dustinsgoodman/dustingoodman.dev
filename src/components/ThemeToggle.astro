@@ -30,7 +30,7 @@ const { className } = Astro.props;
 	:global(.dark) .moon { fill: inherit }
 </style>
 
-<script is:inline>
+<script>
 	document.addEventListener('astro:page-load', () => {
 		const theme = (() => {
 			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
