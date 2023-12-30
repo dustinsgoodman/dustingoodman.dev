@@ -1,17 +1,16 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '@/layouts/base.astro';
-import {
-	MicIcon,
-	PencilIcon,
-	TeamIcon,
-	BlueskyIcon,
-	GithubIcon,
-	LinkedInIcon,
-	TwitterIcon,
-} from '@/components/Icons';
-import RolePill from '@/components/RolePill';
+import RolePill from '@/components/RolePill.astro';
 import headshotImg from '@/images/assets/headshot.jpg';
+
+import MicIcon from '@/components/Icons/MicIcon.astro';
+import PencilIcon from '@/components/Icons/PencilIcon.astro';
+import TeamIcon from '@/components/Icons/TeamIcon.astro';
+import BlueskyIcon from '@/components/Icons/BlueskyIcon.astro';
+import GithubIcon from '@/components/Icons/GithubIcon.astro';
+import LinkedInIcon from '@/components/Icons/LinkedInIcon.astro';
+import TwitterIcon from '@/components/Icons/TwitterIcon.astro';
 
 const socialLinks = [
 	{
