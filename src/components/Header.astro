@@ -1,6 +1,6 @@
 ---
 import HeaderLink from '@/components/HeaderLink.astro';
-import DarkModeToggle from '@/components/DarkModeToggle';
+import DarkModeToggle from '@/components/DarkModeToggle.astro';
 import Logo from '@/components/Logo.astro';
 ---
 
@@ -16,7 +16,7 @@ import Logo from '@/components/Logo.astro';
 		<span
 			class="block border-b border-transparent py-1 text-base uppercase leading-6 text-gray-500 hover:border-blue-600 hover:text-blue-600 hover:no-underline focus:text-blue-600 dark:text-blue-100 dark:hover:border-sky-400 dark:hover:text-sky-400 dark:focus:text-sky-400"
 		>
-			<DarkModeToggle className="align-middle" client:only />
+			<DarkModeToggle className="align-middle" />
 		</span>
 	</div>
 </header>

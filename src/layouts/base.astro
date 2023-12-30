@@ -29,19 +29,6 @@ const { title, description, socialImage, canonicalUrl, redirectUrl } =
 			redirectUrl={redirectUrl}
 		/>
 		<ViewTransitions />
-		<script is:inline>
-			const html = document.querySelector('html');
-			let darkMode = localStorage.getItem('darkMode');
-			if (!darkMode) {
-				darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			} else {
-				darkMode = darkMode === 'true';
-			}
-			if (darkMode) {
-				html.classList.add('dark');
-			}
-			localStorage.setItem('darkMode', darkMode);
-		</script>
 	</head>
 	<body class="bg-white text-gray-900 dark:bg-black dark:text-white">
 		<Header />
