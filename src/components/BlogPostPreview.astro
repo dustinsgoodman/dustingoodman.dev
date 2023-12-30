@@ -42,13 +42,14 @@ const getReadMoreText = (postSource: string | undefined) => {
 >
 	<article class="flex h-full flex-col">
 		<div
-			class="mb-4 flex h-44 flex-col justify-center overflow-hidden bg-slate-900"
+			class="mb-4 relative aspect-[2/1] overflow-hidden bg-slate-900"
 		>
 			<Image
 				src={post.data.heroImage}
 				alt={post.data.alt}
-				class="relative h-44 object-fill"
-				loading="lazy"
+				class="object-cover"
+				width={540}
+				height={297}
 			/>
 		</div>
 		<div class="flex grow flex-col px-4">
