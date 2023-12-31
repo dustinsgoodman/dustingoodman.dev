@@ -37,66 +37,68 @@ const { page, path } = Astro.props;
 const pageNumbers = getPageNumbers(page);
 const firstPageInRange = pageNumbers[0];
 const lastPageInRange = pageNumbers[pageNumbers.length - 1];
-
 ---
-<nav role="navigation" aria-label="Pagination">
-  <ul class="flex align-center justify-center space-x-2 list-none">
-    {page.url.prev && (
-      <li>
-        <a href={page.url.prev} aria-label="Go to previous page">
-          &laquo;Prev
-        </a>
-      </li>
-    )}
-    {firstPageInRange !== 1 && (
-      <li>
-        <a href={getUrl(path, 1)} aria-label="Go to page 1">
-          1
-        </a>
-      </li>
-    )}
-    {
-      firstPageInRange && firstPageInRange > 2 && (
+
+{pageNumbers.length > 1 && (
+  <nav role="navigation" aria-label="Pagination">
+    <ul class="flex align-center justify-center space-x-2 list-none">
+      {page.url.prev && (
         <li>
-          &hellip;
+          <a href={page.url.prev} aria-label="Go to previous page">
+            &laquo;Prev
+          </a>
         </li>
-      )
-    }
-    {
-      pageNumbers.map((pageNumber) => {
-        return (
+      )}
+      {firstPageInRange !== 1 && (
+        <li>
+          <a href={getUrl(path, 1)} aria-label="Go to page 1">
+            1
+          </a>
+        </li>
+      )}
+      {
+        firstPageInRange && firstPageInRange > 2 && (
           <li>
-            {pageNumber === page.currentPage ? (
-              <span> {pageNumber}</span>
-            ) : (
-              <a href={getUrl(path, pageNumber)} aria-label={`Go to page ${pageNumber}`}>
-                {pageNumber}
-              </a>
-            )}
+            &hellip;
           </li>
-        );
-      })
-    }
-    {
-      lastPageInRange < page.lastPage - 1 && (
+        )
+      }
+      {
+        pageNumbers.map((pageNumber) => {
+          return (
+            <li>
+              {pageNumber === page.currentPage ? (
+                <span> {pageNumber}</span>
+              ) : (
+                <a href={getUrl(path, pageNumber)} aria-label={`Go to page ${pageNumber}`}>
+                  {pageNumber}
+                </a>
+              )}
+            </li>
+          );
+        })
+      }
+      {
+        lastPageInRange < page.lastPage - 1 && (
+          <li>
+            &hellip;
+          </li>
+        )
+      }
+      {lastPageInRange !== page.lastPage && (
         <li>
-          &hellip;
+          <a href={getUrl(path, page.lastPage)} aria-label={`Go to page ${page.lastPage}`}>
+            {page.lastPage}
+          </a>
         </li>
-      )
-    }
-    {lastPageInRange !== page.lastPage && (
-      <li>
-        <a href={getUrl(path, page.lastPage)} aria-label={`Go to page ${page.lastPage}`}>
-          {page.lastPage}
-        </a>
-      </li>
-    )}
-    {page.url.next && (
-      <li>
-        <a href={page.url.next} aria-label="Go to next page">
-          Next&raquo;
-        </a>
-      </li>
-    )}
-  </ul>
-</nav>
+      )}
+      {page.url.next && (
+        <li>
+          <a href={page.url.next} aria-label="Go to next page">
+            Next&raquo;
+          </a>
+        </li>
+      )}
+    </ul>
+  </nav>
+)}
