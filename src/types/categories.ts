@@ -1,0 +1,17 @@
+export const allCategories = [
+	'Angular',
+	'Architecture',
+	'AWS',
+	'DevOps',
+	'Engineering Leadership',
+	'GraphQL',
+	'JavaScript',
+	'Microservices',
+	'Node.js',
+	'Open Source',
+	'Project Management',
+	'ReactJS',
+	'REST',
+	'Serverless',
+	'TypeScript',
+] as const;

@@ -1,0 +1,48 @@
+---
+import { type Page } from 'astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { allCategories } from 'src/types/categories';
+import Layout from '@/layouts/base.astro';
+import BlogIndex from '@/components/BlogIndex.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = (await getCollection('blog', (post) => {
+    	if (import.meta.env.MODE === 'production') {
+    		return post.data.draft !== true && !post.data.redirectUrl;
+    	}
+
+      if (post.data.redirectUrl) {
+        return false;
+      }
+
+      return true;
+    })).sort(
+    	(a, b) =>
+    		new Date(b.data.publishDate).valueOf() -
+    		new Date(a.data.publishDate).valueOf()
+    );
+
+  return allCategories.flatMap((category) => {
+    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(category));
+    return paginate(filteredPosts, {
+      params: { category },
+      pageSize: 6,
+    });
+  });
+}
+
+export type Props = {
+	page: Page<CollectionEntry<"blog">>;
+  category: string;
+}
+
+const { page } = Astro.props;
+const { category } = Astro.params;
+---
+
+<Layout
+	title={`Blog - ${category} | Dustin Goodman`}
+	description="Learn from Dustin Goodman's blog"
+>
+  <BlogIndex page={page} category={category} />
+</Layout>

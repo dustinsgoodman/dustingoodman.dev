@@ -2,8 +2,7 @@
 import { type Page } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '@/layouts/base.astro';
-import BlogPostPreview from '@/components/BlogPostPreview.astro';
-import Pagination from '@/components/Pagination.astro';
+import BlogIndex from '@/components/BlogIndex.astro';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection('blog', (post) => {
@@ -34,14 +33,5 @@ const { page } = Astro.props;
 	title="Blog | Dustin Goodman"
 	description="Learn from Dustin Goodman's blog"
 >
-	<section
-		class="container mx-auto mb-4 flex max-w-5xl flex-col bg-blue-100 dark:bg-slate-900"
-	>
-		<div
-			class="grid grid-cols-1 gap-4 gap-y-6 px-4 sm:grid-cols-2 md:grid-cols-3"
-		>
-			{page.data.map((post) => <BlogPostPreview post={post} />)}
-		</div>
-	</section>
-	<Pagination page={page}	path="/blog" />
+	<BlogIndex page={page} />
 </Layout>
