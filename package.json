@@ -10,7 +10,7 @@
 		"format": "yarn prettier -w ."
 	},
 	"devDependencies": {
-		"@astrojs/tailwind": "^5.0.4",
+		"@astrojs/tailwind": "^5.1.0",
 		"astro": "^4.0.7",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.32",
