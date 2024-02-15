@@ -44,14 +44,14 @@ const lastPageInRange = pageNumbers[pageNumbers.length - 1];
     <ul class="flex align-center justify-center space-x-2 list-none">
       {page.url.prev && (
         <li>
-          <a href={page.url.prev} aria-label="Go to previous page">
+          <a href={page.url.prev} aria-label="Go to previous page" class="text-blue-800 hover:text-blue-500 dark:text-blue-200 dark:hover:text-blue-400">
             &laquo;Prev
           </a>
         </li>
       )}
       {firstPageInRange !== 1 && (
         <li>
-          <a href={getUrl(path, 1)} aria-label="Go to page 1">
+          <a href={getUrl(path, 1)} aria-label="Go to page 1" class="text-blue-800 hover:text-blue-500 dark:text-blue-200 dark:hover:text-blue-400">
             1
           </a>
         </li>
@@ -70,7 +70,7 @@ const lastPageInRange = pageNumbers[pageNumbers.length - 1];
               {pageNumber === page.currentPage ? (
                 <span> {pageNumber}</span>
               ) : (
-                <a href={getUrl(path, pageNumber)} aria-label={`Go to page ${pageNumber}`}>
+                <a href={getUrl(path, pageNumber)} aria-label={`Go to page ${pageNumber}`} class="text-blue-800 hover:text-blue-500 dark:text-blue-200 dark:hover:text-blue-400">
                   {pageNumber}
                 </a>
               )}
@@ -87,14 +87,14 @@ const lastPageInRange = pageNumbers[pageNumbers.length - 1];
       }
       {lastPageInRange !== page.lastPage && (
         <li>
-          <a href={getUrl(path, page.lastPage)} aria-label={`Go to page ${page.lastPage}`}>
+          <a href={getUrl(path, page.lastPage)} aria-label={`Go to page ${page.lastPage}`} class="text-blue-800 hover:text-blue-500 dark:text-blue-200 dark:hover:text-blue-400">
             {page.lastPage}
           </a>
         </li>
       )}
       {page.url.next && (
         <li>
-          <a href={page.url.next} aria-label="Go to next page">
+          <a href={page.url.next} aria-label="Go to next page" class="text-blue-800 hover:text-blue-500 dark:text-blue-200 dark:hover:text-blue-400">
             Next&raquo;
           </a>
         </li>

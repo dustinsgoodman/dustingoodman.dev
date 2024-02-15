@@ -8,7 +8,7 @@ const { className } = Astro.props;
 <button
 	id="themeToggle"
 	class={className}
-	aria-label="dark mode toggle"
+	aria-label="toggle light and dark themes"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +79,8 @@ const { className } = Astro.props;
 	  }
 
 		document
-			.getElementById("themeToggle")!
-			.addEventListener("click", handleToggleClick);
+			.getElementById("themeToggle")
+			?.addEventListener("click", handleToggleClick);
 	});
 </script>
 
