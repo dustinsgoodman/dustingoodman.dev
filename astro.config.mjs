@@ -8,26 +8,41 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
-import sentry from "@sentry/astro";
-import spotlightjs from "@spotlightjs/astro";
+import sentry from '@sentry/astro';
+import spotlightjs from '@spotlightjs/astro';
 
 // https://astro.build/config
-export default defineConfig( /** @type {import('astro').AstroUserConfig} */
-{
-  site: 'https://dustingoodman.dev/',
-  markdown: {
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'github-dark-dimmed'
-    },
-    rehypePlugins: [['rehype-autolink-headings', {
-      behavior: 'prepend'
-    }], ['rehype-external-links', {
-      target: '_blank',
-      rel: ['nofollow', 'noopener', 'noreferrer']
-    }]]
-  },
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), sentry(), spotlightjs()]
-});
+export default defineConfig(
+	/** @type {import('astro').AstroUserConfig} */
+	{
+		site: 'https://dustingoodman.dev/',
+		markdown: {
+			syntaxHighlight: 'shiki',
+			shikiConfig: {
+				theme: 'github-dark-dimmed',
+			},
+			rehypePlugins: [
+				[
+					'rehype-autolink-headings',
+					{
+						behavior: 'prepend',
+					},
+				],
+				[
+					'rehype-external-links',
+					{
+						target: '_blank',
+						rel: ['nofollow', 'noopener', 'noreferrer'],
+					},
+				],
+			],
+		},
+		integrations: [
+			tailwind({
+				applyBaseStyles: false,
+			}),
+			sentry(),
+			spotlightjs(),
+		],
+	}
+);
