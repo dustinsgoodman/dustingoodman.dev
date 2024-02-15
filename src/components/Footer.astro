@@ -1,9 +1,6 @@
 ---
 import FooterLink from '@/components/FooterLink.astro';
-import BlueskyIcon from '@/components/Icons/BlueskyIcon.astro';
-import GithubIcon from '@/components/Icons/GithubIcon.astro';
-import LinkedInIcon from '@/components/Icons/LinkedInIcon.astro';
-import TwitterIcon from '@/components/Icons/TwitterIcon.astro';
+import { socialLinks } from '@/utils/constants';
 ---
 
 <div class="w-full">
@@ -11,38 +8,16 @@ import TwitterIcon from '@/components/Icons/TwitterIcon.astro';
 		class="flex items-center justify-center bg-white px-4 py-4 text-center dark:bg-black sm:px-8"
 	>
 		<div class="flex items-center space-x-2">
-			<FooterLink
-				href="https://twitter.com/dustinsgoodman"
-				target="_blank"
-				aria-label="Dustin's Twitter"
-				rel="noopener noreferrer"
-			>
-				<TwitterIcon />
-			</FooterLink>
-			<FooterLink
-				href="https://bsky.app/profile/dustingoodman.dev"
-				target="_blank"
-				aria-label="Dustin's Bluesky"
-				rel="noopener noreferrer"
-			>
-				<BlueskyIcon />
-			</FooterLink>
-			<FooterLink
-				href="https://github.com/dustinsgoodman"
-				target="_blank"
-				aria-label="Dustin's Github"
-				rel="noopener noreferrer"
-			>
-				<GithubIcon />
-			</FooterLink>
-			<FooterLink
-				href="https://www.linkedin.com/in/dustinsgoodman/"
-				target="_blank"
-				aria-label="Dustin's LinkedIn"
-				rel="noopener noreferrer"
-			>
-				<LinkedInIcon />
-			</FooterLink>
+			{socialLinks.map(({ href, label, icon: Icon }) => (
+				<FooterLink
+					href={href}
+					target="_blank"
+					aria-label={label}
+					rel="noopener noreferrer"
+				>
+					<Icon />
+				</FooterLink>
+			))}
 		</div>
 	</footer>
 </div>

@@ -1,34 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import headshotImg from '@/images/assets/headshot.jpg';
-
-import BlueskyIcon from '@/components/Icons/BlueskyIcon.astro';
-import GithubIcon from '@/components/Icons/GithubIcon.astro';
-import LinkedInIcon from '@/components/Icons/LinkedInIcon.astro';
-import TwitterIcon from '@/components/Icons/TwitterIcon.astro';
-
-const socialLinks = [
-	{
-		href: 'https://twitter.com/dustinsgoodman',
-		label: "Dustin's Twitter",
-		icon: TwitterIcon,
-	},
-	{
-		href: 'https://bsky.app/profile/dustingoodman.dev',
-		label: "Dustin's Bluesky",
-		icon: BlueskyIcon,
-	},
-	{
-		href: 'https://github.com/dustinsgoodman',
-		label: "Dustin's Github",
-		icon: GithubIcon,
-	},
-	{
-		href: 'https://www.linkedin.com/in/dustinsgoodman/',
-		label: "Dustin's LinkedIn",
-		icon: LinkedInIcon,
-	},
-];
+import { socialLinks } from '@/utils/constants';
 ---
 
 <section class="container w-full py-8 mx-auto">

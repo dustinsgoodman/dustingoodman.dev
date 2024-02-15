@@ -3,37 +3,11 @@ import { Image } from 'astro:assets';
 import Layout from '@/layouts/base.astro';
 import RolePill from '@/components/RolePill.astro';
 import headshotImg from '@/images/assets/headshot.jpg';
+import { socialLinks } from '@/utils/constants';
 
 import MicIcon from '@/components/Icons/MicIcon.astro';
 import PencilIcon from '@/components/Icons/PencilIcon.astro';
 import TeamIcon from '@/components/Icons/TeamIcon.astro';
-import BlueskyIcon from '@/components/Icons/BlueskyIcon.astro';
-import GithubIcon from '@/components/Icons/GithubIcon.astro';
-import LinkedInIcon from '@/components/Icons/LinkedInIcon.astro';
-import TwitterIcon from '@/components/Icons/TwitterIcon.astro';
-
-const socialLinks = [
-	{
-		href: 'https://twitter.com/dustinsgoodman',
-		label: "Dustin's Twitter",
-		icon: TwitterIcon,
-	},
-	{
-		href: 'https://bsky.app/profile/dustingoodman.dev',
-		label: "Dustin's Bluesky",
-		icon: BlueskyIcon,
-	},
-	{
-		href: 'https://github.com/dustinsgoodman',
-		label: "Dustin's Github",
-		icon: GithubIcon,
-	},
-	{
-		href: 'https://www.linkedin.com/in/dustinsgoodman/',
-		label: "Dustin's LinkedIn",
-		icon: LinkedInIcon,
-	},
-];
 ---
 
 <Layout
@@ -43,7 +17,7 @@ const socialLinks = [
 	<section class="container relative mx-auto flex flex-col items-center">
 		<h2 class="my-2 text-center">I'm Dustin Goodman</h2>
 		<Image
-			class="my-2 block w-1/2 md:w-1/4"
+			class="my-2 block w-1/2 md:w-1/4 rounded-xl"
 			src={headshotImg}
 			alt="Dustin Goodman Headshot"
 			loading="lazy"
