@@ -25,6 +25,8 @@
 	"dependencies": {
 		"@astrojs/check": "^0.3.4",
 		"@fontsource-variable/montserrat": "^5.0.17",
-		"@fontsource/azeret-mono": "^5.0.18"
+		"@fontsource/azeret-mono": "^5.0.18",
+		"@sentry/astro": "^7.101.1",
+		"@spotlightjs/astro": "^1.0.15"
 	}
 }
