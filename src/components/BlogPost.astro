@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { type CollectionEntry } from 'astro:content';
+import { formatDate } from '@/utils/date';
 
 export interface Props {
 	post: CollectionEntry<'blog'>;
@@ -8,14 +9,6 @@ export interface Props {
 
 const { post } = Astro.props;
 const { title, publishDate, heroImage, alt, tags } = post.data;
-
-const formatDate = (date: Date) => {
-	return date.toLocaleString('default', {
-		month: 'short',
-		day: 'numeric',
-		year: 'numeric',
-	});
-};
 ---
 
 <article class="mx-auto max-w-[80ch]">

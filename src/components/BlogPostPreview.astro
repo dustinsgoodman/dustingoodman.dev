@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { type CollectionEntry } from 'astro:content';
-
+import { formatDate } from '@/utils/date';
 export interface Props {
 	post: CollectionEntry<'blog'>;
 	className?: String;
@@ -9,14 +9,6 @@ export interface Props {
 
 const { post, className } = Astro.props as Props;
 const isOffsite = !!post.data.originalArticle;
-
-const formatDate = (date: Date) => {
-	return date.toLocaleString('default', {
-		month: 'short',
-		day: 'numeric',
-		year: 'numeric',
-	});
-};
 
 const getReadMoreText = (postSource: string | undefined) => {
 	if (postSource === 'Medium') {
