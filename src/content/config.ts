@@ -6,7 +6,7 @@ const blogCollection = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string(), // set max length,
-			publishDate: z.date(),
+			date: z.date(),
 			heroImage: image(),
 			alt: z.string(),
 			originalArticle: z.string().url().optional(),
@@ -21,7 +21,7 @@ const videosCollection = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.date(),
+			date: z.date(),
 			event: z.string().optional(),
 			link: z.string().url(),
 		}),
@@ -32,7 +32,7 @@ const podcastCollection = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.date(),
+			date: z.date(),
 			podcast: z.enum([
 				'Modern Web',
 				'Build IT Better',
@@ -44,8 +44,20 @@ const podcastCollection = defineCollection({
 		}),
 });
 
+const conferenceCollection = defineCollection({
+	schema: () =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			conference: z.string(),
+			date: z.date(),
+			link: z.string().url(),
+		}),
+});
+
 export const collections = {
 	blog: blogCollection,
+	conferences: conferenceCollection,
 	podcasts: podcastCollection,
 	videos: videosCollection,
 };
