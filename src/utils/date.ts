@@ -1,3 +1,5 @@
+import type { CollectionEntry } from 'astro:content';
+
 export const formatDate = (date: Date) => {
 	return date.toLocaleString('default', {
 		month: 'short',
@@ -6,3 +8,8 @@ export const formatDate = (date: Date) => {
 		timeZone: 'UTC',
 	});
 };
+
+type Entry = CollectionEntry<'blog' | 'podcasts'>;
+export const sortCollectionByDateDesc = (a: Entry, b: Entry) =>
+	new Date(b.data.publishDate).valueOf() -
+	new Date(a.data.publishDate).valueOf();
