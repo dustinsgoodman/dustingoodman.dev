@@ -77,6 +77,20 @@
 		@apply border-l-4 px-4 italic;
 	}
 
+	.copy-code {
+		@apply bg-blue-600 text-white;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0.25rem 0.5rem;
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+
+	.copy-code:hover {
+		@apply bg-blue-800;
+	}
+
 	.twitter-tweet {
 		@apply mx-auto;
 	}

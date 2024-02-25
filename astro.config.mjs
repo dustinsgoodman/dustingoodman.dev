@@ -11,6 +11,10 @@ import tailwind from '@astrojs/tailwind';
 import sentry from '@sentry/astro';
 import spotlightjs from '@spotlightjs/astro';
 
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
+
 // https://astro.build/config
 export default defineConfig(
 	/** @type {import('astro').AstroUserConfig} */
@@ -22,14 +26,10 @@ export default defineConfig(
 				theme: 'github-dark-dimmed',
 			},
 			rehypePlugins: [
+				rehypeSlug,
+				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
 				[
-					'rehype-autolink-headings',
-					{
-						behavior: 'prepend',
-					},
-				],
-				[
-					'rehype-external-links',
+					rehypeExternalLinks,
 					{
 						target: '_blank',
 						rel: ['nofollow', 'noopener', 'noreferrer'],
