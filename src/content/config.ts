@@ -16,6 +16,24 @@ const blogCollection = defineCollection({
 		}),
 });
 
+const podcastCollection = defineCollection({
+	schema: () =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			publishDate: z.date(),
+			podcast: z.enum([
+				'Modern Web',
+				'Build IT Better',
+				'JAMhack',
+				'Engineering Leadership',
+				'FSJam',
+			]),
+			link: z.string().url(),
+		}),
+});
+
 export const collections = {
 	blog: blogCollection,
+	podcasts: podcastCollection,
 };
