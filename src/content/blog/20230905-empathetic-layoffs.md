@@ -2,7 +2,7 @@
 title: Performing a Layoff with Empathy
 description: >
   My team had to perform a layoff recently. There were several lessons and some interesting insights I gained from the situation. In this post, I'll discuss some of the lessons I learned in handling this layoff and how my organization's leaders did their best to treat everyone humanely.
-publishDate: 2023-09-05
+date: 2023-09-05
 heroImage: ./blog-assets/20230905-empathetic-layoffs.png
 alt: Performing a Layoff with Empathy
 tags:
