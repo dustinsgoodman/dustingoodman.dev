@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '@/layouts/base.astro';
 import HeroBanner from '@/components/HeroBanner.astro';
 import BlogPreviewSection from '@/components/BlogPreviewSection.astro';
+import { sortCollectionByDateDesc } from '@/utils/date';
 
 const recentBlogPosts = (
 	await getCollection('blog', (post) => {
@@ -12,11 +13,7 @@ const recentBlogPosts = (
 		);
 	})
 )
-	.sort(
-		(a, b) =>
-			new Date(b.data.publishDate).valueOf() -
-			new Date(a.data.publishDate).valueOf()
-	)
+	.sort(sortCollectionByDateDesc)
 	.slice(0, 3);
 ---
 

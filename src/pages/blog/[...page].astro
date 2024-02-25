@@ -3,6 +3,7 @@ import { type Page } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '@/layouts/base.astro';
 import BlogIndex from '@/components/BlogIndex.astro';
+import { sortCollectionByDateDesc } from '@/utils/date';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection('blog', (post) => {
@@ -12,11 +13,7 @@ export async function getStaticPaths({ paginate }) {
 
   	return !post.data.redirectUrl;
   });
-  const posts = allPosts.sort(
-  	(a, b) =>
-  		new Date(b.data.publishDate).valueOf() -
-  		new Date(a.data.publishDate).valueOf()
-  );
+  const posts = allPosts.sort(sortCollectionByDateDesc);
 
   return paginate(posts, { pageSize: 6 });
 }
