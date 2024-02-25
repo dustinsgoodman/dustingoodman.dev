@@ -8,8 +8,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
-import sentry from '@sentry/astro';
-import spotlightjs from '@spotlightjs/astro';
+// import sentry from '@sentry/astro';
+// import spotlightjs from '@spotlightjs/astro';
 
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -41,8 +41,6 @@ export default defineConfig(
 			tailwind({
 				applyBaseStyles: false,
 			}),
-			sentry(),
-			spotlightjs(),
 		],
 	}
 );
