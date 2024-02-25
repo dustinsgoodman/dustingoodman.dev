@@ -9,7 +9,7 @@ description: >
   The limitations of server components are examined, with the hosts expressing disappointment over the inability to use essential React paradigms like state on the server. They advocate for more open discussions and RFCs before implementing significant changes.
 
   Throughout the segment, the hosts stress the importance of thoughtful planning in dealing with server components and the need to make intentional decisions to ensure smooth development and prevent performance issues. They also call for transparency and collaboration in the development of these technologies.
-publishDate: 2023-08-07
+date: 2023-08-07
 podcast: Build IT Better
 link: https://www.youtube.com/watch?v=WEdm5J7QsUE&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=8&t=7s
 ---

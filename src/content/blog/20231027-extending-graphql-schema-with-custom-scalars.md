@@ -2,7 +2,7 @@
 title: 'Extending GraphQL Schemas with Custom Scalars'
 description: >
   Out-of-the-box GraphQL is extremely powerful in allowing us to define the shape of our data and allow others to consume it. But what if we could give more guidance and clarity at the field level for consumers? In this post, we'll dive into custom scalars and how you can do just that.
-publishDate: 2023-10-27
+date: 2023-10-27
 heroImage: ./blog-assets/20231027-extending-graphql-schema-with-custom-scalars.png
 alt: Extending GraphQL Schemas with Custom Scalars
 tags:
