@@ -16,6 +16,17 @@ const blogCollection = defineCollection({
 		}),
 });
 
+const videosCollection = defineCollection({
+	schema: () =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			publishDate: z.date(),
+			event: z.string().optional(),
+			link: z.string().url(),
+		}),
+});
+
 const podcastCollection = defineCollection({
 	schema: () =>
 		z.object({
@@ -36,4 +47,5 @@ const podcastCollection = defineCollection({
 export const collections = {
 	blog: blogCollection,
 	podcasts: podcastCollection,
+	videos: videosCollection,
 };
