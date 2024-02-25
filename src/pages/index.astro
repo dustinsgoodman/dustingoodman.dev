@@ -8,7 +8,6 @@ const recentBlogPosts = (
 	await getCollection('blog', (post) => {
 		return (
 			import.meta.env.MODE !== 'production' ||
-			post.data.draft !== true ||
 			!!post.data.publishDate
 		);
 	})
