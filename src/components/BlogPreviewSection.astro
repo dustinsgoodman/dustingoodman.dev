@@ -13,7 +13,7 @@ type BlogType = CollectionEntry<'blog'>;
 			class="grid gap-4 md:grid-cols-2 md:px-0 lg:grid-cols-3"
 		>
 			{
-				blogPosts.map((post: BlogType, idx: number) => (
+				blogPosts.map((post: BlogType) => (
 					<BlogPostPreview
 						post={post}
 					/>
