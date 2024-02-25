@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/base.astro';
+import { sortCollectionByDateDesc } from '@/utils/date';
+
+const podcasts = (await getCollection('podcasts')).sort(sortCollectionByDateDesc);
+---
+
+<Layout
+	title="Portfolio | Dustin Goodman"
+	description="Dustin around the community"
+>
+	<div class="container relative mx-auto flex flex-col items-center">
+		<h1 class="my-2">Checkout my apperances on the web</h1>
+    <section>
+      <h2>Podcasts</h2>
+      <ul>
+        {podcasts.map((podcast) => (
+          <li>{podcast.data.title}</li>
+        ))}
+      </ul>
+    </section>
+	</div>
+</Layout>
