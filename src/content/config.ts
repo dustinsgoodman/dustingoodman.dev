@@ -4,7 +4,6 @@ import { allCategories } from 'src/types/categories';
 const blogCollection = defineCollection({
 	schema: ({ image }) =>
 		z.object({
-			draft: z.boolean().optional(),
 			title: z.string(),
 			description: z.string(), // set max length,
 			publishDate: z.date(),
