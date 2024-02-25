@@ -7,7 +7,7 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"format": "yarn prettier -w ."
+		"format": "prettier -w ."
 	},
 	"devDependencies": {
 		"@astrojs/tailwind": "^5.1.0",
