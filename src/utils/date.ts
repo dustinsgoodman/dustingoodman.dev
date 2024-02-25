@@ -9,7 +9,6 @@ export const formatDate = (date: Date) => {
 	});
 };
 
-type Entry = CollectionEntry<'blog' | 'podcasts'>;
+type Entry = CollectionEntry<'blog' | 'podcasts' | 'videos' | 'conferences'>;
 export const sortCollectionByDateDesc = (a: Entry, b: Entry) =>
-	new Date(b.data.publishDate).valueOf() -
-	new Date(a.data.publishDate).valueOf();
+	new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
