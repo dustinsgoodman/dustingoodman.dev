@@ -61,9 +61,9 @@ const { Content } = await post.render();
 	    });
 		});
 
-		async function copyCode(block, button) {
+		async function copyCode(block: HTMLPreElement, button: HTMLButtonElement) {
 	    let code = block.querySelector("code");
-	    let text = code.innerText;
+	    let text = code?.innerText || '';
 
 	    await navigator.clipboard.writeText(text);
 
