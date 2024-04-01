@@ -27,7 +27,7 @@
 		"@fontsource-variable/montserrat": "^5.0.17",
 		"@fontsource/azeret-mono": "^5.0.18",
 		"@sentry/astro": "^7.101.1",
-		"@spotlightjs/astro": "^1.0.15",
+		"@spotlightjs/astro": "^1.0.19",
 		"rehype-slug": "^6.0.0"
 	}
 }
