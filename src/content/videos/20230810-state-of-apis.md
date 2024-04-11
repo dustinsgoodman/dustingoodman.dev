@@ -5,4 +5,5 @@ description: >
 date: 2023-08-10
 event: State of the Web
 link: https://www.youtube.com/watch?v=Be8xOGwsrSY&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=6
+embed: https://www.youtube.com/embed/Be8xOGwsrSY?si=JNrlinqST-oIu_bF
 ---

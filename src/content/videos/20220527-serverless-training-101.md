@@ -5,4 +5,5 @@ description: >
 date: 2022-05-27
 event: JavaScript Marathon
 link: https://www.youtube.com/watch?v=NAnulpCT5yQ&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=13
+embed: https://www.youtube.com/embed/NAnulpCT5yQ?si=BSmylRxWn-3QxAlq
 ---

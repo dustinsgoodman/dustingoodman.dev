@@ -5,4 +5,5 @@ description: >
 date: 2022-05-03
 event: State of the Web
 link: https://www.youtube.com/watch?v=9c06TnsZPl8&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=14
+embed: https://www.youtube.com/embed/9c06TnsZPl8?si=bSfRehx2Wn35Lyfp
 ---

@@ -5,4 +5,5 @@ description: >
 date: 2021-07-16
 event: JSWORLD Conference
 link: https://www.youtube.com/watch?v=xiMdIi9eNN4&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=21
+embed: https://www.youtube.com/embed/xiMdIi9eNN4?si=tzJMCS1K02XLdF9b
 ---

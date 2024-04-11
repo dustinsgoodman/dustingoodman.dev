@@ -5,4 +5,5 @@ description: >
 date: 2021-03-24
 event: JavaScript Marathon
 link: https://www.youtube.com/watch?v=L7y3zQGtpIo&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=24
+embed: https://www.youtube.com/embed/L7y3zQGtpIo?si=u2ZSBFiTCOxz4EW8
 ---
