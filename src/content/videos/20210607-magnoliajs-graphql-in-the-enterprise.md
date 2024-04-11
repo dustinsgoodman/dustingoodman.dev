@@ -5,4 +5,5 @@ description: >
 date: 2021-06-07
 event: MagnoliaJS 2021
 link: https://www.youtube.com/watch?v=xAYDLpH4rwY&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=22
+embed: https://www.youtube.com/embed/xAYDLpH4rwY?si=x6RIwE7Wy4wMxXwj
 ---

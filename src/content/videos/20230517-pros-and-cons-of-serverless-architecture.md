@@ -5,4 +5,5 @@ description: >
 date: 2023-05-17
 event: JS Drops
 link: https://www.youtube.com/watch?v=uifNCoJNVZ4&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=8
+embed: https://www.youtube.com/embed/uifNCoJNVZ4?si=Xzrs2NhVksVZTbHD
 ---

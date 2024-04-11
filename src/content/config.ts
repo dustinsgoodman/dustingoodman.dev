@@ -24,6 +24,7 @@ const videosCollection = defineCollection({
 			date: z.date(),
 			event: z.string().optional(),
 			link: z.string().url(),
+			embed: z.string().url(),
 		}),
 });
 

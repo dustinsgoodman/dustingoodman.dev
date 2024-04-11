@@ -5,4 +5,5 @@ description: >
 date: 2024-01-29
 event: JS Drops
 link: https://www.youtube.com/watch?v=H5MqqM1DDJw&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=1
+embed: https://www.youtube.com/embed/H5MqqM1DDJw?si=CzNzyRxaNvuCVYAO
 ---

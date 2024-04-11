@@ -5,4 +5,5 @@ description: >
 date: 2021-11-22
 event: React Chicago
 link: https://www.youtube.com/watch?v=P1oyn1eiEAc&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=19
+embed: https://www.youtube.com/embed/P1oyn1eiEAc?si=Vz-xvwZU2rHAX6cl
 ---

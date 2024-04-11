@@ -5,4 +5,5 @@ description: >
 date: 2021-12-07
 event: State of the Web
 link: https://www.youtube.com/watch?v=yPxkcq_uvzU&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=18
+embed: https://www.youtube.com/embed/yPxkcq_uvzU?si=-eovDT0OkZ4yk_Zj
 ---
