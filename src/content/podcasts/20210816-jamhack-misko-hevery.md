@@ -7,4 +7,6 @@ description: >
 date: 2021-08-16
 podcast: JAMhack
 link: https://www.youtube.com/watch?v=9kCLnC717qA&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=20
+embed: https://www.youtube.com/embed/9kCLnC717qA?si=3QO76YR2HHM7-Lqn
+source: YouTube
 ---

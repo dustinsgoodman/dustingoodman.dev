@@ -6,4 +6,6 @@ description: >
 date: 2023-11-27
 podcast: Engineering Leadership
 link: https://www.youtube.com/watch?v=HtIYWKc1Tqg&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=6
+embed: https://www.youtube.com/embed/HtIYWKc1Tqg?si=XOMULIrkhuT036BA
+source: YouTube
 ---

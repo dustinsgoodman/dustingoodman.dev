@@ -42,6 +42,8 @@ const podcastCollection = defineCollection({
 				'FSJam',
 			]),
 			link: z.string().url(),
+			embed: z.string().url(),
+			source: z.enum(['Podbean', 'Spotify', 'YouTube']),
 		}),
 });
 
