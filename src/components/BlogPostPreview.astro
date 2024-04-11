@@ -33,9 +33,7 @@ const getReadMoreText = (postSource: string | undefined) => {
 	rel="noopener noreferrer"
 >
 	<article class="flex h-full flex-col">
-		<div
-			class="mb-4 relative aspect-[2/1] overflow-hidden bg-slate-900"
-		>
+		<div class="mb-4 relative aspect-[2/1] overflow-hidden bg-slate-900">
 			<Image
 				src={post.data.heroImage}
 				alt={post.data.alt}
@@ -47,7 +45,7 @@ const getReadMoreText = (postSource: string | undefined) => {
 		</div>
 		<div class="flex grow flex-col px-4">
 			<p class="mb-1 text-sm text-gray-500 dark:text-gray-200">
-				{formatDate(post.data.publishDate)}
+				{formatDate(post.data.date)}
 			</p>
 			<h2
 				class="m-0 text-xl text-blue-600 group-hover:text-blue-800 dark:text-blue-200 dark:group-hover:text-blue-300"

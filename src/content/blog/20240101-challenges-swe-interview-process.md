@@ -2,7 +2,7 @@
 title: Challenges of the SWE Interview Process
 description: >
   The SWE interview process has always been riddled with challenges. Specifically, how we approach technically validating a candidate continues to be a struggle. These are my thoughts on that process and where I hope to see the industry move.
-publishDate: 2024-01-01
+date: 2024-01-01
 heroImage: ./blog-assets/20240101-challenges-swe-interview-process.png
 alt: Challenges of the SWE Interview Process
 tags:
