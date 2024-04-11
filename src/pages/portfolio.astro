@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '@/layouts/base.astro';
 import { sortCollectionByDateDesc } from '@/utils/date';
 import VideoCard from '@/components/VideoCard.astro';
+import PodcastCard from '@/components/PodcastCard.astro';
 
 const videos = (await getCollection('videos')).sort(sortCollectionByDateDesc);
 const podcasts = (await getCollection('podcasts')).sort(
@@ -34,9 +35,17 @@ const conferences = (await getCollection('conferences')).sort(
 			</div>
 			<section>
 				<h2>Podcasts</h2>
-				<ul>
-					{podcasts.map((podcast) => <li>{podcast.data.title}</li>)}
-				</ul>
+				<div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+					<ul class="flex flex-nowrap m-0">
+						{
+							podcasts.map((podcast) => (
+								<li class="block px-3">
+									<PodcastCard podcast={podcast} />
+								</li>
+							))
+						}
+					</ul>
+				</div>
 			</section>
 			<section>
 				<h2>Conferences</h2>
