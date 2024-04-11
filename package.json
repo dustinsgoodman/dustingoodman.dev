@@ -24,7 +24,7 @@
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.4",
+		"@astrojs/check": "^0.5.10",
 		"@fontsource-variable/montserrat": "^5.0.17",
 		"@fontsource/azeret-mono": "^5.0.18",
 		"@sentry/astro": "^7.101.1",
