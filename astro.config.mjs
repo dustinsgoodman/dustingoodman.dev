@@ -6,6 +6,7 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 // @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 // import sentry from '@sentry/astro';
@@ -27,7 +28,12 @@ export default defineConfig(
 			},
 			rehypePlugins: [
 				rehypeSlug,
-				[rehypeAutolinkHeadings, { behavior: 'wrap' }],
+				[
+					rehypeAutolinkHeadings,
+					{
+						behavior: 'wrap',
+					},
+				],
 				[
 					rehypeExternalLinks,
 					{
@@ -38,6 +44,7 @@ export default defineConfig(
 			],
 		},
 		integrations: [
+			react(),
 			tailwind({
 				applyBaseStyles: false,
 			}),

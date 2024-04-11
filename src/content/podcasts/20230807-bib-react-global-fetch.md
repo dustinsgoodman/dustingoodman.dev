@@ -12,4 +12,6 @@ description: >
 date: 2023-08-07
 podcast: Build IT Better
 link: https://www.youtube.com/watch?v=WEdm5J7QsUE&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=8&t=7s
+embed: https://www.youtube.com/embed/WEdm5J7QsUE?si=LmIFAsLE7fnMN8yE
+source: YouTube
 ---

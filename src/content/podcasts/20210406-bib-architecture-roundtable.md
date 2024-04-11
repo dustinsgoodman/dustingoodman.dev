@@ -8,4 +8,6 @@ description: >
 date: 2021-04-06
 podcast: Build IT Better
 link: https://www.youtube.com/watch?v=9HTTr3VAgrE&list=PL_GnFlm_okptWRXF6cu9FxRva--XoxB5g&index=24
+embed: https://www.youtube.com/embed/9HTTr3VAgrE?si=wHAk5JmORy_8TsoZ
+source: YouTube
 ---
