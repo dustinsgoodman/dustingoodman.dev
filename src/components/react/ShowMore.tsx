@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState, type FC } from 'react';
 
 interface ShowMoreProps {
 	text: string;
 }
 
-const ShowMore: React.FC<ShowMoreProps> = ({ text }) => {
+const ShowMore: FC<ShowMoreProps> = ({ text }) => {
 	const [expanded, setExpanded] = useState(false);
 
 	const toggleExpanded = () => {
@@ -25,12 +25,12 @@ const ShowMore: React.FC<ShowMoreProps> = ({ text }) => {
 	};
 
 	const displayText = getDisplayText();
-	console.log(displayText, text);
+	const showButton = !(displayText === text && expanded === false);
 
 	return (
 		<div>
 			{displayText}
-			{displayText === text ? null : (
+			{showButton && (
 				<>
 					&nbsp;
 					<button

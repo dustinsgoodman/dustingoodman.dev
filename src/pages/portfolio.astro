@@ -18,41 +18,37 @@ const conferences = (await getCollection('conferences')).sort(
 	title="Portfolio | Dustin Goodman"
 	description="Dustin around the community"
 >
-	<div class="container relative mx-auto flex flex-col">
+	<div class="container relative mx-auto flex flex-col scroll-smooth">
 		<h1 class="my-2">Checkout my apperances on the web</h1>
 		<section>
 			<h2>Videos</h2>
-			<div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-				<ul class="flex flex-nowrap m-0">
+			<ul class="list-none flex flex-nowrap overflow-x-auto pb-10 m-0">
+				{
+					videos.map((video) => (
+						<li class="basis-auto px-3">
+							<VideoCard video={video} />
+						</li>
+					))
+				}
+			</ul>
+			<section>
+				<h2>Podcasts</h2>
+				<ul class="list-none flex flex-nowrap overflow-x-auto pb-10 m-0">
 					{
-						videos.map((video) => (
-							<li class="block px-3">
-								<VideoCard video={video} />
+						podcasts.map((podcast) => (
+							<li class="basis-auto px-3">
+								<PodcastCard podcast={podcast} />
 							</li>
 						))
 					}
 				</ul>
-			</div>
-			<section>
-				<h2>Podcasts</h2>
-				<div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-					<ul class="flex flex-nowrap m-0">
-						{
-							podcasts.map((podcast) => (
-								<li class="block px-3">
-									<PodcastCard podcast={podcast} />
-								</li>
-							))
-						}
-					</ul>
-				</div>
 			</section>
-			<section>
-				<h2>Conferences</h2>
-				<ul>
-					{conferences.map((conference) => <li>{conference.data.title}</li>)}
-				</ul>
-			</section>
+		</section>
+		<section>
+			<h2>Conferences</h2>
+			<ul>
+				{conferences.map((conference) => <li>{conference.data.title}</li>)}
+			</ul>
 		</section>
 	</div>
 </Layout>
