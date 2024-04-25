@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '@/utils/date';
+import ShowMore from '@/components/react/ShowMore.tsx';
+
+export interface Props {
+	conference: CollectionEntry<'conferences'>;
+}
+
+const { conference: entry } = Astro.props;
+const { title, date, description, link, conference } = entry.data;
+---
+
+<article
+	class="flex flex-col rounded-lg border bg-white hover:bg-slate-100 text-gray-900 shadow-sm w-[33.33vw] max-w-screen-sm h-full"
+>
+	<div class="p-6">
+		<h3 class="text-xl font-semibold my-2">{conference}</h3>
+		<h4 class="text-lg font-medium my-2">{title}</h4>
+		<p class="text-sm text-gray-500">
+			{formatDate(date)}
+		</p>
+		<p class="text-gray-700">
+			<ShowMore text={description} client:only="react" />
+		</p>
+	</div>
+	<div class="flex justify-end px-6 pb-6 mt-auto">
+		<a
+			href={link}
+			target="_blank"
+			class="inline-block border-2 rounded-md px-4 py-2 text-sm font-medium text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-blue-700 bg-blue-600 dark:bg-blue-100 hover:bg-blue-200 dark:hover:bg-blue-600 border-blue-600 dark:border-blue-100 hover:border-blue-700 dark:hover:border-blue-600"
+		>
+			Conference Website
+		</a>
+	</div>
+</article>
