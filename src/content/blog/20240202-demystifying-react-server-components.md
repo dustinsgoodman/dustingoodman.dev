@@ -5,7 +5,7 @@ description: >
 date: 2024-02-02
 heroImage: ./blog-assets/20240202-demystifying-react-server-components.webp
 alt: Demystifying React Server Components
-originalArticle: https://www.thisdot.co/blog/how-to-configure-and-optimize-a-new-serverless-framework-project-with
+originalArticle: https://www.thisdot.co/blog/demystifying-react-server-components
 originalSource: ThisDot
 tags:
   - ReactJS
