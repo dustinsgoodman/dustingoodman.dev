@@ -6,24 +6,23 @@ import BlogIndex from '@/components/BlogIndex.astro';
 import { sortCollectionByDateDesc } from '@/utils/date';
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection('blog', (post) => {
-  	if (import.meta.env.MODE === 'production') {
-  		return !post.data.redirectUrl;
-  	}
+	const allPosts = await getCollection('blog', (post) => {
+		if (import.meta.env.MODE === 'production') {
+			return !post.data.redirectUrl;
+		}
 
-  	return !post.data.redirectUrl;
-  });
-  const posts = allPosts.sort(sortCollectionByDateDesc);
+		return !post.data.redirectUrl;
+	});
+	const posts = allPosts.sort(sortCollectionByDateDesc);
 
-  return paginate(posts, { pageSize: 6 });
+	return paginate(posts, { pageSize: 12 });
 }
 
 export type Props = {
-	page: Page<CollectionEntry<"blog">>;
-}
+	page: Page<CollectionEntry<'blog'>>;
+};
 
 const { page } = Astro.props;
-
 ---
 
 <Layout
