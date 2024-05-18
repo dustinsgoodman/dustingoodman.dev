@@ -18,8 +18,8 @@ dependencies:
     specifier: ^3.1.4
     version: 3.1.4
   '@fontsource-variable/montserrat':
-    specifier: ^5.0.17
-    version: 5.0.17
+    specifier: ^5.0.19
+    version: 5.0.19
   '@fontsource/azeret-mono':
     specifier: ^5.0.18
     version: 5.0.18
@@ -714,8 +714,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@fontsource-variable/montserrat@5.0.17:
-    resolution: {integrity: sha512-kRPFY+sLUPE4fGTkuHu6phebYTwizsbGVIvqYa2vysRLPKUxwoiy1lb9Z4Qul8qoVspXnl0b9zA5LSn0scD9vA==}
+  /@fontsource-variable/montserrat@5.0.19:
+    resolution: {integrity: sha512-vOlVjdGock2yBOeBbg5qexPa1TJM/PS8Nx9YlF6DFEtFf/Y5ayDbZRvV/WPj8W2vk7/aDxUEtTAp/Qp8wK9hNQ==}
     dev: false
 
   /@fontsource/azeret-mono@5.0.18:
