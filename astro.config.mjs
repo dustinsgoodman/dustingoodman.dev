@@ -16,6 +16,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig(
 	/** @type {import('astro').AstroUserConfig} */
@@ -48,6 +50,7 @@ export default defineConfig(
 			tailwind({
 				applyBaseStyles: false,
 			}),
+			sitemap(),
 		],
 	}
 );
