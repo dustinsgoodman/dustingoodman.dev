@@ -52,5 +52,11 @@ export default defineConfig(
 			}),
 			sitemap(),
 		],
+		redirects: {
+			'/blog/202220414-serverless-template-announcement':
+				'/blog/20220414-serverless-template-announcement',
+			'/blog/202040506-thoughts-on-the-future-of-http-apis':
+				'20240506-thoughts-on-the-future-of-http-apis',
+		},
 	}
 );

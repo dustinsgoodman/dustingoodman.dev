@@ -3,7 +3,7 @@ title: Thoughts on the Future of HTTP APIs
 description: >
   The introduction of React Server Components (RSCs) and Actions have started a conversation in the JavaScript community about how we interact with our databases and backend services. When developing a new application, do we need to have an API in front of the database?
 date: 2024-05-06
-heroImage: ./blog-assets/202040506-thoughts-on-the-future-of-http-apis.png
+heroImage: ./blog-assets/20240506-thoughts-on-the-future-of-http-apis.png
 alt: Thoughts on the Future of HTTP APIs
 tags:
   - Architecture
