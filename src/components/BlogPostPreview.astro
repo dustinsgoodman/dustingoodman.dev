@@ -41,6 +41,7 @@ const getReadMoreText = (postSource: string | undefined) => {
 				width={540}
 				height={297}
 				loading="eager"
+				transition:name=`blog-image-${post.slug}`
 			/>
 		</div>
 		<div class="flex grow flex-col px-4">

@@ -12,7 +12,12 @@ const { title, date, heroImage, tags } = post.data;
 ---
 
 <article class="mx-auto max-w-[80ch]">
-	<Image class="object-contain" src={heroImage} alt="" />
+	<Image
+		class="object-contain"
+		src={heroImage}
+		alt=""
+		transition:name=`blog-image-${post.slug}`
+	/>
 	<h1 class="mb-2 px-4 text-center text-4xl">{title}</h1>
 	<p class="mb-2 block text-center text-lg text-gray-600 dark:text-gray-100">
 		{formatDate(date)}
