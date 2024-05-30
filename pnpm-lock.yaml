@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.0.17
     version: 5.0.17
   '@fontsource/azeret-mono':
-    specifier: ^5.0.18
-    version: 5.0.18
+    specifier: ^5.0.20
+    version: 5.0.20
   '@sentry/astro':
     specifier: ^7.112.2
     version: 7.112.2(astro@4.9.1)
@@ -1308,8 +1308,8 @@ packages:
     resolution: {integrity: sha512-kRPFY+sLUPE4fGTkuHu6phebYTwizsbGVIvqYa2vysRLPKUxwoiy1lb9Z4Qul8qoVspXnl0b9zA5LSn0scD9vA==}
     dev: false
 
-  /@fontsource/azeret-mono@5.0.18:
-    resolution: {integrity: sha512-gTgOP1Kq0ZIXy0nkPOk2/35yyvx+XBlhfUWCfzPCo6z/RfM9dJQmvnVGm/Ds8Fa7c2lbL3DLB+RfsYQ1XIMVOQ==}
+  /@fontsource/azeret-mono@5.0.20:
+    resolution: {integrity: sha512-cYCpqtaJuyjbLRcL4D8I+QIwaymJnNnTaPK4MJWhEIk4nZuE04DSQfR21uxcsZDagOu9YnlOLDVHTpqLMjpANA==}
     dev: false
 
   /@img/sharp-darwin-arm64@0.33.4:
