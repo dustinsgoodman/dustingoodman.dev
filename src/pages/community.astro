@@ -23,7 +23,9 @@ const conferences = (await getCollection('conferences')).sort(
 		<h1 class="my-8">My Community Appearances</h1>
 		<section>
 			<h2>Videos</h2>
-			<ul class="list-none flex flex-nowrap overflow-x-auto pb-10 m-0">
+			<ul
+				class="card-section list-none flex flex-nowrap overflow-x-auto pb-10 m-0"
+			>
 				{
 					videos.map((video) => (
 						<li class="basis-auto px-3">
@@ -34,7 +36,9 @@ const conferences = (await getCollection('conferences')).sort(
 			</ul>
 			<section>
 				<h2>Podcasts</h2>
-				<ul class="list-none flex flex-nowrap overflow-x-auto pb-10 m-0">
+				<ul
+					class="card-section list-none flex flex-nowrap overflow-x-auto pb-10 m-0"
+				>
 					{
 						podcasts.map((podcast) => (
 							<li class="basis-auto px-3">
@@ -47,7 +51,9 @@ const conferences = (await getCollection('conferences')).sort(
 		</section>
 		<section>
 			<h2>Conferences</h2>
-			<ul class="list-none flex flex-nowrap overflow-x-auto pb-10 m-0">
+			<ul
+				class="card-section list-none flex flex-nowrap overflow-x-auto pb-10 m-0"
+			>
 				{
 					conferences.map((conference) => (
 						<li class="basis-auto px-3">

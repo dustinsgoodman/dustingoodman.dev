@@ -94,4 +94,20 @@
 	.twitter-tweet {
 		@apply mx-auto;
 	}
+
+	.card-section article {
+		animation: highlight;
+		animation-timeline: view(inline);
+	}
+
+	@keyframes highlight {
+		entry 0%,
+		exit 100% {
+			opacity: 0;
+		}
+		entry 100%,
+		exit 0% {
+			opacity: 1;
+		}
+	}
 }
