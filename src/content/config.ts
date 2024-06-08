@@ -40,10 +40,11 @@ const podcastCollection = defineCollection({
 				'JAMhack',
 				'Engineering Leadership',
 				'FSJam',
+				'Human Side of Dev',
 			]),
 			link: z.string().url(),
 			embed: z.string().url(),
-			source: z.enum(['Podbean', 'Spotify', 'YouTube']),
+			source: z.enum(['Podbean', 'Spotify', 'YouTube', 'Website']),
 		}),
 });
 
