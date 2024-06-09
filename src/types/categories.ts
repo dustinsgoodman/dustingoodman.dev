@@ -10,6 +10,7 @@ export const allCategories = [
 	'Node.js',
 	'Open Source',
 	'Project Management',
+	'Ruby on Rails',
 	'ReactJS',
 	'REST',
 	'Serverless',

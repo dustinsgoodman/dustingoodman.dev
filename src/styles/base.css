@@ -77,6 +77,10 @@
 		@apply border-l-4 px-4 italic;
 	}
 
+	iframe {
+		@apply mx-auto w-full max-w-full aspect-video;
+	}
+
 	.copy-code {
 		@apply bg-blue-600 text-white;
 		position: absolute;
