@@ -31,7 +31,7 @@
 		"@fontsource-variable/montserrat": "^5.0.19",
 		"@fontsource/azeret-mono": "^5.0.20",
 		"@sentry/astro": "^7.112.2",
-		"@spotlightjs/astro": "^1.0.20",
+		"@spotlightjs/astro": "^2.1.7",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.2.25",
 		"markdown-it": "^14.1.0",
