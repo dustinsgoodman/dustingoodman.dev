@@ -34,7 +34,11 @@
 	}
 
 	a {
-		@apply text-blue-900 hover:text-blue-500 underline dark:text-blue-200 dark:hover:text-blue-400;
+		@apply text-blue-900 hover:text-blue-500 hover:underline dark:text-blue-200 dark:hover:text-blue-400;
+	}
+
+	.post-content a {
+		@apply underline;
 	}
 
 	p {
@@ -105,12 +109,10 @@
 	}
 
 	@keyframes highlight {
-		entry 0%,
-		exit 100% {
+		from {
 			opacity: 0;
 		}
-		entry 100%,
-		exit 0% {
+		to {
 			opacity: 1;
 		}
 	}
