@@ -7,9 +7,9 @@ import YoutubeIcon from '@/components/Icons/YoutubeIcon.astro';
 
 export const socialLinks = [
 	{
-		href: 'https://twitter.com/dustinsgoodman',
-		label: "Dustin's Twitter",
-		icon: TwitterIcon,
+		href: 'https://bsky.app/profile/dustingoodman.dev',
+		label: "Dustin's Bluesky",
+		icon: BlueskyIcon,
 	},
 	{
 		href: 'https://www.linkedin.com/in/dustinsgoodman/',
@@ -27,13 +27,13 @@ export const socialLinks = [
 		icon: TwitchIcon,
 	},
 	{
-		href: 'https://bsky.app/profile/dustingoodman.dev',
-		label: "Dustin's Bluesky",
-		icon: BlueskyIcon,
-	},
-	{
 		href: 'https://www.youtube.com/@dustinsgoodman/featured',
 		label: "Dustin's YouTube",
 		icon: YoutubeIcon,
+	},
+	{
+		href: 'https://twitter.com/dustinsgoodman',
+		label: "Dustin's Twitter",
+		icon: TwitterIcon,
 	},
 ];
