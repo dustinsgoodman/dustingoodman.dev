@@ -30,8 +30,8 @@ importers:
         specifier: ^8.40.0
         version: 8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))
       '@spotlightjs/astro':
-        specifier: ^1.0.20
-        version: 1.0.20(@sentry/astro@8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5)))(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))
+        specifier: ^2.1.11
+        version: 2.1.11(@sentry/astro@8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5)))(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1114,17 +1114,24 @@ packages:
   '@shikijs/vscode-textmate@9.2.0':
     resolution: {integrity: sha512-5FinaOp6Vdh/dl4/yaOTh0ZeKch+rYS8DUb38V3GMKYVkdqzxw53lViRKUYkVILRiVQT7dcPC7VvAKOR73zVtQ==}
 
-  '@spotlightjs/astro@1.0.20':
-    resolution: {integrity: sha512-3j4GqodpdaNPcsP2KbQylg2dF2nlRLe1z8UH/TgWx1MZJM16V2WP474nHUeP54kVmBaFwaJmF9OCkCMBqfKYfw==}
+  '@spotlightjs/astro@2.1.11':
+    resolution: {integrity: sha512-UmzPTaeGZRE3fhk4vHwtaJ5A+tWmVmXYDP/P96J25jYwLj9ceNoYew3wfDsTT8WPljd5UcoU8wB2yAmsxMvxxQ==}
+    engines: {node: '>=18'}
     peerDependencies:
       '@sentry/astro': '>=7.84.0'
-      astro: '>=3.4.0 || >=4.0.0-beta'
+      astro: '>=4.0.0'
 
-  '@spotlightjs/overlay@1.8.3':
-    resolution: {integrity: sha512-6b5tBspOOEd6Gj0l4xgdUwR4Ydn2dNX9lqJ/WSzIu1lqkI96w2lqf69IGzEo6jb9aPtfTtu8nx5K2SD6JXH2SA==}
+  '@spotlightjs/overlay@2.6.0':
+    resolution: {integrity: sha512-UnvWi6J8MTxhUHaBxd+k2mVyQh+0sJ5MImb/UfnEOA0WhNaFl2Foo/R7ByoOIDzDGT42+mZtfEyhJzNZ5naAaQ==}
 
-  '@spotlightjs/sidecar@1.4.0':
-    resolution: {integrity: sha512-onj/phrNtDI8a79zc8jfxJ5BITQk5klO4xSoQXxiYeQWTZcegVeO8VftOVfWPBnMY/axnh+ltxJm/cHaV5SP6Q==}
+  '@spotlightjs/sidecar@1.8.0':
+    resolution: {integrity: sha512-c3w5OJieAEE0nee4jGrI7KCkQ9h7cB9Mz72W5YFdG2zlj3J9BjPR3Vlx9IkkUCBnWvLfCKgmUcOFbyNuDKzSVQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  '@spotlightjs/spotlight@2.5.0':
+    resolution: {integrity: sha512-tOlefTjOUuNGyHtt1+r1IdY5vq9Hq9Vi2HqPENZ9orS/12KMEK6rVFliWT0/IXJLH5LdunNGaw3kan08bsA+NQ==}
+    engines: {node: '>=18'}
     hasBin: true
 
   '@types/babel__core@7.20.5':
@@ -1886,6 +1893,9 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
+  launch-editor@2.9.1:
+    resolution: {integrity: sha512-Gcnl4Bd+hRO9P9icCP/RVVT2o8SFlPXofuCxvA2SaZuH45whSvf5p8x5oih5ftLiVhEI4sp5xDY+R+b3zJBh5w==}
+
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
@@ -2584,6 +2594,9 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+
+  shell-quote@1.8.1:
+    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
 
   shiki@1.16.2:
     resolution: {integrity: sha512-gSym0hZf5a1U0iDPsdoOAZbvoi+e0c6c3NKAi03FoSLTm7oG20tum29+gk0wzzivOasn3loxfGUPT+jZXIUbWg==}
@@ -4218,17 +4231,25 @@ snapshots:
 
   '@shikijs/vscode-textmate@9.2.0': {}
 
-  '@spotlightjs/astro@1.0.20(@sentry/astro@8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5)))(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))':
+  '@spotlightjs/astro@2.1.11(@sentry/astro@8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5)))(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))':
     dependencies:
       '@sentry/astro': 8.40.0(astro@4.15.4(rollup@4.21.2)(typescript@5.4.5))
-      '@spotlightjs/overlay': 1.8.3
-      '@spotlightjs/sidecar': 1.4.0
+      '@spotlightjs/spotlight': 2.5.0
       astro: 4.15.4(rollup@4.21.2)(typescript@5.4.5)
+
+  '@spotlightjs/overlay@2.6.0': {}
+
+  '@spotlightjs/sidecar@1.8.0':
+    dependencies:
+      kleur: 4.1.5
+      launch-editor: 2.9.1
       source-map: 0.7.4
 
-  '@spotlightjs/overlay@1.8.3': {}
-
-  '@spotlightjs/sidecar@1.4.0': {}
+  '@spotlightjs/spotlight@2.5.0':
+    dependencies:
+      '@spotlightjs/overlay': 2.6.0
+      '@spotlightjs/sidecar': 1.8.0
+      import-meta-resolve: 4.1.0
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -5109,6 +5130,11 @@ snapshots:
   kleur@3.0.3: {}
 
   kleur@4.1.5: {}
+
+  launch-editor@2.9.1:
+    dependencies:
+      picocolors: 1.1.0
+      shell-quote: 1.8.1
 
   lilconfig@2.1.0: {}
 
@@ -6007,6 +6033,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shell-quote@1.8.1: {}
 
   shiki@1.16.2:
     dependencies:
