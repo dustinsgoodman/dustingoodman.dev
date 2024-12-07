@@ -1,0 +1,15 @@
+---
+import NoteIcon from '@/components/Icons/NoteIcon.astro';
+---
+
+<div
+	class="pt-8 pb-4 px-5 sm:px-8 my-8 relative rounded-none shadow-inner-border -mx-5 sm:mx-auto sm:rounded-2xl bg-blue-500 dark:bg-blue-300 dark:bg-opacity-20 text-primary dark:text-primary-dark text-lg"
+>
+	<h3 class="text-2xl font-display font-bold">
+		<NoteIcon className="inline me-2 mb-1 text-lg" />
+		Note
+	</h3>
+	<div class="relative">
+		<div class="py-2"><slot /></div>
+	</div>
+</div>
