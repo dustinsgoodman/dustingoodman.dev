@@ -1,6 +1,6 @@
 ---
 import '../styles/base.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '@fontsource-variable/montserrat';
 import '@fontsource/azeret-mono';
 import Head from '@/components/Head.astro';
@@ -28,7 +28,7 @@ const { title, description, socialImage, canonicalUrl, redirectUrl } =
 			canonicalUrl={canonicalUrl}
 			redirectUrl={redirectUrl}
 		/>
-		<ViewTransitions />
+		<ClientRouter />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link
 			rel="alternate"
