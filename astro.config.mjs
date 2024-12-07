@@ -8,6 +8,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
 
 // import sentry from '@sentry/astro';
 // import spotlightjs from '@spotlightjs/astro';
@@ -46,6 +47,7 @@ export default defineConfig(
 			],
 		},
 		integrations: [
+			mdx(),
 			react(),
 			tailwind({
 				applyBaseStyles: false,
