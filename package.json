@@ -35,7 +35,6 @@
 		"@spotlightjs/astro": "^2.1.11",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.1",
-		"markdown-it": "^14.1.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"rehype-slug": "^6.0.0",
