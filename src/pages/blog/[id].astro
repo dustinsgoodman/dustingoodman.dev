@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '@/layouts/base.astro';
 import BlogPost from '@/components/BlogPost.astro';
 
@@ -7,9 +7,10 @@ export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 
 	return posts.map((post) => {
+		console.log('getStaticPaths', post.id);
 		return {
 			params: {
-				slug: post.slug,
+				id: post.id,
 			},
 			props: {
 				post,
@@ -26,7 +27,7 @@ const { post } = Astro.props;
 const { title, description, heroImage, redirectUrl, originalArticle } =
 	post.data;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <Layout

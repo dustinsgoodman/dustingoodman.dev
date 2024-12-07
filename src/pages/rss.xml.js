@@ -26,7 +26,7 @@ export async function GET(context) {
       `,
 			link: post.data.originalArticle
 				? post.data.originalArticle
-				: `/blog/${post.slug}/`,
+				: `/blog/${post.id}/`,
 		})),
 	});
 }
