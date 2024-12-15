@@ -8,7 +8,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"check": "astro check",
-		"format": "prettier -w ."
+		"format": "prettier -w src/."
 	},
 	"devDependencies": {
 		"@astrojs/tailwind": "^5.1.3",

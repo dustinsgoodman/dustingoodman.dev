@@ -6,21 +6,20 @@ import Pagination from '@/components/Pagination.astro';
 import BlogCategorySelector from '@/components/BlogCategorySelector.astro';
 
 export type Props = {
-  page: Page;
-  category?: typeof allCategories[number];
-}
+	page: Page;
+	category?: (typeof allCategories)[number];
+};
 
 const { page, category } = Astro.props;
 ---
-<section
-  class="container mx-auto flex flex-col bg-blue-100 dark:bg-slate-900"
->
-  <h1 class="my-2 text-center">My Blog</h1>
-  <BlogCategorySelector activeCategory={category} />
+
+<section class="container mx-auto flex flex-col bg-blue-100 dark:bg-slate-900">
+	<h1 class="my-2 text-center">My Blog</h1>
+	<BlogCategorySelector activeCategory={category} />
 	<div
 		class="grid grid-cols-1 gap-4 gap-y-6 px-4 my-4 sm:grid-cols-2 md:grid-cols-3"
 	>
 		{page.data.map((post) => <BlogPostPreview post={post} />)}
 	</div>
-  <Pagination page={page}	path="/blog" />
+	<Pagination page={page} path="/blog" />
 </section>

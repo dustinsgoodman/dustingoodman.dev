@@ -7,31 +7,35 @@ import BlogIndex from '@/components/BlogIndex.astro';
 import { sortCollectionByDateDesc } from '@/utils/date';
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = (await getCollection('blog', (post) => {
-    	if (import.meta.env.MODE === 'production') {
-    		return !post.data.redirectUrl;
-    	}
+	const allPosts = (
+		await getCollection('blog', (post) => {
+			if (import.meta.env.MODE === 'production') {
+				return !post.data.redirectUrl;
+			}
 
-      if (post.data.redirectUrl) {
-        return false;
-      }
+			if (post.data.redirectUrl) {
+				return false;
+			}
 
-      return true;
-    })).sort(sortCollectionByDateDesc);
+			return true;
+		})
+	).sort(sortCollectionByDateDesc);
 
-  return allCategories.flatMap((category) => {
-    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(category));
-    return paginate(filteredPosts, {
-      params: { category },
-      pageSize: 6,
-    });
-  });
+	return allCategories.flatMap((category) => {
+		const filteredPosts = allPosts.filter((post) =>
+			post.data.tags.includes(category)
+		);
+		return paginate(filteredPosts, {
+			params: { category },
+			pageSize: 6,
+		});
+	});
 }
 
 export type Props = {
-	page: Page<CollectionEntry<"blog">>;
-  category: string;
-}
+	page: Page<CollectionEntry<'blog'>>;
+	category: string;
+};
 
 const { page } = Astro.props;
 const { category } = Astro.params;
@@ -41,5 +45,5 @@ const { category } = Astro.params;
 	title={`Blog - ${category} | Dustin Goodman`}
 	description="Learn from Dustin Goodman's blog"
 >
-  <BlogIndex page={page} category={category} />
+	<BlogIndex page={page} category={category} />
 </Layout>

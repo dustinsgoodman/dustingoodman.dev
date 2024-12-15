@@ -2,16 +2,24 @@
 import { allCategories } from 'src/types/categories';
 
 export type Props = {
-  activeCategory?: typeof allCategories[number];
+	activeCategory?: (typeof allCategories)[number];
 };
 
 const { activeCategory } = Astro.props;
-const visibleCategories = allCategories.filter((category) => category !== activeCategory);
+const visibleCategories = allCategories.filter(
+	(category) => category !== activeCategory
+);
 ---
+
 <div class="flex flex-wrap items-start justify-center">
-  {visibleCategories.map((category) => (
-    <a href={`/blog/${category}`} class="bg-black m-2 p-2 rounded text-blue-100 hover:text-blue-300 dark:bg-blue-100 dark:text-blue-900">
-      {category}
-    </a>
-  ))}
+	{
+		visibleCategories.map((category) => (
+			<a
+				href={`/blog/${category}`}
+				class="bg-black m-2 p-2 rounded text-blue-100 hover:text-blue-300 dark:bg-blue-100 dark:text-blue-900"
+			>
+				{category}
+			</a>
+		))
+	}
 </div>

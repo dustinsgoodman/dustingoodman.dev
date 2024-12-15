@@ -8,16 +8,18 @@ import { socialLinks } from '@/utils/constants';
 		class="flex items-center justify-center bg-white px-4 py-4 text-center dark:bg-black sm:px-8"
 	>
 		<div class="flex items-center space-x-2">
-			{socialLinks.map(({ href, label, icon: Icon }) => (
-				<FooterLink
-					href={href}
-					target="_blank"
-					aria-label={label}
-					rel="noopener noreferrer"
-				>
-					<Icon />
-				</FooterLink>
-			))}
+			{
+				socialLinks.map(({ href, label, icon: Icon }) => (
+					<FooterLink
+						href={href}
+						target="_blank"
+						aria-label={label}
+						rel="noopener noreferrer"
+					>
+						<Icon />
+					</FooterLink>
+				))
+			}
 		</div>
 	</footer>
 </div>
