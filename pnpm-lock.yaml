@@ -27,8 +27,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       '@fontsource/azeret-mono':
-        specifier: ^5.0.20
-        version: 5.0.20
+        specifier: ^5.1.0
+        version: 5.1.0
       '@sentry/astro':
         specifier: ^8.40.0
         version: 8.40.0(astro@5.0.3(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
@@ -639,8 +639,8 @@ packages:
   '@fontsource-variable/montserrat@5.1.0':
     resolution: {integrity: sha512-1bloVBKJx/ABBmF+/VzhJZDLzaDNUxw/8Pt5AOgfKL6N3t1fAhwtJBb1gdqU7ABckSNLsKf572A5Inv9YneRug==}
 
-  '@fontsource/azeret-mono@5.0.20':
-    resolution: {integrity: sha512-cYCpqtaJuyjbLRcL4D8I+QIwaymJnNnTaPK4MJWhEIk4nZuE04DSQfR21uxcsZDagOu9YnlOLDVHTpqLMjpANA==}
+  '@fontsource/azeret-mono@5.1.0':
+    resolution: {integrity: sha512-GCZ1EwBTHoVxfKvdo6HFHKUPMIISoSgyq/9SGC3x4lOuhPvtS9EhL6SqhycyrtjHxDmYdKFUX6kzhJ6M3JV/xQ==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3902,7 +3902,7 @@ snapshots:
 
   '@fontsource-variable/montserrat@5.1.0': {}
 
-  '@fontsource/azeret-mono@5.0.20': {}
+  '@fontsource/azeret-mono@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
