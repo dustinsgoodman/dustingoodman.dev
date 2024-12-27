@@ -33,8 +33,8 @@ importers:
         specifier: ^8.45.0
         version: 8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
       '@spotlightjs/astro':
-        specifier: ^2.1.11
-        version: 2.1.11(@sentry/astro@8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1)))(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
+        specifier: ^2.3.0
+        version: 2.3.0(@sentry/astro@8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1)))(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
       '@types/react':
         specifier: ^19.0.1
         version: 19.0.1
@@ -1236,23 +1236,23 @@ packages:
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
 
-  '@spotlightjs/astro@2.1.11':
-    resolution: {integrity: sha512-UmzPTaeGZRE3fhk4vHwtaJ5A+tWmVmXYDP/P96J25jYwLj9ceNoYew3wfDsTT8WPljd5UcoU8wB2yAmsxMvxxQ==}
+  '@spotlightjs/astro@2.3.0':
+    resolution: {integrity: sha512-OnBYS4rDgkigxQkTpH5aGFQzReuF1CKagOSHudyTQBcd17zdNLKSujeBAUJBhH7VoNz9mu6q2+weGW8sWlH4og==}
     engines: {node: '>=18'}
     peerDependencies:
       '@sentry/astro': '>=7.84.0'
       astro: '>=4.0.0'
 
-  '@spotlightjs/overlay@2.6.0':
-    resolution: {integrity: sha512-UnvWi6J8MTxhUHaBxd+k2mVyQh+0sJ5MImb/UfnEOA0WhNaFl2Foo/R7ByoOIDzDGT42+mZtfEyhJzNZ5naAaQ==}
+  '@spotlightjs/overlay@2.9.0':
+    resolution: {integrity: sha512-toZW0hmFgx51yiEkz2+csXiwKWSBzFF1VD0JmEHdQrD76+n3YfEmkVxUqqmcB/s8vC32i/9ti0QQRbQzjACbow==}
 
-  '@spotlightjs/sidecar@1.8.0':
-    resolution: {integrity: sha512-c3w5OJieAEE0nee4jGrI7KCkQ9h7cB9Mz72W5YFdG2zlj3J9BjPR3Vlx9IkkUCBnWvLfCKgmUcOFbyNuDKzSVQ==}
+  '@spotlightjs/sidecar@1.10.0':
+    resolution: {integrity: sha512-aGqj3kp09OmxVwr30J3vAVfN+aCAZQ1jF6YyyQJ4vWGzymxYJJCTO1U4Amh5NgPxLw02OCWPqQ5c7cKSHvn4WQ==}
     engines: {node: '>=18'}
     hasBin: true
 
-  '@spotlightjs/spotlight@2.5.0':
-    resolution: {integrity: sha512-tOlefTjOUuNGyHtt1+r1IdY5vq9Hq9Vi2HqPENZ9orS/12KMEK6rVFliWT0/IXJLH5LdunNGaw3kan08bsA+NQ==}
+  '@spotlightjs/spotlight@2.9.0':
+    resolution: {integrity: sha512-SQeToiN6Fykl++VkQhbn8aomPtIBW9qQOKyeEHxoOQGzK5irsU0O0fCUOfZHh8loV34K3m5ua8Ic1sIPR2tGlg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1579,6 +1579,10 @@ packages:
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
+
+  commander@9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
 
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
@@ -2160,6 +2164,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  macho-unsign@2.0.6:
+    resolution: {integrity: sha512-YkIVGFnpVHJMMwfy4bHo79Vy05ddVk/PZGSCmmiCT4zepx+FMP/JAt9hOoXuc31s2bbcOtnzznOGca5fRhgZOg==}
+    engines: {node: '>=18.12.0'}
+
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
 
@@ -2568,6 +2576,10 @@ packages:
   pkg-types@1.2.1:
     resolution: {integrity: sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==}
 
+  portable-executable-signature@2.0.6:
+    resolution: {integrity: sha512-VV+1GuJca0cJ0PFwnCW/xK8Ro9DDX38e4iUDh6ngPjd9vj7VLiemh9rSlqquvcVGtClkVzYaV/UseMVnUrxS/Q==}
+    engines: {node: '>=18.12.0'}
+
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
@@ -2624,6 +2636,11 @@ packages:
   postgres-interval@1.2.0:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
+
+  postject@1.0.0-alpha.6:
+    resolution: {integrity: sha512-b9Eb8h2eVqNE8edvKdwqkrY6O7kAwmI8kcnBv1NScolYJbo59XUF0noFq+lxbC1yN20bmC0WBEbDC5H/7ASb0A==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
 
   preferred-pm@4.0.0:
     resolution: {integrity: sha512-gYBeFTZLu055D8Vv3cSPox/0iTPtkzxpLroSYYA7WXgRi31WCJ51Uyl8ZiPeUUjyvs2MBzK+S8v9JVUgHU/Sqw==}
@@ -4705,25 +4722,36 @@ snapshots:
 
   '@shikijs/vscode-textmate@9.3.0': {}
 
-  '@spotlightjs/astro@2.1.11(@sentry/astro@8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1)))(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))':
+  '@spotlightjs/astro@2.3.0(@sentry/astro@8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1)))(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))':
     dependencies:
       '@sentry/astro': 8.45.0(astro@5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1))
-      '@spotlightjs/spotlight': 2.5.0
+      '@spotlightjs/spotlight': 2.9.0
       astro: 5.1.1(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.5.1)
+    transitivePeerDependencies:
+      - supports-color
 
-  '@spotlightjs/overlay@2.6.0': {}
+  '@spotlightjs/overlay@2.9.0': {}
 
-  '@spotlightjs/sidecar@1.8.0':
+  '@spotlightjs/sidecar@1.10.0':
     dependencies:
+      '@sentry/node': 8.45.0
       kleur: 4.1.5
       launch-editor: 2.9.1
       source-map: 0.7.4
+    transitivePeerDependencies:
+      - supports-color
 
-  '@spotlightjs/spotlight@2.5.0':
+  '@spotlightjs/spotlight@2.9.0':
     dependencies:
-      '@spotlightjs/overlay': 2.6.0
-      '@spotlightjs/sidecar': 1.8.0
+      '@sentry/node': 8.45.0
+      '@spotlightjs/overlay': 2.9.0
+      '@spotlightjs/sidecar': 1.10.0
       import-meta-resolve: 4.1.0
+      macho-unsign: 2.0.6
+      portable-executable-signature: 2.0.6
+      postject: 1.0.0-alpha.6
+    transitivePeerDependencies:
+      - supports-color
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -5176,6 +5204,8 @@ snapshots:
   comma-separated-tokens@2.0.3: {}
 
   commander@4.1.1: {}
+
+  commander@9.5.0: {}
 
   common-ancestor-path@1.0.1: {}
 
@@ -5798,7 +5828,7 @@ snapshots:
 
   launch-editor@2.9.1:
     dependencies:
-      picocolors: 1.1.0
+      picocolors: 1.1.1
       shell-quote: 1.8.1
 
   lilconfig@3.1.1: {}
@@ -5854,6 +5884,8 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  macho-unsign@2.0.6: {}
 
   magic-string@0.30.14:
     dependencies:
@@ -6511,6 +6543,8 @@ snapshots:
       mlly: 1.7.3
       pathe: 1.1.2
 
+  portable-executable-signature@2.0.6: {}
+
   postcss-import@15.1.0(postcss@8.4.49):
     dependencies:
       postcss: 8.4.49
@@ -6557,6 +6591,10 @@ snapshots:
   postgres-interval@1.2.0:
     dependencies:
       xtend: 4.0.2
+
+  postject@1.0.0-alpha.6:
+    dependencies:
+      commander: 9.5.0
 
   preferred-pm@4.0.0:
     dependencies:
