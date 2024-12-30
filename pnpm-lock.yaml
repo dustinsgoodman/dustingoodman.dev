@@ -24,8 +24,8 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       '@fontsource-variable/montserrat':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.1.1
+        version: 5.1.1
       '@fontsource/azeret-mono':
         specifier: ^5.1.0
         version: 5.1.0
@@ -548,8 +548,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/montserrat@5.1.0':
-    resolution: {integrity: sha512-1bloVBKJx/ABBmF+/VzhJZDLzaDNUxw/8Pt5AOgfKL6N3t1fAhwtJBb1gdqU7ABckSNLsKf572A5Inv9YneRug==}
+  '@fontsource-variable/montserrat@5.1.1':
+    resolution: {integrity: sha512-eHmSruS3B+4wVaHk6ShNUJj1MbWEohOuriwN/oYR2VY8jRS83a5SKQeG1wu4Eku3v3f5cXTIbfd1tHeQ7GXkiA==}
 
   '@fontsource/azeret-mono@5.1.0':
     resolution: {integrity: sha512-GCZ1EwBTHoVxfKvdo6HFHKUPMIISoSgyq/9SGC3x4lOuhPvtS9EhL6SqhycyrtjHxDmYdKFUX6kzhJ6M3JV/xQ==}
@@ -3904,7 +3904,7 @@ snapshots:
   '@esbuild/win32-x64@0.24.0':
     optional: true
 
-  '@fontsource-variable/montserrat@5.1.0': {}
+  '@fontsource-variable/montserrat@5.1.1': {}
 
   '@fontsource/azeret-mono@5.1.0': {}
 
