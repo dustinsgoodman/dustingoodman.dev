@@ -31,7 +31,7 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@fontsource-variable/montserrat": "^5.1.0",
 		"@fontsource/azeret-mono": "^5.1.0",
-		"@sentry/astro": "^8.45.0",
+		"@sentry/astro": "^8.50.0",
 		"@spotlightjs/astro": "^2.3.0",
 		"@types/react": "^19.0.1",
 		"@types/react-dom": "^19.0.2",
