@@ -33,7 +33,7 @@
 		"@fontsource/azeret-mono": "^5.1.0",
 		"@sentry/astro": "^8.45.0",
 		"@spotlightjs/astro": "^2.3.0",
-		"@types/react": "^19.0.1",
+		"@types/react": "^19.0.7",
 		"@types/react-dom": "^19.0.2",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
