@@ -27,7 +27,7 @@
 		"@astrojs/check": "^0.9.4",
 		"@astrojs/mdx": "^4.0.3",
 		"@astrojs/react": "^4.1.2",
-		"@astrojs/rss": "^4.0.10",
+		"@astrojs/rss": "^4.0.11",
 		"@astrojs/sitemap": "^3.2.1",
 		"@fontsource-variable/montserrat": "^5.1.1",
 		"@fontsource/azeret-mono": "^5.1.0",
