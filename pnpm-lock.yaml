@@ -75,6 +75,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.6.14
         version: 0.6.14(prettier-plugin-astro@0.14.1)(prettier@3.7.4)
+      prompts:
+        specifier: ^2.4.2
+        version: 2.4.2
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0
